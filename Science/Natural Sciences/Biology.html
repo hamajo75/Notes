@@ -1,0 +1,495 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-12-01 Fri 16:01 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Biology</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="shortcut icon" href="/public_html/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/html-export.css"/>
+<link rel="stylesheet" type="text/css" href="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/css/hideshow.css"/>
+<link rel="stylesheet" type="text/css" href="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/css/code.css">
+
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery.zclip.min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/bigblow.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/hideshow.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery.stickytableheaders.min.js"></script>
+</head>
+<body>
+<div style = "text-align: right; margin-top: 5px">
+   <a accesskey="h" href="" style="font: 20px arial,helvetica,clean,sans-serif"></a>
+   <a accesskey="H" href="https://joesanmarzano.duckdns.org/public_html/" style="font: 20px arial,helvetica,clean,sans-serif;margin: 30px;"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Biology</h1>
+
+<div id="outline-container-orgdc9c5cf" class="outline-2">
+<h2 id="orgdc9c5cf">Einteilung der Lebewesen (Biosystematik)</h2>
+<div class="outline-text-2" id="text-orgdc9c5cf">
+<ul class="org-ul">
+<li>Lebewesen
+<ul class="org-ul">
+<li>(Notiz: Viren gelten nicht als Lebewesen.)</li>
+</ul></li>
+<li>Domäne
+<ul class="org-ul">
+<li>z.B. Bakterien, Archaeen, Eukaryoten</li>
+</ul></li>
+<li>Reich
+<ul class="org-ul">
+<li>z.B. Tiere, Pflanzen, Pilze</li>
+</ul></li>
+<li>Stamm
+<ul class="org-ul">
+<li>z.B. Algen, Wirbeltiere, Weichtiere</li>
+</ul></li>
+<li>Klasse
+<ul class="org-ul">
+<li>z.B. Säugetiere, Amphibien, Reptilien, Vögel, Insekten</li>
+</ul></li>
+<li>Ordnung, Teilordnung, Überfamilie</li>
+<li>Familie, Unterfamilie, Tribus</li>
+<li>Gattung</li>
+<li>Art</li>
+</ul>
+
+<p>
+Beispiel Mensch:
+</p>
+<ul class="org-ul">
+<li>Reich: Vielzeller</li>
+<li>Stamm: Wirbeltiere</li>
+<li>Klasse: Säugetiere</li>
+<li>Ordnung: Primaten</li>
+<li>Familie: Menschenaffen (Hominidae)</li>
+<li>Unterfamilie: Homininae</li>
+<li>Tribus: Hominini</li>
+<li>Gattung: Homo</li>
+<li>Art: Mensch</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org925f4be" class="outline-2">
+<h2 id="org925f4be">Evolution</h2>
+<div class="outline-text-2" id="text-org925f4be">
+</div>
+<div id="outline-container-org3a62443" class="outline-3">
+<h3 id="org3a62443">12 Epochen</h3>
+<div class="outline-text-3" id="text-org3a62443">
+</div>
+<div id="outline-container-org21ee227" class="outline-4">
+<h4 id="org21ee227">Paläozoikum (Erdaltertum 288 Ma)</h4>
+<div class="outline-text-4" id="text-org21ee227">
+</div>
+<div id="outline-container-org0748746" class="outline-5">
+<h5 id="org0748746">Präkambrium (3,5 Mrd - 542 Mil)</h5>
+<div class="outline-text-5" id="text-org0748746">
+<p>
+Bakterien, Viren, Photosynthese, Vielzeller,
+</p>
+
+<p>
+Photosynthese betreibende Cyanobakterien produzieren Sauerstoff. Es kommt zur Bildung
+der Ozonschicht und mithin zum Schutz vor UV-Strahlung. Den meisten Bakterien im Meer
+bringt der giftige Sauerstoff allerdings den Tod.
+</p>
+
+<p>
+Entwicklungssprung: Eukaryoten
+</p>
+</div>
+<div id="outline-container-orga6f9d0f" class="outline-6">
+<h6 id="orga6f9d0f">Eukarytoen (ca. 2 Mrd)</h6>
+<div class="outline-text-6" id="text-orga6f9d0f">
+<p>
+Zwei Bakterien vereinigen sich zum wechselseitigen Vorteil.
+Das umschlossene Bakterium bildet am Ende den Zellkern (Mitochondrium) mit der Aufgabe
+Energie in Form von ATP (Adenosintriphosphat) herzustellen und das Erbgut zu verwalten.
+</p>
+</div>
+</div>
+<div id="outline-container-org41816a9" class="outline-6">
+<h6 id="org41816a9">Die ersten Vielzeller (ca. 1.2 Mrd)</h6>
+<div class="outline-text-6" id="text-org41816a9">
+<p>
+Irgendwann nach der Sauerstoffkatastrophe beginnen Eukaryoten sich Cyanobakterien einzuverleiben.
+Irgenwann kommt es dazu, dass sich ein solches Bakterium nach der Zellteilung nicht vollständig
+trennt. Die ersten Mehrzeller entstehen.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbbc1bbe" class="outline-5">
+<h5 id="orgbbc1bbe">Kambrium (541 - 485,4)</h5>
+<div class="outline-text-5" id="text-orgbbc1bbe">
+<p>
+Zu Beginn des Kambriums: Kambrische Explosion
+</p>
+<div class="picture" id="orgad97ff6">
+
+<div id="org799518f" class="figure">
+<p><img src="resources/Biologie/Evolution.jpg" alt="Evolution.jpg" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-orge488a59" class="outline-5">
+<h5 id="orge488a59">Ordovizium (485,4 - 443,4)</h5>
+</div>
+<div id="outline-container-orgf56a2ad" class="outline-5">
+<h5 id="orgf56a2ad">Silur (443,4 - 419,2)</h5>
+</div>
+<div id="outline-container-orgac2301f" class="outline-5">
+<h5 id="orgac2301f">Devon (419,2 - 358,9)</h5>
+</div>
+<div id="outline-container-org398a23b" class="outline-5">
+<h5 id="org398a23b">Karbon (358,9 - 298,9)</h5>
+</div>
+<div id="outline-container-org49ff525" class="outline-5">
+<h5 id="org49ff525">Perm (298,9 - 252,2)</h5>
+</div>
+</div>
+<div id="outline-container-org09ba19c" class="outline-4">
+<h4 id="org09ba19c">Mesozoikum (Erdmittelalter 186 Ma)</h4>
+<div class="outline-text-4" id="text-org09ba19c">
+</div>
+<div id="outline-container-org43e5030" class="outline-5">
+<h5 id="org43e5030">Trias (363,2 - 201,3)</h5>
+</div>
+<div id="outline-container-orge17e7a1" class="outline-5">
+<h5 id="orge17e7a1">Jura (201,3 - 145)</h5>
+</div>
+<div id="outline-container-orgedc8516" class="outline-5">
+<h5 id="orgedc8516">Kreide (145 - 66)</h5>
+</div>
+<div id="outline-container-org633f010" class="outline-5">
+<h5 id="org633f010">Paläogen (66 - 23)</h5>
+</div>
+</div>
+<div id="outline-container-org20beb3c" class="outline-4">
+<h4 id="org20beb3c">Känozoikum (Erdneuzeit, 66 Ma)</h4>
+<div class="outline-text-4" id="text-org20beb3c">
+</div>
+<div id="outline-container-org537f9d2" class="outline-5">
+<h5 id="org537f9d2">Neogen (23 - 2,5)</h5>
+</div>
+<div id="outline-container-org870b2d6" class="outline-5">
+<h5 id="org870b2d6">Quartär (2,5 - 0)</h5>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org975f9d8" class="outline-3">
+<h3 id="org975f9d8">Die 5 großen Massensterben</h3>
+<div class="outline-text-3" id="text-org975f9d8">
+<ul class="org-ul">
+<li>Ordovizium</li>
+<li>Devon</li>
+<li>Perm</li>
+<li>Kreide</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org177e052" class="outline-3">
+<h3 id="org177e052">Evolution des Menschen</h3>
+<div class="outline-text-3" id="text-org177e052">
+<p>
+Menschen gehören zur Familie der Hominidae (eingedeutscht: Hominiden, Menschenaffen), die entsprechende
+Gattung ist Homo.
+</p>
+
+<p>
+Vorgeschichtliche Arten:
+</p>
+<ul class="org-ul">
+<li>Ardipithecus (6-4 Mio. Jahre)
+<ul class="org-ul">
+<li>Ardipithecus ramidus: Der erste, der aufrecht geht. Lebte aber noch im Wald.</li>
+</ul></li>
+<li>Vormenschen: Australopithecinen (4-2 Mio. Jahre)</li>
+<li>Urmenschen: Homo rudofensis, Homo habilis, Homo ergaster, Homo heidelbergensis, Homo erectus</li>
+<li>Frühmenschen:</li>
+</ul>
+</div>
+
+<div id="outline-container-orgd15c7b3" class="outline-4">
+<h4 id="orgd15c7b3">Australopithecinen</h4>
+<div class="outline-text-4" id="text-orgd15c7b3">
+<ul class="org-ul">
+<li>aufrechter Gang</li>
+
+<li>A. anamensis</li>
+<li>A. afarensis
+Berühmter Skelettfund: Lucy</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd8f45c8" class="outline-4">
+<h4 id="orgd8f45c8">Homo</h4>
+<div class="outline-text-4" id="text-orgd8f45c8">
+<p>
+(Info from Wikipedia.)
+</p>
+<ul class="org-ul">
+<li>H. rudolfensis (2.5 - 1.9 Mio. Jahre)</li>
+<li>H. erectus (2 - ? Mio. Jahre)</li>
+<li>H. ergaster (1.9 - 1.4 Mio. Jahre)</li>
+<li>H. habilis (2.1 - 1.5 Mio. Jahre)</li>
+<li>H. heidelbergensis (600.000 - 200.000 Jahre)</li>
+</ul>
+
+<p>
+Aus Homo habilis oder Homo rudolfensis (man weiß es nicht genau) entsteht Homo ergaster.
+Er ist der erste Homo der Afrika verlässt.
+Aus Homo ergaster entwickelt sich einerseits, außerhalb von Afrike, Homo erectus, der es bis nach Asien schafft.
+Andererseits, noch in Afrika, Homo heidelbergensis. Dieser wandert in Europa ein und entwickelt sich dort
+zum Homo neanderthalis. In Afrika entwickelt er sich weiter zum Homo sapiens.
+Vor ca. 100.000 Jahren dringt Homo sapiens bis in den nahen Osten vor, zieht sich danach aber wieder nach
+Afrika zurück. Vermutlich kommt er mit der Kälte nicht gut zurecht.
+Vor 60.000 Jahren wandert eine kleine Gruppe über die arabische Halbinsel aus und bevölkert die letztlich
+ganze Welt. Vor 45.000 Jahren nach Australien, vor 15.000 Jahren nach Amerika.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org672e187" class="outline-2">
+<h2 id="org672e187">Viren</h2>
+<div class="outline-text-2" id="text-org672e187">
+<p>
+Haben keine eigenständige Replikation und sind deshalb auf den Stoffwechsel
+einer Wirtszelle angewiesen.
+</p>
+
+<p>
+Viren kommen in zwei Erscheinungsformen vor:
+</p>
+<ul class="org-ul">
+<li>Als DNA oder RNA in der Zelle eines Wirts.</li>
+<li>Als DNA oder RNA in einer Proteinhülle (<i>Virion</i>).</li>
+</ul>
+</div>
+
+<div id="outline-container-org3583c58" class="outline-3">
+<h3 id="org3583c58">Übertragung</h3>
+<div class="outline-text-3" id="text-org3583c58">
+<ul class="org-ul">
+<li>Blut</li>
+<li>Luft</li>
+<li>Schmierinfektion</li>
+</ul>
+</div>
+<div id="outline-container-org1ad1f45" class="outline-4">
+<h4 id="org1ad1f45">Tröpfcheninfektion</h4>
+</div>
+</div>
+
+<div id="outline-container-org0a463dc" class="outline-3">
+<h3 id="org0a463dc">Klassifikation</h3>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2023-12-01 Fri 16:01</p>
+</div>
+</body>
+</html>

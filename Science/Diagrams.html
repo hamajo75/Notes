@@ -1,0 +1,502 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2022-11-22 Tue 18:10 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Diagrams</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="shortcut icon" href="/public_html/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/html-export.css"/>
+<link rel="stylesheet" type="text/css" href="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/css/hideshow.css"/>
+<link rel="stylesheet" type="text/css" href="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/css/code.css">
+
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery.zclip.min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/bigblow.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/hideshow.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery.stickytableheaders.min.js"></script>
+</head>
+<body>
+<div style = "text-align: right; margin-top: 5px">
+   <a accesskey="h" href="" style="font: 20px arial,helvetica,clean,sans-serif"></a>
+   <a accesskey="H" href="https://joesanmarzano.duckdns.org/public_html/" style="font: 20px arial,helvetica,clean,sans-serif;margin: 30px;"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Diagrams</h1>
+
+<div id="outline-container-orge19d7af" class="outline-2">
+<h2 id="orge19d7af">Flow Chart</h2>
+<div class="outline-text-2" id="text-orge19d7af">
+<div class="PICTURE" id="orgbdb6947">
+
+<div id="org135179d" class="figure">
+<p><img src="Diagrams/Flow Chart.png" alt="Flow Chart.png" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org34e4af0" class="outline-2">
+<h2 id="org34e4af0">Control Flow</h2>
+<div class="outline-text-2" id="text-org34e4af0">
+<div class="PICTURE" id="org2772df8">
+
+<div id="org9e232cb" class="figure">
+<p><img src="Diagrams/Control Flow Graph.PNG" alt="Control Flow Graph.PNG" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc74e9c9" class="outline-2">
+<h2 id="orgc74e9c9">Spider Diagram</h2>
+<div class="outline-text-2" id="text-orgc74e9c9">
+<div class="PICTURE" id="org85e3a5c">
+
+<div id="orge34a9c7" class="figure">
+<p><img src="Diagrams/Spider Diagram.png" alt="Spider Diagram.png" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org16df656" class="outline-2">
+<h2 id="org16df656">Tree Map</h2>
+<div class="outline-text-2" id="text-org16df656">
+<div class="PICTURE" id="org0d62c2f">
+
+<div id="org35e66e7" class="figure">
+<p><img src="Diagrams/Tree Map.PNG" alt="Tree Map.PNG" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<div id="outline-container-orga33dafb" class="outline-2">
+<h2 id="orga33dafb">Dependency Graph</h2>
+<div class="outline-text-2" id="text-orga33dafb">
+<div class="PICTURE" id="org35cb724">
+
+<div id="orgca9aa28" class="figure">
+<p><img src="Diagrams/Dependency Graph.PNG" alt="Dependency Graph.PNG" />
+</p>
+</div>
+
+</div>
+<p>
+Directory Dependence Graph
+</p>
+<div class="PICTURE" id="orga7e12b4">
+
+<div id="org56f4a7b" class="figure">
+<p><img src="Diagrams/Directory Dependence Graph.PNG" alt="Directory Dependence Graph.PNG" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org224df02" class="outline-2">
+<h2 id="org224df02">Block or Layer Diagram</h2>
+<div class="outline-text-2" id="text-org224df02">
+<div class="PICTURE" id="orgb1357b1">
+
+<div id="org6e52faa" class="figure">
+<p><img src="Diagrams/Block Diagram.png" alt="Block Diagram.png" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org84677bc" class="outline-2">
+<h2 id="org84677bc">Sankey Diagram</h2>
+<div class="outline-text-2" id="text-org84677bc">
+<div class="PICTURE" id="org36a75e5">
+
+<div id="orgf942ce8" class="figure">
+<p><img src="Diagrams/Sankey Diagram (Energieflussdiagram).PNG" alt="Sankey Diagram (Energieflussdiagram).PNG" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org35870f2" class="outline-2">
+<h2 id="org35870f2">Context Diagram</h2>
+<div class="outline-text-2" id="text-org35870f2">
+<div class="PICTURE" id="orge2b1e6b">
+
+<div id="orgd2660c7" class="figure">
+<p><img src="Diagrams/Context Diagramm.png" alt="Context Diagramm.png" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org4997295" class="outline-2">
+<h2 id="org4997295">Entity Relationship Diagram</h2>
+<div class="outline-text-2" id="text-org4997295">
+<div class="PICTURE" id="org241ad7f">
+
+<div id="orge329fa1" class="figure">
+<p><img src="Diagrams/Entity Relationship Diagram.png" alt="Entity Relationship Diagram.png" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<div id="outline-container-orgaa32009" class="outline-2">
+<h2 id="orgaa32009">Concept Diagram</h2>
+<div class="outline-text-2" id="text-orgaa32009">
+<div class="PICTURE" id="orgf486406">
+
+<div id="orga00a81f" class="figure">
+<p><img src="Diagrams/Concept Diagram.png" alt="Concept Diagram.png" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org8289d49" class="outline-2">
+<h2 id="org8289d49">Scatter Plot</h2>
+<div class="outline-text-2" id="text-org8289d49">
+<div class="PICTURE" id="org649e649">
+
+<div id="org7270c54" class="figure">
+<p><img src="Diagrams/Scatter Plot.PNG" alt="Scatter Plot.PNG" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<div id="outline-container-orgadab316" class="outline-2">
+<h2 id="orgadab316">Use Case Diagram</h2>
+<div class="outline-text-2" id="text-orgadab316">
+<div class="PICTURE" id="orged19baa">
+
+<div id="orgc730236" class="figure">
+<p><img src="Diagrams/Use Case Diagram.PNG" alt="Use Case Diagram.PNG" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org42a5643" class="outline-2">
+<h2 id="org42a5643">Class Diagram</h2>
+<div class="outline-text-2" id="text-org42a5643">
+<p>
+Relations
+</p>
+<div class="picture" id="orgf7a51be">
+
+<div id="org54c23f4" class="figure">
+<p><img src="Diagrams/UML/ClassDiagramRelations.PNG" alt="ClassDiagramRelations.PNG" />
+</p>
+</div>
+
+</div>
+
+<p>
+Visibility
+</p>
+<ul class="org-ul">
+<li>public <code>+</code>, private <code>-</code>, protected <code>#</code></li>
+</ul>
+<div class="PICTURE" id="orgc17471a">
+
+<div id="org4c0f7d9" class="figure">
+<p><img src="Diagrams/UML/Composite Pattern UML.PNG" alt="Composite Pattern UML.PNG" />
+</p>
+</div>
+
+</div>
+
+<p>
+<a href="https://plantuml.com/de/">https://plantuml.com/de/</a>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-plantuml">@startuml
+Class01 &lt;|-- Class02
+Class03 *-- Class04
+Class05 o-- Class06
+Class07 .. Class08
+Class09 -- Class10
+@enduml
+</pre>
+</div>
+
+<div class="picture" id="org5427173">
+
+<div id="orgc1c02c1" class="figure">
+<p><img src="Diagrams/UML/ClassDiagramRelationsPlantUML.png" alt="ClassDiagramRelationsPlantUML.png" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3875092" class="outline-2">
+<h2 id="org3875092">Sequence Diagram</h2>
+<div class="outline-text-2" id="text-org3875092">
+<p>
+<a href="https://plantuml.com/de/">https://plantuml.com/de/</a>
+</p>
+
+<div class="org-src-container">
+<pre class="src src-plantuml">@startuml
+Alice -&gt; Bob: Authentication Request
+Bob --&gt; Alice: Authentication Response
+
+Alice -&gt; Bob: Another authentication Request
+Alice &lt;-- Bob: another authentication Response
+@enduml
+</pre>
+</div>
+
+<div class="picture" id="orgff7f0eb">
+
+<div id="org4a14840" class="figure">
+<p><img src="Diagrams/UML/SequenceDiagramPlantUML.png" alt="SequenceDiagramPlantUML.png" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org46f5434" class="outline-2">
+<h2 id="org46f5434">Balloon Diagram</h2>
+<div class="outline-text-2" id="text-org46f5434">
+<div class="PICTURE" id="org14f525f">
+
+<div id="orgaf8d07f" class="figure">
+<p><img src="Diagrams/Balloon Race.PNG" alt="Balloon Race.PNG" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<div id="outline-container-orgb87c95d" class="outline-2">
+<h2 id="orgb87c95d">State Machine</h2>
+<div class="outline-text-2" id="text-orgb87c95d">
+<div class="PICTURE" id="orgd718ad1">
+
+<div id="org31a4b63" class="figure">
+<p><img src="Diagrams/State Machine Diagram.png" alt="State Machine Diagram.png" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2022-11-22 Tue 18:10</p>
+</div>
+</body>
+</html>

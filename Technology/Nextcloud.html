@@ -1,0 +1,1150 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2023-12-01 Fri 16:01 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Nextcloud</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="shortcut icon" href="/public_html/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/html-export.css"/>
+<link rel="stylesheet" type="text/css" href="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/css/hideshow.css"/>
+<link rel="stylesheet" type="text/css" href="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/css/code.css">
+
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery.zclip.min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/bigblow.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/hideshow.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery.stickytableheaders.min.js"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        extensions: ["tex2jax.js","TeX/AMSmath.js","TeX/AMSsymbols.js",
+                     "TeX/noUndefined.js"],
+        tex2jax: {
+            inlineMath: [ ["\\(","\\)"] ],
+            displayMath: [ ['$$','$$'], ["\\[","\\]"], ["\\begin{displaymath}","\\end{displaymath}"] ],
+            skipTags: ["script","noscript","style","textarea","pre","code"],
+            ignoreClass: "tex2jax_ignore",
+            processEscapes: false,
+            processEnvironments: true,
+            preview: "TeX"
+        },
+        showProcessingMessages: true,
+        displayAlign: "center",
+        displayIndent: "0em",
+        "HTML-CSS": {
+             scale: 110,
+             availableFonts: ["STIX","TeX"],
+             preferredFont: "TeX",
+             webFont: "TeX",
+             imageFont: "TeX",
+             showMathMenu: true,
+        },
+        MMLorHTML: {
+             prefer: {
+                 MSIE:    "MML",
+                 Firefox: "MML",
+                 Opera:   "HTML",
+                 other:   "HTML"
+             }
+        }
+    });
+</script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.5/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+</head>
+<body>
+<div style = "text-align: right; margin-top: 5px">
+   <a accesskey="h" href="" style="font: 20px arial,helvetica,clean,sans-serif"></a>
+   <a accesskey="H" href="https://joesanmarzano.duckdns.org/public_html/" style="font: 20px arial,helvetica,clean,sans-serif;margin: 30px;"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Nextcloud</h1>
+<p>
+Nextcloud on ODROID XU4.
+</p>
+
+<div id="outline-container-org00168f1" class="outline-2">
+<h2 id="org00168f1">Installation <code>[0/6]</code></h2>
+<div class="outline-text-2" id="text-org00168f1">
+<ul class="org-ul">
+<li><a href="https://www.canox.net/2016/06/die-eigene-cloud-mit-dem-raspberry-pi-und-nextcloud/">https://www.canox.net/2016/06/die-eigene-cloud-mit-dem-raspberry-pi-und-nextcloud/</a></li>
+<li><a href="https://docs.nextcloud.com/server/11/admin_manual/installation/source_installation.html#apache-configuration-label">https://docs.nextcloud.com/server/11/admin_manual/installation/source_installation.html#apache-configuration-label</a></li>
+</ul>
+
+<pre class="example">
+apt update
+apt upgrade
+</pre>
+</div>
+
+<div id="outline-container-orge1d7e48" class="outline-3">
+<h3 id="orge1d7e48">Forward Ports 80 and 443</h3>
+</div>
+<div id="outline-container-orgbfc80bd" class="outline-3">
+<h3 id="orgbfc80bd">Apache</h3>
+<div class="outline-text-3" id="text-orgbfc80bd">
+<pre class="example">
+sudo apt install apache2
+</pre>
+</div>
+</div>
+<div id="outline-container-org6afc41a" class="outline-3">
+<h3 id="org6afc41a">MySQL</h3>
+<div class="outline-text-3" id="text-org6afc41a">
+<pre class="example">
+sudo apt-get install mysql-server phpmyadmin mysql-client
+</pre>
+
+<p>
+creates a webinterface for configuring the MySql db
+</p>
+<ul class="org-ul">
+<li><p>
+Configuration
+in /etc/mysql/my.cnf
+</p>
+<div class="VERBATIM" id="orgb317f42">
+<p>
+[mysqld]
+innodb_buffer_pool_size = 512M
+#innodb_buffer_pool_instance = 1
+innodb_flush_log_at_trx_commit = 2
+innodb_log_buffer_size = 32M
+innodb_max_dirty_pages_pct = 90
+innodb_thread_concurrency = 8
+</p>
+
+</div></li>
+</ul>
+<p>
+Log in mysql (with root pwd)
+</p>
+<pre class="example">
+mysql -u root -p
+SHOW DATABASES;
+</pre>
+
+
+<p>
+The data base is called <code>nextcloud</code>.
+</p>
+</div>
+</div>
+<div id="outline-container-org855398f" class="outline-3">
+<h3 id="org855398f">PHP</h3>
+<div class="outline-text-3" id="text-org855398f">
+<pre class="example">
+sudo apt-get install php libapache2-mod-php php-mcrypt php-mysql php-json php-gd php-curl php-mbstring php-intl php-imagick php-xml php-zip php-common php-apcu php-xml-parser curl libcurl3-dev
+</pre>
+</div>
+</div>
+<div id="outline-container-orgfeca880" class="outline-3">
+<h3 id="orgfeca880">Download Nextcloud</h3>
+<div class="outline-text-3" id="text-orgfeca880">
+<pre class="example">
+cd /var/www
+sudo wget https://download.nextcloud.com/server/releases/latest.zip
+sudo unzip latest.zip
+sudo rm latest.zip
+</pre>
+
+
+<p>
+change Owner and Group
+</p>
+<pre class="example">
+sudo chown -R www-data:www-data /var/www/html/nextcloud
+</pre>
+
+
+<p>
+create a MySql database for Nextcloud:
+</p>
+<pre class="example">
+mysql -u root -p
+CREATE DATABASE nextcloud;
+CREATE USER 'h...'@'localhost' IDENTIFIED BY 'Ph...';
+GRANT ALL ON nextcloud.* TO 'h...'@'localhost' IDENTIFIED BY 'Ph..' WITH GRANT OPTION;
+FLUSH PRIVILEGES;
+EXIT;
+</pre>
+
+
+<p>
+Maybe you have to do this:
+</p>
+<pre class="example">
+sudo ln -s /etc/phpmyadmin/apache.conf /etc/apache2/conf-available/phpmyadmin.conf
+sudo a2enconf phpmyadmin.conf
+sudo systemctl restart apache2
+</pre>
+
+
+<p>
+log in with root and the pwd from the mysql installation.
+Neu-&gt; enter "nextcloud" -&gt; Anlegen
+</p>
+
+<p>
+Change DocumentRoot:
+In the two files
+</p>
+<ul class="org-ul">
+<li>/etc/apache2/sites-available/000-default.conf</li>
+<li>/etc/apache2/sites-available/000-default-le-ssl.conf</li>
+</ul>
+
+<p>
+change
+DocumentRoot /var/www/html
+to
+DocumentRoot /var/www/html/nextcloud
+</p>
+
+<p>
+At the end of the file add:
+</p>
+
+<p>
+&lt;Directory /var/www/html/nextcloud/&gt;
+ Options +FollowSymlinks
+ AllowOverride All
+&lt;/Directory&gt;
+</p>
+
+<p>
+Then restart
+</p>
+<pre class="example">
+sudo service apache2 restart
+</pre>
+</div>
+</div>
+<div id="outline-container-org2bf5780" class="outline-3">
+<h3 id="org2bf5780">Duck DNS</h3>
+<div class="outline-text-3" id="text-org2bf5780">
+<p>
+joesanmarzano.duckdns.org
+Don't use Reddit Login anymore!
+</p>
+</div>
+</div>
+<div id="outline-container-orga471c1f" class="outline-3">
+<h3 id="orga471c1f">Install Let's Encrypt</h3>
+<div class="outline-text-3" id="text-orga471c1f">
+<pre class="example">
+sudo a2enmod ssl
+sudo a2enmod headers
+sudo service apache2 restart
+sudo apt install git -y
+cd /etc
+sudo git clone https://github.com/letsencrypt/letsencrypt
+cd letsencrypt
+sudo ./letsencrypt-auto
+</pre>
+</div>
+</div>
+<div id="outline-container-orgc6361b2" class="outline-3">
+<h3 id="orgc6361b2">Renew Certificate automatically</h3>
+<div class="outline-text-3" id="text-orgc6361b2">
+<p>
+The Let's Encrypt Certificate runs out after 3 months.
+</p>
+
+<ul class="org-ul">
+<li><p>
+Create the file /etc/letsencrypt/cli.ini with the content:
+</p>
+<ul class="org-ul">
+<li>rsa-key-size = 4096</li>
+<li>text = True</li>
+<li>redirect = True</li>
+<li>renew-by-default = True</li>
+<li>agree-tos = True</li>
+<li>email = johann.hagler@gmail.com</li>
+</ul>
+<pre class="example">
+sudo /etc/letsencrypt/letsencrypt-auto certonly --agree-tos --renew-by-default -a webroot --webroot-path /var/www/html/ -d joesanmarzano.duckdns.org
+</pre>
+
+<p>
+(Note: <i>var/www/html</i> is the webroot)
+</p></li>
+
+<li><p>
+Insert command in crontab
+</p>
+<pre class="example">
+sudo crontab -e
+</pre>
+
+<p>
+This opens the cron config file for root.
+enter the above and save:
+</p>
+<pre class="example">
+/etc/letsencrypt/letsencrypt-auto certonly --agree-tos --renew-by-default -a webroot --webroot-path /var/www/html/ -d joesanmarzano.duckdns.org
+</pre></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga40f4cc" class="outline-3">
+<h3 id="orga40f4cc">Install Redis for memcache</h3>
+<div class="outline-text-3" id="text-orga40f4cc">
+<pre class="example">
+sudo apt-get install redis-server
+sudo apt-get install php-redis
+</pre>
+
+
+<p>
+You can verify that the Redis daemon is running with:
+</p>
+<pre class="example">
+ps ax | grep redis
+</pre>
+
+
+<p>
+/var/www/html/nextcloud/config/config.php configuration uses Redis for the local server cache:
+</p>
+
+<pre class="example">
+'memcache.local' =&gt; '\OC\Memcache\Redis',
+'redis' =&gt; array(
+    'host' =&gt; 'localhost',
+    'port' =&gt; 6379,
+     ),
+</pre>
+
+<p>
+For best performance, use Redis for file locking by adding this:
+</p>
+
+<pre class="example">
+'memcache.locking' =&gt; '\OC\Memcache\Redis'
+</pre>
+</div>
+</div>
+<div id="outline-container-org0bba9c8" class="outline-3">
+<h3 id="org0bba9c8">Use Cron for tasks instead of AJAX</h3>
+<div class="outline-text-3" id="text-org0bba9c8">
+<p>
+In <code>Einstellungen -&gt; Grundeinstellungen</code> select Cron.
+</p>
+
+<p>
+Create a cron job for <code>cron.php</code> for the web server user:
+</p>
+<pre class="example">
+crontab -u www-data -e
+*/15  *  *  *  * php -f /var/www/html/nextcloud/cron.php
+</pre>
+
+
+<p>
+Create a cron job for scanning files every hour:
+</p>
+<pre class="example">
+*  *  *  *  * php /var/www/html/nextcloud/occ files:scan --all
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbaa1c46" class="outline-2">
+<h2 id="orgbaa1c46">Maintenance</h2>
+<div class="outline-text-2" id="text-orgbaa1c46">
+<p>
+Execute the occ commands in <code>/var/www/html/nextcloud</code>.
+(You need to be su!)
+</p>
+
+<p>
+Set maintenance mode:
+</p>
+<pre class="example">
+sudo -u www-data php occ maintenance:mode --on
+</pre>
+
+<p>
+(or in config.php:  "maintenance" =&gt; true,)
+</p>
+</div>
+
+<div id="outline-container-orge29d027" class="outline-3">
+<h3 id="orge29d027">Rescan files on external drive</h3>
+<div class="outline-text-3" id="text-orge29d027">
+<p>
+If you have e.g. locking issues.
+</p>
+
+<pre class="example">
+sudo -u www-data php occ files:scan hamajo75 --path /hamajo75/files/BigData
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org602e403" class="outline-3">
+<h3 id="org602e403">Delete files_versions</h3>
+<div class="outline-text-3" id="text-org602e403">
+<pre class="example">
+sudo -u www-data php occ versions:cleanup
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org39aa808" class="outline-3">
+<h3 id="org39aa808">Rescan Files</h3>
+<div class="outline-text-3" id="text-org39aa808">
+<pre class="example">
+sudo -u www-data php occ files:scan --all
+</pre>
+</div>
+</div>
+<div id="outline-container-orge2a2c45" class="outline-3">
+<h3 id="orge2a2c45">Unlock files</h3>
+<div class="outline-text-3" id="text-orge2a2c45">
+<ol class="org-ol">
+<li>put your nextcloud under maintenance mode on config.php , so no one access it while you are doing changes.</li>
+<li>open /var/www/nextcloud/config/config.php</li>
+<li>there should be a field the like this : " 'dbname' =&gt; " , in this field there is your database name.</li>
+</ol>
+
+<p>
+with root:
+</p>
+<pre class="example">
+mysql -u root -p
+</pre>
+
+
+<p>
+then connect to nextcloud database with the following command :
+</p>
+
+<pre class="example">
+connect nextcloud
+</pre>
+
+
+<p>
+after this point all you have to do is to issue the sql command to delete all data inside the oc_file_locks table
+</p>
+
+<pre class="example">
+DELETE FROM oc_file_locks WHERE 1
+</pre>
+
+
+<p>
+then after this point all you have to do is :
+\q to close sql prompt and you are done .
+</p>
+</div>
+</div>
+<div id="outline-container-org736f666" class="outline-3">
+<h3 id="org736f666">Disable File Versioning</h3>
+<div class="outline-text-3" id="text-org736f666">
+<p>
+If SD Card space runs out:
+In <code>/var/www/nextcloud/config/config.php</code> add:
+</p>
+<pre class="example">
+'versions_retention_obligation' =&gt; 'disabled',
+</pre>
+</div>
+</div>
+<div id="outline-container-org5dc3e3c" class="outline-3">
+<h3 id="org5dc3e3c">Renew Lets Encrypt Certificate</h3>
+<div class="outline-text-3" id="text-org5dc3e3c">
+<p>
+Simply start
+</p>
+<pre class="example">
+sudo ./letsencrpyt-auto
+</pre>
+
+<p>
+in <code>etc/letsencrypt/</code>
+</p>
+
+<p>
+or:
+</p>
+<pre class="example">
+sudo /etc/letsencrypt/letsencrypt-auto certonly --agree-tos --renew-by-default -a webroot --webroot-path /var/www/html/ -d joesanmarzano.duckdns.org
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org6e6c306" class="outline-2">
+<h2 id="org6e6c306">Issues Checklist</h2>
+<div class="outline-text-2" id="text-org6e6c306">
+</div>
+<div id="outline-container-org9dc9c68" class="outline-3">
+<h3 id="org9dc9c68">apache2</h3>
+<div class="outline-text-3" id="text-org9dc9c68">
+<pre class="example">
+sudo service apache2 restart
+</pre>
+
+
+<p>
+Check configuration
+</p>
+<pre class="example">
+sudo apache2ctl configtest
+</pre>
+</div>
+</div>
+<div id="outline-container-orgd18b6b7" class="outline-3">
+<h3 id="orgd18b6b7">duckdns</h3>
+<div class="outline-text-3" id="text-orgd18b6b7">
+<ul class="org-ul">
+<li>check ip address (84.112.92.246)</li>
+<li>UPC ip change</li>
+<li>Sometimes there are DNS issues that disappear after a while.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org7f5aaae" class="outline-3">
+<h3 id="org7f5aaae">letsencrypt</h3>
+</div>
+<div id="outline-container-orga43e37e" class="outline-3">
+<h3 id="orga43e37e">root (/) is full</h3>
+<div class="outline-text-3" id="text-orga43e37e">
+<p>
+Usually it is the <code>/var/www/html/nextcloud/data/files_versions</code> folder.
+</p>
+<pre class="example">
+du -sh * | sort -h           show sizw of folders
+ncdu                         analyze disk usage
+df -h                        show usage of disks
+</pre>
+
+
+<p>
+Most likely the reason is that old file versions are kept on the sd card.
+See <a href="#org736f666">Disable File Versioning</a>
+</p>
+
+<p>
+Do this:
+</p>
+<pre class="example">
+sudo -u www-data php occ versions:cleanup
+</pre>
+
+
+<p>
+Last time i had to delete the files in the folder manually.
+</p>
+
+<p>
+Other problematic locations:
+</p>
+<ul class="org-ul">
+<li>nextcloude/user/files_trashbin</li>
+<li>nextcloud/appdataX/preview</li>
+</ul>
+
+<p>
+Also check if the USB-Harddisks are mounted correctly:
+</p>
+<ul class="org-ul">
+<li>BigData</li>
+<li>BigDataBackup</li>
+</ul>
+
+<p>
+It happened that <code>BigDataBackup</code> was not mounted and somehow the backup was written
+to the sd card.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org45b98fd" class="outline-3">
+<h3 id="org45b98fd">Login doesn't work</h3>
+<div class="outline-text-3" id="text-org45b98fd">
+<p>
+The login page is just refreshed.
+</p>
+<ul class="org-ul">
+<li>This happens when the sd card is too full. See above.</li>
+<li>Last time it was also necessary to delete browser history.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org6537f68" class="outline-3">
+<h3 id="org6537f68">deleted folder reappearing</h3>
+<div class="outline-text-3" id="text-org6537f68">
+<p>
+owner, rights issue
+~&gt; change with chown, chmod
+</p>
+</div>
+</div>
+<div id="outline-container-org44338ce" class="outline-3">
+<h3 id="org44338ce">Odroid XU4 can't start after power outage because Backup Disk has invalid sectors</h3>
+<div class="outline-text-3" id="text-org44338ce">
+<p>
+~&gt; correct errors on PC in Kubuntu with
+</p>
+<pre class="example">
+fsck /dev/sda1
+</pre>
+
+<p>
+and reconnect disk to odroid.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgbd96eab" class="outline-3">
+<h3 id="orgbd96eab">Troubleshooting</h3>
+<div class="outline-text-3" id="text-orgbd96eab">
+<p>
+Start Nextcloud client with logging:
+</p>
+<pre class="example">
+"C:\Program Files\Nextcloud\nextcloud.exe" --logfile C:\Users\jh\Desktop\Nextcloud.log
+</pre>
+
+
+<p>
+Logfiles:
+</p>
+<ul class="org-ul">
+<li>/var/log/apache2/error.log</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org79c3ca5" class="outline-2">
+<h2 id="org79c3ca5">Nextcloud Clients</h2>
+<div class="outline-text-2" id="text-org79c3ca5">
+</div>
+<div id="outline-container-orgbce6f77" class="outline-3">
+<h3 id="orgbce6f77">Deploy data to client pc without syncing</h3>
+<div class="outline-text-3" id="text-orgbce6f77">
+<p>
+How to move big folders (e.g. 100 GB) to a client pc without syncing via Internet?
+</p>
+
+<ol class="org-ol">
+<li>You have to sync them to at least one pc.
+<ul class="org-ul">
+<li>Do that via the internal network: <a href="http://192.168.0.27/nextcloud">http://192.168.0.27/nextcloud</a></li>
+<li>Take care that you sync all files: Check Ignored Files List.
+There might be a problem with "Computer Aufsetzen".</li>
+</ul></li>
+<li>If you create a perfect copy, that should do the trick.
+<ul class="org-ul">
+<li>Stop Nextcloud Client (don't start it until deployment is finished).
+<ul class="org-ul">
+<li><p>
+Copy Nextcloud folder to USB Drive and then to Client PC.
+</p>
+
+<p>
+Local Client:
+<code>robocopy c:\users\joe\Nextcloud e:\Nextcloud /mir /copyall /dcopy:T</code>
+</p>
+
+<p>
+Remote Client:
+<code>robocopy f:\Nextcloud c:\joe\Nextcloud /mir /copyall /dcopy:T</code>
+</p></li>
+
+<li>in Nextcloud Client do:
+<ul class="org-ul">
+<li>Remove Account (somehow removing only the Sync Connection doesn't work).</li>
+<li>Add new Account.</li>
+<li>For whatever reason the first time Nextcloud starts to download the files.
+In this case stop Nextcloud, delete the <code>*.dp</code> files in the Nextcloud folder
+and copy them again. Then remove and add the Account again.</li>
+</ul></li>
+</ul></li>
+</ul></li>
+</ol>
+
+<p>
+<b>How does Nextcloud decide that a file needs to be synced?</b>
+</p>
+
+<p>
+The Nextcloud server provides a unique number that changes whenever a file or folder changes. This
+number is chosen randomly and transmitted via http in the ETag field. The ETag value is queried from
+the client database and compared to the server value. If the value is the same, the file has not
+been changed and no synchronization will be done.
+</p>
+
+<ul class="org-ul">
+<li>csync is used in the background.</li>
+<li>ETag value is compared.</li>
+<li>file modification timestamp + file ID is used.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org304c2d1" class="outline-3">
+<h3 id="org304c2d1">Logging Sync Activities</h3>
+<div class="outline-text-3" id="text-org304c2d1">
+<p>
+Start Nextcloud client with logging:
+</p>
+<pre class="example">
+"C:\Program Files\Nextcloud\nextcloud.exe" --logfile C:\Users\jh\Desktop\Nextcloud.log
+</pre>
+
+
+<p>
+Interesting Lines are:
+</p>
+<pre class="example">
+OCC::FolderWatcher::changeDetected
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-org7578d28" class="outline-2">
+<h2 id="org7578d28">Upgrade Nextcloud Server</h2>
+<div class="outline-text-2" id="text-org7578d28">
+</div>
+<div id="outline-container-orgaf7c673" class="outline-3">
+<h3 id="orgaf7c673">Backup</h3>
+<div class="outline-text-3" id="text-orgaf7c673">
+<p>
+Turn on maintenance mode
+</p>
+<pre class="example">
+cd /var/www/html/nextcloud
+sudo -u www-data php occ maintenance:mode --on
+</pre>
+
+
+<p>
+Backup folders
+</p>
+<pre class="example">
+rsync -Aavx nextcloud/ /media/BigData/Backup/Nextcloud/nextcloud_`date +"%Y%m%d"`/
+</pre>
+
+
+<p>
+Backup mysql database
+</p>
+<pre class="example">
+mysqldump --single-transaction -u root -p nextcloud &gt; /media/BigData/Backup/Nextcloud/nextcloud_mysql_backup_`date +"%Y%m%d"`.bak
+</pre>
+
+
+<p>
+Turn off maintenence mode
+</p>
+<pre class="example">
+sudo -u www-data php occ maintenance:mode --off
+</pre>
+</div>
+
+<div id="outline-container-orgcb28452" class="outline-4">
+<h4 id="orgcb28452">Restore Backup</h4>
+<div class="outline-text-4" id="text-orgcb28452">
+<p>
+Turn on maintenance mode
+</p>
+<pre class="example">
+cd /var/www/html/nextcloud
+sudo -u www-data php occ maintenance:mode --on
+</pre>
+
+
+<p>
+Restore folders
+</p>
+<pre class="example">
+rsync -Aax  /media/BigData/Backup/Nextcloud/nexcloud_&lt;DATE&gt;/ /var/www/html/nextcloud/
+</pre>
+
+
+<p>
+Restore mysql database
+</p>
+<ul class="org-ul">
+<li><p>
+Drop &amp; Recreate database
+</p>
+<pre class="example">
+mysql -u root -p -e "DROP DATABASE nextcloud"
+mysql -u root -p -e "CREATE DATABASE nextcloud"
+</pre></li>
+<li><p>
+Restore backup
+</p>
+<pre class="example">
+mysql -u root -p nextcloud &lt; /media/BigData/Backup/Nextcloud/nextcloud-mysql_backup_&lt;DATE&gt;.bak
+</pre></li>
+</ul>
+
+<p>
+Make sure sync clients can recover from backup:
+</p>
+<pre class="example">
+sudo -u www-data php occ maintenance:data-fingerprint
+</pre>
+
+
+<p>
+Turn off maintenence mode
+</p>
+<pre class="example">
+sudo -u www-data php occ maintenance:mode --off
+</pre>
+</div>
+</div>
+</div>
+<div id="outline-container-orge2ea2a1" class="outline-3">
+<h3 id="orge2ea2a1">Upgrade</h3>
+<div class="outline-text-3" id="text-orge2ea2a1">
+<p>
+Notes:
+</p>
+<ul class="org-ul">
+<li>You cannot upgrade over multiple major version. So you have to do it step
+by step.</li>
+<li>It's assumed that you are <code>su</code>.</li>
+</ul>
+
+<p>
+Stop cron job (comment out line)
+</p>
+<pre class="example">
+crontab -e
+</pre>
+
+
+<p>
+Download desired versions of Nextcloud server from (to <code>/media/BigData/Download</code>)
+</p>
+<ul class="org-ul">
+<li><a href="https://nextcloud.com/install/">https://nextcloud.com/install/</a> (Archive File - Tab, zip-file)</li>
+</ul>
+
+<p>
+(repeat from here if multiple version updates are required)
+</p>
+<ol class="org-ol">
+<li>Turn on maintenance mode</li>
+</ol>
+<pre class="example">
+cd /var/www/html/nextcloud
+sudo -u www-data php occ maintenance:mode --on
+</pre>
+
+
+<ol class="org-ol">
+<li>Stop web server</li>
+</ol>
+<pre class="example">
+service apache2 stop
+</pre>
+
+
+<ol class="org-ol">
+<li>Replace nextcloud folder (in <code>/var/www/html</code>)</li>
+</ol>
+<pre class="example">
+rm -r nextcloud_old
+mv nextcloud nextcloud_old
+unzip /media/BigData/Download/nextcloud-[version].zip
+cp nextcloud_old/config/config.php nextcloud/config/config.php
+rsync -Aax nextcloud_old/data/ nextcloud/data/
+</pre>
+
+<p>
+(this takes a while)
+</p>
+
+<ol class="org-ol">
+<li>Set file permissions</li>
+</ol>
+<pre class="example">
+chown -R www-data:www-data nextcloud
+find nextcloud/ -type d -exec chmod 750 {} \;
+find nextcloud/ -type f -exec chmod 640 {} \;
+</pre>
+
+
+<ol class="org-ol">
+<li>Restart web server</li>
+</ol>
+<pre class="example">
+service apache2 start
+</pre>
+
+
+<ol class="org-ol">
+<li>Launch upgrade (in <code>/var/www/html/nextcloud</code>)</li>
+</ol>
+<pre class="example">
+sudo -u www-data php occ upgrade
+</pre>
+
+
+<ol class="org-ol">
+<li>Turn off maintenence mode</li>
+</ol>
+<pre class="example">
+sudo -u www-data php occ maintenance:mode --off
+</pre>
+
+
+<ol class="org-ol">
+<li>Check the webpage</li>
+<li><a href="https://joesanmarzano.duckdns.org/nextcloud/index.php/apps/dashboard/">https://joesanmarzano.duckdns.org/nextcloud/index.php/apps/dashboard/</a></li>
+<li>This also updates the version nr. in <code>config.php</code>.</li>
+</ol>
+
+<p>
+(go back to 1. when doing more updates)
+</p>
+
+<p>
+Enable cron job again
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb0fa114" class="outline-3">
+<h3 id="orgb0fa114">Issues</h3>
+<div class="outline-text-3" id="text-orgb0fa114">
+<ul class="org-ul">
+<li>Internal Server Error</li>
+</ul>
+<pre class="example" id="org2a687e9">
+An unhandled exception has been thrown:
+Error: Undefined class constant 'MAJOR_VERSION' in /var/www/html/nextcloud/3rdparty/guzzlehttp/guzzle/src/Utils.php:118
+</pre>
+<p>
+Solution: delete app <code>files_external_gdrive</code> from <code>nextcloud/apps</code> folder.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4af93d7" class="outline-2">
+<h2 id="org4af93d7">Tipps &amp; Tricks</h2>
+<div class="outline-text-2" id="text-org4af93d7">
+</div>
+<div id="outline-container-org9912d38" class="outline-3">
+<h3 id="org9912d38">File extensions</h3>
+<div class="outline-text-3" id="text-org9912d38">
+<p>
+Change the mimetype mapping to open e.g. ".log" files with the editor.
+</p>
+<ul class="org-ul">
+<li><a href="https://docs.nextcloud.com/server/latest/admin_manual/configuration_mimetypes/index.html">https://docs.nextcloud.com/server/latest/admin_manual/configuration_mimetypes/index.html</a></li>
+</ul>
+<p>
+Be patient it takes a while until the mapping is updated.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2023-12-01 Fri 16:01</p>
+</div>
+</body>
+</html>

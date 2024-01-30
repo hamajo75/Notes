@@ -1,0 +1,1098 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-01-16 Tue 06:00 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Computer Networks</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="shortcut icon" href="/public_html/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/html-export.css"/>
+<link rel="stylesheet" type="text/css" href="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/css/hideshow.css"/>
+<link rel="stylesheet" type="text/css" href="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/css/code.css">
+
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery.zclip.min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/bigblow.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/hideshow.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery.stickytableheaders.min.js"></script>
+</head>
+<body>
+<div style = "text-align: right; margin-top: 5px">
+   <a accesskey="h" href="" style="font: 20px arial,helvetica,clean,sans-serif"></a>
+   <a accesskey="H" href="https://joesanmarzano.duckdns.org/public_html/" style="font: 20px arial,helvetica,clean,sans-serif;margin: 30px;"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Computer Networks</h1>
+
+<div id="outline-container-orge2498a0" class="outline-2">
+<h2 id="orge2498a0">General</h2>
+<div class="outline-text-2" id="text-orge2498a0">
+<ul class="org-ul">
+<li>Documents reflecting the activities of the internet community are called RFCs (Request for Comments).
+(e.g. original TCP Standard from 1981: <a href="https://www.rfc-editor.org/rfc/rfc793.html">https://www.rfc-editor.org/rfc/rfc793.html</a>).</li>
+</ul>
+</div>
+
+<div id="outline-container-org2034626" class="outline-3">
+<h3 id="org2034626">Connections</h3>
+<div class="outline-text-3" id="text-org2034626">
+<dl class="org-dl">
+<dt>Connection oriented</dt><dd>First a connection is established, then data can be send.
+A server must listen to connection requests.</dd>
+<dt>TCP/IP protocol suite</dt><dd>Family of ~ 500 protocols forming the basis of communication on the internet
+(e.g. IP, ICMP, ARP, UDP, TCP, IGMP, &#x2026;).</dd>
+</dl>
+
+<p>
+line switching vs. packet switching
+Leitungsvermittelte Netze vs. paketvermittelte Netze
+e.g. Telefon vs. Internet
+</p>
+
+<p>
+Packet switching is either based on datagrams (connectionless) or on virtual
+connections.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org80bfe42" class="outline-3">
+<h3 id="org80bfe42">Routing vs. Bridging vs. Switching</h3>
+<div class="outline-text-3" id="text-org80bfe42">
+<ul class="org-ul">
+<li>Routing allows communication over separated networks.</li>
+<li>Bridging connects multiple network segments (same network) as if they were one single network (Data link layer 2).
+It basically forwards a packet to the other network segment if necessary (or not if not necessary, avoiding traffic).</li>
+<li>Switching is done (e.g by an Ethernet switch or a Linux bridge) on layer 2. A switch holds a mapping of MAC addresses to ports.</li>
+</ul>
+
+<p>
+What is routing?
+</p>
+<ul class="org-ul">
+<li>In a packet switching network routing refers to the process of forwarding packets across multiple networks via different network nodes.</li>
+<li>Usually uses routing tables containing routes to network destinations.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org82725ad" class="outline-2">
+<h2 id="org82725ad">Distributed Systems</h2>
+<div class="outline-text-2" id="text-org82725ad">
+</div>
+<div id="outline-container-orgc053bf0" class="outline-3">
+<h3 id="orgc053bf0">Introduction</h3>
+<div class="outline-text-3" id="text-orgc053bf0">
+<p>
+<b>Definition:</b> A <b>Distributed System</b> is a system of heterogeneous, independent
+computers appearing to the user as one single coherent system. <sup><a id="fnr.1" name="fnr.1" class="footref" href="#fn.1" role="doc-backlink">1</a></sup>
+</p>
+
+<ul class="org-ul">
+<li>The internal system (hardware, operating systems) is hidden from the user.</li>
+<li>Distributed systems should be easy to expand and scale.</li>
+<li>Distributed systems should make resources easily accessible.</li>
+</ul>
+
+<p>
+Why create Distributed Systems?
+</p>
+<ul class="org-ul">
+<li>Make remote resources (printer, storage, networks, etc.) available to a user easily.</li>
+<li>Distributed systems scale nicely (just add a new data center).</li>
+<li>Fault tolerance (multiple data centers in different locations).</li>
+<li>Low Latency (have a node nearby).</li>
+</ul>
+
+<p>
+A Distributed System that looks like one computer is called <b>transparent</b> (<b>Distribution Transparency</b>).
+</p>
+
+<p>
+What types of hiding (transparency) resources are there?
+</p>
+<ul class="org-ul">
+<li>Access : Hide how a resource is accessed.</li>
+<li>Location : Hide where it is.</li>
+<li>Migration : Hide that it might have been moved.</li>
+<li>Relocation : Hide that it might have been moved while in use.</li>
+<li>Replication : Hide that it has been replicated.</li>
+<li>Concurrency : Hide that it might be shared with other users.</li>
+<li>Failure : Hide failure and recovery.</li>
+</ul>
+
+<p>
+Transaction follow the ACID-principle:
+</p>
+<ul class="org-ul">
+<li>Atomic: appear as indivisible</li>
+<li>Consistent: transactions don't violate system invariants.
+For example replicated databases might become inconsistent.</li>
+<li>Isolated: Concurrent transactions don't interfere with each other.</li>
+<li>Durable: Changes are permanent.</li>
+</ul>
+
+<p>
+A distributed system can be organized as a <b>middleware</b> layer extending
+over multiple machines allowing applications the same interface.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org747cccb" class="outline-3">
+<h3 id="org747cccb">Scalabilty</h3>
+<div class="outline-text-3" id="text-org747cccb">
+<ul class="org-ul">
+<li>size</li>
+<li>distance</li>
+<li>administrative</li>
+</ul>
+
+<p>
+Scaling Techniques
+</p>
+<ul class="org-ul">
+<li>hiding communication latencies
+<ul class="org-ul">
+<li>asynchronous communication</li>
+<li>reduce overall communication</li>
+</ul></li>
+<li>distribution
+<ul class="org-ul">
+<li>Example: DNS, name resolution is distributed across several machines</li>
+</ul></li>
+<li>replication
+<ul class="org-ul">
+<li>cashing</li>
+<li>leads to consistency problems</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org2b57c61" class="outline-3">
+<h3 id="org2b57c61">Various topics</h3>
+<div class="outline-text-3" id="text-org2b57c61">
+<p>
+Interface Definition Language (IDL)
+Remote Procedure Call (RPC)
+</p>
+
+<p>
+Virtualization
+Middleware
+Server/Client vs. Peer to peer
+</p>
+</div>
+</div>
+<div id="outline-container-org6493782" class="outline-3">
+<h3 id="org6493782">Processes</h3>
+<div class="outline-text-3" id="text-org6493782">
+</div>
+<div id="outline-container-org6444e33" class="outline-4">
+<h4 id="org6444e33">Threads</h4>
+<div class="outline-text-4" id="text-org6444e33">
+<ul class="org-ul">
+<li>Using User-Level-Threads is fast.</li>
+<li>User-Level-Threads are all halted when a blocking system call is made.</li>
+<li>Using kernel threads is expensive.</li>
+<li>In between: Lightweight Processes (LWPs)</li>
+</ul>
+</div>
+
+<div id="outline-container-org4833825" class="outline-5">
+<h5 id="org4833825">Multithreaded Clients</h5>
+<div class="outline-text-5" id="text-org4833825">
+<p>
+For example Web browsers.
+Communictaion delays should be hidden from the user.
+After initiating a communication something else is typically happening (e.g. building up a web page).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org784fc45" class="outline-5">
+<h5 id="org784fc45">Multithreaded Servers</h5>
+<div class="outline-text-5" id="text-org784fc45">
+<p>
+A <b>concurrent server</b> passes a request to a separate thread or
+another process.
+</p>
+
+<p>
+A <b>superserver</b> (e.g. <code>inetd</code>) listens to multiple ports and then
+forks a process to handle it.
+</p>
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org6d30994" class="outline-3">
+<h3 id="org6d30994">Communication</h3>
+<div class="outline-text-3" id="text-org6d30994">
+<p>
+Two remote processes can communicate
+</p>
+<ul class="org-ul">
+<li>peer-to-peer: shared resource for data exchange</li>
+<li>client-server: client requests a resource from server</li>
+</ul>
+</div>
+
+<div id="outline-container-org694fb8d" class="outline-4">
+<h4 id="org694fb8d">Client Server Model</h4>
+<div class="outline-text-4" id="text-org694fb8d">
+<p>
+Two processes might interact
+</p>
+<ul class="org-ul">
+<li>sockets</li>
+<li>remote procedure calls (RPCs)</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4cf050d" class="outline-2">
+<h2 id="org4cf050d">HTTP</h2>
+<div class="outline-text-2" id="text-org4cf050d">
+<p>
+Client to server request
+</p>
+<div class="picture" id="org83d5df5">
+
+<div id="orgff100dd" class="figure">
+<p><img src="resources/HTTP_Transaction.PNG" alt="HTTP_Transaction.PNG" />
+</p>
+</div>
+
+</div>
+
+<ol class="org-ol">
+<li>Establish TCP connection.</li>
+<li>Send: this is the HTTP request.</li>
+<li>The Web Server processes the request and sends back the data.</li>
+</ol>
+
+<p>
+<code>GET</code> command
+</p>
+<div class="picture" id="org88c2ef1">
+
+<div id="org022856c" class="figure">
+<p><img src="resources/HTTP_GET_Request.PNG" alt="HTTP_GET_Request.PNG" />
+</p>
+</div>
+
+</div>
+
+<p>
+Notes:
+</p>
+<ul class="org-ul">
+<li>"GET /" means requesting the front page of the web site.</li>
+</ul>
+
+<p>
+Command line browser Lynx
+</p>
+<pre class="example">
+lynx -head -dump http://www.apache.org
+</pre>
+</div>
+
+<div id="outline-container-org4bce27e" class="outline-3">
+<h3 id="org4bce27e">Common Gateway Interface protocol (CGI)</h3>
+<div class="outline-text-3" id="text-org4bce27e">
+<p>
+Used to dynamically create web content.
+The content is e.g. created with a perl script.
+</p>
+
+<p>
+Obsolete with JavaScript.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-orgd8f6674" class="outline-2">
+<h2 id="orgd8f6674">IP Addresses, Subnetting, NAT</h2>
+<div class="outline-text-2" id="text-orgd8f6674">
+<ul class="org-ul">
+<li>4 octets</li>
+<li>slash notation: 192.168.1.0/24 means 24 1s in network mask (class C network)</li>
+</ul>
+</div>
+
+<div id="outline-container-org554f9e2" class="outline-3">
+<h3 id="org554f9e2">Subnetting</h3>
+<div class="outline-text-3" id="text-org554f9e2">
+<ul class="org-ul">
+<li>Break a network into subnets
+<ul class="org-ul">
+<li>broadcast: Who is 192.168.1.73 ? (doesn't cross routers)</li>
+<li>use small networks to limit traffic</li>
+</ul></li>
+<li>Network address: e.g. 192.168.1.0</li>
+
+<li>Host address (computer in a network) e.g. 192.168.1.10</li>
+<li>The subnet mask, masks out the part of the IP address that
+represents the network address, e.g.
+Subnet mask: 255.255.255.0 tells us that the first 3 bytes
+of e.g. 192.168.1.25 are the network address.</li>
+<li>Create subnets:
+<ul class="org-ul">
+<li>Let's say we want 3 subnets.</li>
+<li>255.255.255.0     1 network,  254 hosts (all 0, all 1 is reserved for network id and broadcast id)</li>
+<li>255.255.255.128   2 networks, 126 hosts each</li>
+<li>255.255.255.192   4 networks, 62 hosts each</li>
+</ul></li>
+<li>A, B, C class networks have the following default subnet masks:
+<ul class="org-ul">
+<li>255.0.0.0</li>
+<li>255.255.0.0</li>
+<li>255.255.255.0</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5c785a7" class="outline-3">
+<h3 id="org5c785a7">NAT</h3>
+<div class="outline-text-3" id="text-org5c785a7">
+<p>
+Network Address Translation
+</p>
+
+<p>
+One public IP address servers multiple private hosts.
+</p>
+<ul class="org-ul">
+<li>Router: 60.202.151.70</li>
+<li>various devices are connected to the Router with private IP addressses (192.168.0.X)</li>
+<li>How does an IP packet find it's way to the private host via the Router?
+<ul class="org-ul">
+<li>Routing Table in the Router</li>
+<li>IP packets go through the routing table.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org965a1ef" class="outline-3">
+<h3 id="org965a1ef">CIDR</h3>
+<div class="outline-text-3" id="text-org965a1ef">
+<p>
+Classless Inter-Domain Routing with
+Variable Length Subnet Masks (VLSM).
+</p>
+
+<ul class="org-ul">
+<li>IP addresses are wasted due to subnetting.</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org77944c5" class="outline-2">
+<h2 id="org77944c5">Issues</h2>
+<div class="outline-text-2" id="text-org77944c5">
+</div>
+<div id="outline-container-org4323337" class="outline-3">
+<h3 id="org4323337">Switching Loop</h3>
+<div class="outline-text-3" id="text-org4323337">
+<p>
+A switching loop, in the context of networking, is a situation where data packets within a network become trapped
+in an endless loop, continuously circulating between network devices. This can happen when there are redundant or
+misconfigured connections in a network, causing packets to be forwarded indefinitely. Switching loops can lead to
+network congestion, degradation of performance, and even network outages. They are typically avoided and mitigated
+through the use of loop prevention mechanisms like Spanning Tree Protocol (STP) in Ethernet networks.
+</p>
+</div>
+
+<div id="outline-container-orgbce838e" class="outline-4">
+<h4 id="orgbce838e">Broadcast Storm</h4>
+<div class="outline-text-4" id="text-orgbce838e">
+<p>
+A broadcast storm in networking occurs when a large number of broadcast packets flood the network continuously.
+ARP (Address Resolution Protocol) is a common source of broadcast packets in these storms as they broadcasted
+to everyone (target address: FF:FF:FF:FF:FF:FF). The flooding happens when there is a switching loop in the
+network and the ARP packets circle continuously.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4611def" class="outline-4">
+<h4 id="org4611def">Spanning Tree Protocol (STP)</h4>
+<div class="outline-text-4" id="text-org4611def">
+<p>
+Spanning Tree Protocol (STP) is a network protocol designed to prevent and manage switching loops in Ethernet
+networks. Switching loops can lead to network congestion and instability, and STP's primary function is to
+create a loop-free logical topology within a network. Here's a brief overview of how STP works:
+</p>
+
+<ol class="org-ol">
+<li><b><b>Bridge ID and Root Bridge</b></b>:
+<ul class="org-ul">
+<li>Each network bridge (Ethernet switch) in the network is assigned a unique Bridge ID, consisting of a
+Bridge Priority value and the switch's MAC address.</li>
+<li>The switch with the lowest Bridge ID becomes the Root Bridge, serving as the reference point for the
+entire spanning tree.</li>
+</ul></li>
+
+<li><b><b>Bridge Protocol Data Units (BPDU)</b></b>:
+<ul class="org-ul">
+<li>STP relies on Bridge Protocol Data Units, or BPDUs, which are special control messages exchanged between switches.</li>
+<li>BPDUs contain information about the sending switch, including its Bridge ID, the ID of the Root Bridge, and the cost to reach the Root Bridge.</li>
+</ul></li>
+
+<li><b><b>Root Bridge Election</b></b>:
+<ul class="org-ul">
+<li>Initially, all switches assume they are the Root Bridge and broadcast BPDUs with their own Bridge ID.</li>
+<li>When a switch receives a BPDU from another switch, it compares the received Root Bridge ID with its own.
+If the received ID is lower, it acknowledges the other switch as the Root Bridge and stops broadcasting its BPDUs.
+If not, it continues broadcasting its BPDUs.</li>
+</ul></li>
+
+<li><b><b>Building the Spanning Tree</b></b>:
+<ul class="org-ul">
+<li>Once the Root Bridge is established, each switch calculates the best path to reach the Root Bridge.</li>
+<li>Switches select one of their ports as the Root Port, which is the port through which they can reach
+the Root Bridge with the lowest cost.</li>
+<li>The other ports on each switch go into a blocking state to prevent loops. These ports are in the
+Discarding state, which means they don't forward data frames.</li>
+</ul></li>
+
+<li><b><b>Loop Prevention</b></b>:
+<ul class="org-ul">
+<li>If there are multiple paths to the Root Bridge, STP determines the best path by considering the path
+cost, which is based on the link speed or bandwidth. Lower cost paths are preferred.</li>
+<li>STP continuously monitors the network for changes. If a link failure or new link is detected, STP
+recalculates the spanning tree to adapt to the changes and prevent loops.</li>
+</ul></li>
+
+<li><b><b>Convergence</b></b>:
+<ul class="org-ul">
+<li>STP ensures network convergence, meaning that after the spanning tree topology is established,
+the network is stable and loop-free.</li>
+</ul></li>
+</ol>
+
+<p>
+In summary, STP works by electing a Root Bridge and calculating the best paths for all switches to reach it,
+while blocking redundant links to prevent switching loops. It continuously monitors the network for changes
+and adapts the spanning tree as needed to maintain a loop-free topology. The protocol is part of the IEEE 802.1D
+standard and has variations like Rapid Spanning Tree Protocol (RSTP) and Multiple Spanning Tree Protocol (MSTP)
+to improve convergence times and support multiple VLANs.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0228503" class="outline-2">
+<h2 id="org0228503">TCP and UDP</h2>
+<div class="outline-text-2" id="text-org0228503">
+<p>
+<sup><a id="fnr.2" name="fnr.2" class="footref" href="#fn.2" role="doc-backlink">2</a></sup>
+The <i>Internet Protocol (IP)</i> specifies how Information is exchanged on the Internet
+between Routers and Hosts. (The path the information takes is the <i>route</i>).
+</p>
+
+<p>
+The <i>Transmission Control Protocol (TCP)</i> and the <i>User Datagram Protocol (UDP)</i>
+on the other hand are used to exchange information
+between processes (not between hosts and routers) running on different hosts. So
+they both use <i>port numbers</i> to identify these processes.
+</p>
+
+<p>
+So <i>TCP</i> and <i>UDP</i> are logically located on a higher communication layer (above
+<i>IP</i>).
+</p>
+
+<p>
+<i>TCP</i> is connection oriented, byte stream based, if packets get lost they will be resent.
+<i>UDP</i> is a connectionless service without handshake mechanisms using datagrams.
+</p>
+
+<p>
+TCP establishes a connection between endpoints called sockets (ip address + port).
+A TCP connection is identifies by a quadrupel:
+</p>
+<pre class="example">
+(Source IP, Source Port, Destination IP, Destination Port)
+</pre>
+</div>
+
+<div id="outline-container-org99ca8d0" class="outline-3">
+<h3 id="org99ca8d0">How the protocol works</h3>
+<div class="outline-text-3" id="text-org99ca8d0">
+</div>
+<div id="outline-container-orgd3e55cc" class="outline-4">
+<h4 id="orgd3e55cc">Connection establishment</h4>
+<div class="outline-text-4" id="text-orgd3e55cc">
+<ol class="org-ol">
+<li>Client sends a SYN packet (SYN bit set in header) with a (random) sequence number s to the server.</li>
+<li>The server responds with SYNACK incl. sequence nr. s+1 (or TCP-RST if the port is not open).</li>
+<li>Client sends an ACK packet with sequence nr. s+1</li>
+</ol>
+
+<pre class="example" id="org54e8234">
+Client                               Server
+
+  |    Client initiates connection     |
+  |    by sending a TCP SYN packet     |
+  |    with sequence number C          |
+  |-----------------------------------&gt;|
+  |                                    |
+  |    Server receives the SYN packet  |
+  |    with sequence number C and      |
+  |    sends SYN-ACK packet back       |
+  |    with sequence number S and      |
+  |    ACK number C+1                  |
+  |&lt;-----------------------------------|
+  |                                    |
+  |    Client receives the SYN-ACK     |
+  |    packet with sequence number S   |
+  |    and sends an ACK packet         |
+  |    with sequence number C+1 and    |
+  |    ACK number S+1                  |
+  |    to acknowledge the connection   |
+  |-----------------------------------&gt;|
+  |                                    |
+  |      Connection Established        |
+  |                                    |
+
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orge7efa1f" class="outline-4">
+<h4 id="orge7efa1f">TCP Retransmit</h4>
+<div class="outline-text-4" id="text-orge7efa1f">
+<ul class="org-ul">
+<li><a href="https://www.msxfaq.de/netzwerk/grundlagen/tcp_retransmit_und_sack.htm">https://www.msxfaq.de/netzwerk/grundlagen/tcp_retransmit_und_sack.htm</a></li>
+</ul>
+
+<p>
+The data stream send via a TCP connection is chopped into numbered packets (sequence nr.). If a packet gets
+lost it has to be retransmitted.
+</p>
+</div>
+</div>
+
+
+<div id="outline-container-orgc5eb103" class="outline-4">
+<h4 id="orgc5eb103">Connection termination</h4>
+</div>
+</div>
+<div id="outline-container-orgdc1c045" class="outline-3">
+<h3 id="orgdc1c045">Specifications</h3>
+<div class="outline-text-3" id="text-orgdc1c045">
+<p>
+Structure of a TCP-Segment:
+</p>
+<div class="PICTURE" id="org1833d65">
+
+<div id="orgb805db1" class="figure">
+<p><img src="resources/TCP Segment.PNG" alt="TCP Segment.PNG" />
+</p>
+</div>
+
+</div>
+
+<p>
+Establishing a TCP-Connection:<br />
+Synchronization Segments are being transmitted. Three ways handshake.
+</p>
+
+<ul class="org-ul">
+<li>Client: send SYN-Segment, with initial sequence number (client_isn)</li>
+<li>Server: send SYNACK-Segment, ACK Number: client_isn + 1, Seq Number: server_isn</li>
+<li>Client: send Segment with SYN-Bit 0, ACK Number: server_isn + 1</li>
+</ul>
+
+<p>
+Structure of a UDP-Segment:
+</p>
+<div class="PICTURE" id="orgee9d437">
+
+<div id="orgfe1a238" class="figure">
+<p><img src="resources/UDP_Segment_Structure.PNG" alt="UDP_Segment_Structure.PNG" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<div id="outline-container-org62998d5" class="outline-3">
+<h3 id="org62998d5">Sockets</h3>
+<div class="outline-text-3" id="text-org62998d5">
+<ul class="org-ul">
+<li>There are two kinds of sockets: Stream sockets (TCP), Datagram sockets (UDP).</li>
+<li>Sockets connect two devices. The are communication endpoints.</li>
+<li>Abstraction above the TCP layer.</li>
+</ul>
+
+<div class="PICTURE" id="org8bef217">
+
+<div id="org8963875" class="figure">
+<p><img src="resources/socket.PNG" alt="socket.PNG" />
+</p>
+</div>
+
+</div>
+
+<p>
+Uniquely identified by
+</p>
+<ul class="org-ul">
+<li>ip address</li>
+<li>end-to-end protocol (TCP or UDP)</li>
+<li>port number</li>
+</ul>
+
+<p>
+When you create a socket you get something like a file handle. The operations are different though.
+</p>
+
+<p>
+As a client you <code>connect</code> to a server.
+If your a server you <code>listen</code>, i.e. wait for clients, and <code>accept</code> to connect to a client.
+Once you have a connection you can <code>send</code> and <code>receive</code> data (like write and read with a file).
+</p>
+
+<p>
+<b>Socket Operations</b>
+</p>
+<ul class="org-ul">
+<li>socket (address_family, type, protocol) : Create a new endpoint, returns socket</li>
+<li>bind (sockid, &amp;addrport, size)          : Attach a local address to a socket</li>
+<li>listen (sockid, MAX_LENGTH)             : Accept connections, non-blocking</li>
+<li>accept ()                               : Block until request arrives, returns socket</li>
+<li>connect (sockid, &amp;serverAdd, size)      : Open connection to server (as a client), blocking</li>
+<li>send (sockid, msg, size, flags)         : send msg, blocking</li>
+<li>receive (sockid, recvBuf, size, flags)  : receive data, blocking</li>
+<li>close (sockid)                          : Close the connection</li>
+</ul>
+
+<p>
+Notes:
+</p>
+<ul class="org-ul">
+<li>A socket is an index into the socket table.</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga44d87c" class="outline-3">
+<h3 id="orga44d87c">lwip Library</h3>
+<div class="outline-text-3" id="text-orga44d87c">
+<ul class="org-ul">
+<li>Use raw/native API without operating system.</li>
+<li>Event oriented using callback functions.</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-orgda7aef4" class="outline-2">
+<h2 id="orgda7aef4">NFS</h2>
+</div>
+<div id="outline-container-org1a79eb7" class="outline-2">
+<h2 id="org1a79eb7">SMB/CIFS (SAMBA)</h2>
+<div class="outline-text-2" id="text-org1a79eb7">
+<p>
+Searches for shared Files and Printers using Broadcast.
+</p>
+
+<p>
+Configuration on Linux:
+</p>
+<pre class="example">
+/etc/samba/smb.conf
+</pre>
+</div>
+</div>
+<div id="outline-container-orgf152f67" class="outline-2">
+<h2 id="orgf152f67">Security</h2>
+<div class="outline-text-2" id="text-orgf152f67">
+</div>
+<div id="outline-container-org19f6e1f" class="outline-3">
+<h3 id="org19f6e1f">TLS / SSL</h3>
+<div class="outline-text-3" id="text-org19f6e1f">
+<ul class="org-ul">
+<li>asynchronous exchange of symmetric key</li>
+<li>authenticate</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org9d5785b" class="outline-2">
+<h2 id="org9d5785b">OSI Model</h2>
+<div class="outline-text-2" id="text-org9d5785b">
+<ul class="org-ul">
+<li>Layer 7 - Application Layer:    (HTTP, FTP, SSH, etc.)</li>
+<li>Layer 6 - Presentation Layer:</li>
+<li>Layer 5 - Session Layer:</li>
+<li>Layer 4 - Transport Layer:      ports (UPD, TCP, etc.)</li>
+<li>Layer 3 - Network Layer:        packets, routing, ip addresses (IP, etc. )</li>
+<li>Layer 2 - Data Link Layer:      frames, data integrity (CRC, parity bits, etc.) (MAC, etc.)</li>
+<li>Layer 1 - Physical Layer:       signals, cables, etc.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0026e1f" class="outline-2">
+<h2 id="org0026e1f">Web Programming</h2>
+<div class="outline-text-2" id="text-org0026e1f">
+<p>
+Client-Server Application using HTTP where the client is a
+web browser.
+</p>
+
+<ul class="org-ul">
+<li>Thin Client : Data processing is done only on the server.</li>
+<li>Rich Client : The client does more than just displaying the html-pages.</li>
+
+<li>Static content :  html- pages</li>
+<li>Dynamic content : content is generated on demand, e.g. JavaScript code generates content on the client side.</li>
+
+<li>Common Gateway Interface (CGI)</li>
+
+<li>Session ID : Is used to uniquely identify the requesting client program.</li>
+<li>URL-Rewriting</li>
+</ul>
+</div>
+<div id="outline-container-org5c53cdc" class="outline-3">
+<h3 id="org5c53cdc">Technologies</h3>
+<div class="outline-text-3" id="text-org5c53cdc">
+</div>
+<div id="outline-container-org0f644cc" class="outline-4">
+<h4 id="org0f644cc">ASP.NET</h4>
+<div class="outline-text-4" id="text-org0f644cc">
+<p>
+Model View Controller Pattern.
+</p>
+</div>
+</div>
+<div id="outline-container-orgd4f686d" class="outline-4">
+<h4 id="orgd4f686d">Java EE (Java Enterprise Edition)</h4>
+<div class="outline-text-4" id="text-orgd4f686d">
+<p>
+Collection of specifications for web based business applications.
+Can only be implemented in Java.
+</p>
+</div>
+</div>
+<div id="outline-container-org52cbc12" class="outline-4">
+<h4 id="org52cbc12">Ajax</h4>
+<div class="outline-text-4" id="text-org52cbc12">
+<p>
+(Asynchronous JavaScript and XML)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3566757" class="outline-4">
+<h4 id="org3566757">jQuery</h4>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc99aa71" class="outline-2">
+<h2 id="orgc99aa71">WIFI</h2>
+<div class="outline-text-2" id="text-orgc99aa71">
+</div>
+<div id="outline-container-orgfd3a77d" class="outline-3">
+<h3 id="orgfd3a77d">General</h3>
+<div class="outline-text-3" id="text-orgfd3a77d">
+<ul class="org-ul">
+<li>IEEE 802.11 based (a, g, n, ac, ax - efficiency) (IEEE 802.3 is for Ethernet)</li>
+<li>802.11 is only about Layer 1 (physical) and Layer 2
+(data link: frames) of the OSI - model.</li>
+<li>PHY (physical layer)</li>
+<li>802.11n - High Troughput - big step</li>
+<li>2.4 GHz problems:
+<ul class="org-ul">
+<li>channels overlap, effectively only 3 channels that
+don't overlap (1, 6, 11)</li>
+</ul></li>
+<li>half duplex</li>
+<li>management (negotiate connections), control (avoid collisions), data frames</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgc10b81c" class="outline-3">
+<h3 id="orgc10b81c">Frames</h3>
+<div class="outline-text-3" id="text-orgc10b81c">
+<p>
+Frames frame the payload, i.e. bits before or after the payload.
+E.g. a header before and some kind of data integrity info at the end.
+</p>
+
+<ul class="org-ul">
+<li>wifi protocol analyzers: frame and packet decoding</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org78b328b" class="outline-3">
+<h3 id="org78b328b">Access Points</h3>
+<div class="outline-text-3" id="text-org78b328b">
+<ul class="org-ul">
+<li>The only layer 2 element in a WLAN.</li>
+</ul>
+
+<p>
+Service is advertised, typically every 100ms.
+</p>
+
+<ul class="org-ul">
+<li>Switch: Layer 2 (MAC Addresses)</li>
+<li>Router: Layer 3 (IP Addresses)</li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orga77b01c" class="outline-3">
+<h3 id="orga77b01c">Topology</h3>
+<div class="outline-text-3" id="text-orga77b01c">
+<ul class="org-ul">
+<li>IBSS (Independent Base Service Set (ad-hoc)
+<ul class="org-ul">
+<li>Direct communication between 2 hosts.</li>
+</ul></li>
+<li>BSS (Basic Service Set)
+<ul class="org-ul">
+<li>Typical use. An Access Point makes the connection to a wired network.</li>
+</ul></li>
+<li>EBSS (Extended Service Set
+<ul class="org-ul">
+<li>Multiple Access Points.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org363388d" class="outline-2">
+<h2 id="org363388d">Links</h2>
+<div class="outline-text-2" id="text-org363388d">
+<ul class="org-ul">
+<li><a href="https://www.rfc-editor.org/">https://www.rfc-editor.org/</a></li>
+<li><a href="https://www.youtube.com/watch?v=PBWhzz_Gn10&amp;t=0s">Warriors of the net - Video</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgd062239" class="outline-2">
+<h2 id="orgd062239">Bibliography</h2>
+<div class="outline-text-2" id="text-orgd062239">
+<style>.csl-entry{text-indent: -1.5em; margin-left: 1.5em;}</style><div class="csl-bib-body">
+  <div class="csl-entry"><a id="citeproc_bib_item_1"></a>Tanenbaum, Andrew S., and Maarten van Steen. 2006. <i>Distributed Systems: Principles and Paradigms</i>. 2nd ed. USA: Prentice-Hall, Inc. <a href="https://joesanmarzano.duckdns.org/nextcloud/index.php/f/914592">https://joesanmarzano.duckdns.org/nextcloud/index.php/f/914592</a>.</div>
+  <div class="csl-entry"><a id="citeproc_bib_item_2"></a>Tanenbaum, Andrew S., and David Wetherall. 2011. <i>Computer Networks</i>. 5th ed. Boston: Prentice Hall. <a href="https://joesanmarzano.duckdns.org/nextcloud/index.php/f/915242">https://joesanmarzano.duckdns.org/nextcloud/index.php/f/915242</a>.</div>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<h2 class="footnotes">Footnotes: </h2>
+<div id="text-footnotes">
+
+<div class="footdef"><sup><a id="fn.1" name="fn.1" class="footnum" href="#fnr.1" role="doc-backlink">1</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">(<a href="#citeproc_bib_item_1">Tanenbaum and Steen 2006</a>)</p></div></div>
+
+<div class="footdef"><sup><a id="fn.2" name="fn.2" class="footnum" href="#fnr.2" role="doc-backlink">2</a></sup> <div class="footpara" role="doc-footnote"><p class="footpara">(<a href="#citeproc_bib_item_2">Tanenbaum and Wetherall 2011</a>)</p></div></div>
+
+
+</div>
+</div></div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-01-16 Tue 06:00</p>
+</div>
+</body>
+</html>

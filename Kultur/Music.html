@@ -1,0 +1,1449 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-01-21 Sun 06:00 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Music</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="shortcut icon" href="/public_html/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/html-export.css"/>
+<link rel="stylesheet" type="text/css" href="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/css/hideshow.css"/>
+<link rel="stylesheet" type="text/css" href="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/css/code.css">
+
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery.zclip.min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/bigblow.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/hideshow.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery.stickytableheaders.min.js"></script>
+</head>
+<body>
+<div style = "text-align: right; margin-top: 5px">
+   <a accesskey="h" href="" style="font: 20px arial,helvetica,clean,sans-serif"></a>
+   <a accesskey="H" href="https://joesanmarzano.duckdns.org/public_html/" style="font: 20px arial,helvetica,clean,sans-serif;margin: 30px;"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">Music</h1>
+
+<div id="outline-container-org3c6df89" class="outline-2">
+<h2 id="org3c6df89">Intervals</h2>
+<div class="outline-text-2" id="text-org3c6df89">
+</div>
+<div id="outline-container-org70056ac" class="outline-3">
+<h3 id="org70056ac">General</h3>
+<div class="outline-text-3" id="text-org70056ac">
+<p>
+C-Major Scale:
+</p>
+<pre class="example">
+C  D  E  F  G  A  B  C  D  E   F   G   A   B
+s1 s2 s3 s4 s5 s6 s7 s8 s9 s10 s11 s12 s13 s14
+</pre>
+
+
+<p>
+Intervals:
+</p>
+
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+
+
+<colgroup>
+<col  class="org-right" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-right">Semitones</th>
+<th scope="col" class="org-left">Notation</th>
+<th scope="col" class="org-left">Notes</th>
+<th scope="col" class="org-left">Interval names</th>
+<th scope="col" class="org-left">Interval names</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-right">0</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">C</td>
+<td class="org-left">s1 unison</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">1</td>
+<td class="org-left">(b9)</td>
+<td class="org-left">Cis, C sharp</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">kl. Sekunde</td>
+</tr>
+
+<tr>
+<td class="org-right">2</td>
+<td class="org-left">(9)</td>
+<td class="org-left">D</td>
+<td class="org-left">s2 major second</td>
+<td class="org-left">Sekunde</td>
+</tr>
+
+<tr>
+<td class="org-right">3</td>
+<td class="org-left">b3</td>
+<td class="org-left">Es, Dis, E flat, D sharp</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">kl. Terz</td>
+</tr>
+
+<tr>
+<td class="org-right">4</td>
+<td class="org-left">3</td>
+<td class="org-left">E</td>
+<td class="org-left">s3 major third</td>
+<td class="org-left">Terz</td>
+</tr>
+
+<tr>
+<td class="org-right">5</td>
+<td class="org-left">4(11)(sus4)</td>
+<td class="org-left">F</td>
+<td class="org-left">s4 perfect 4th</td>
+<td class="org-left">Quarte</td>
+</tr>
+
+<tr>
+<td class="org-right">6</td>
+<td class="org-left">b5</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">Tritonus</td>
+</tr>
+
+<tr>
+<td class="org-right">7</td>
+<td class="org-left">5</td>
+<td class="org-left">G</td>
+<td class="org-left">s5 perfect 5th</td>
+<td class="org-left">Quinte</td>
+</tr>
+
+<tr>
+<td class="org-right">8</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">kl. Sexte</td>
+</tr>
+
+<tr>
+<td class="org-right">9</td>
+<td class="org-left">6(13)</td>
+<td class="org-left">A</td>
+<td class="org-left">s6 major sixth</td>
+<td class="org-left">Sexte</td>
+</tr>
+
+<tr>
+<td class="org-right">10</td>
+<td class="org-left">7</td>
+<td class="org-left">Ais, A sharp</td>
+<td class="org-left">minor seventh</td>
+<td class="org-left">kl. Septime</td>
+</tr>
+
+<tr>
+<td class="org-right">11</td>
+<td class="org-left">maj7</td>
+<td class="org-left">B</td>
+<td class="org-left">s7</td>
+<td class="org-left">Septime</td>
+</tr>
+
+<tr>
+<td class="org-right">12</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">s8</td>
+<td class="org-left">Oktave</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-right">13</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">kl. None</td>
+</tr>
+
+<tr>
+<td class="org-right">14</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">s9 ninth</td>
+<td class="org-left">None</td>
+</tr>
+
+<tr>
+<td class="org-right">15</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">16</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">s10 tenth</td>
+<td class="org-left">Dezime</td>
+</tr>
+
+<tr>
+<td class="org-right">17</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">s11 eleventh</td>
+<td class="org-left">Undezime</td>
+</tr>
+
+<tr>
+<td class="org-right">18</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">19</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">s12 twelth</td>
+<td class="org-left">Duodezime</td>
+</tr>
+
+<tr>
+<td class="org-right">20</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+</tr>
+
+<tr>
+<td class="org-right">21</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">s13 thirteenth</td>
+<td class="org-left">Tredezime</td>
+</tr>
+</tbody>
+</table>
+
+<p>
+On the piano:
+</p>
+<div class="picture" id="orgdf4ec8d">
+
+<div id="orge3b56ec" class="figure">
+<p><img src="resources/Guitar/Intervals.PNG" alt="Intervals.PNG" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgf25df68" class="outline-3">
+<h3 id="orgf25df68">On the Guitar</h3>
+<div class="outline-text-3" id="text-orgf25df68">
+<p>
+Third
+</p>
+<pre class="example">
+|-b3|-3-|---|---|---|---|---|           g |-b3|-3-|---|---|---|---|
+|---|---|-1-|---|---|-b3|-3-|             |---|-1-|---|---|-b3|-3-|
+</pre>
+
+
+<pre class="example">
+|-4-|---|---|---|---|---|               g |---|-4-|---|---|---|---|
+|-1-|---|---|---|---|-4-|                 |-1-|---|---|---|---|-4-|
+</pre>
+
+<p>
+Fourth
+</p>
+
+<p>
+Fifth
+</p>
+<pre class="example">
+|-5-|---|---|---|---|---|                 |-5-|---|---|---|---|---|
+|---|---|---|---|---|-5-|                 |---|---|---|---|---|-5-|
+|---|---|---|-1-|---|---|               g |---|---|-1-|---|---|---|
+</pre>
+
+
+<p>
+Sixth
+</p>
+<pre class="example">
+|-5-|---|-6-|---|---|---|---|---|         |-5-|---|-6-|
+|---|---|---|---|---|-5-|---|-6-|         |---|---|---|
+|---|---|---|-1-|---|---|---|---|       g |---|---|-1-|
+</pre>
+
+
+<p>
+Seventh
+</p>
+<pre class="example">
+|-5-|---|-6-|---|-7-|                     |-5-|---|-6-|---|-7-|
+|---|---|---|---|---|                     |---|---|---|---|---|
+|---|---|---|-1-|---|                   g |---|---|-1-|---|---|
+</pre>
+
+
+
+<p>
+All intervals together:
+</p>
+<pre class="example" id="org60835dd">
+The numbers refer to the numbers in of the scale without 's' (e.g. s5).
+
+| |-4-|---|-5-|---|-6-|---|-7-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| |-1-|---|---|-b3|-3-|-4-|---|-5-|---|-6-|---|-7-|---|---|---|---|---|---|---|---|---|---|---|
+|5|---|-6-|---|-7-|-1-|---|---|-b3|-3-|-4-|---|-5-|---|-6-|---|---|---|---|---|---|---|---|---|
+| |-b3|-3-|-4-|---|-5-|---|-6-|---|-7-|-1-|---|---|---|---|---|---|---|---|---|---|---|---|---|
+| |---|---|-1-|---|---|-b3|-3-|-4-|---|-5-|---|-6-|---|-7-|-1-|---|---|---|---|---|---|---|---|
+| |---|---|---|---|---|---|---|-1-|---|---|-b3|-3-|---|---|---|---|---|---|---|---|---|---|---|
+            *       *       *       *          **           *       *       *
+</pre>
+
+<p>
+Intervals above the octave:
+</p>
+<pre class="example" id="org4e2ced5">
+|---|-13|---|---|---|---|---|---|---|---|  |---|-10|-11|---|-12|---|-13|---|---|---|
+|---|-10|-11|---|-12|---|-13|---|---|---|  |---|---|-o-|---|-9-|---|-10|-11|---|---|
+|---|-o-|---|-9-|---|-10|-11|---|---|---|  |---|---|---|---|---|---|-o-|---|---|---|
+|---|---|---|---|---|---|-o-|---|---|---|  |---|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|---|  |---|---|---|---|-1-|---|---|---|---|---|
+|---|---|---|---|-1-|---|---|---|---|---|  |---|---|---|---|---|---|---|---|---|---|
+
+o...octave
+</pre>
+
+<p>
+<b>Complementary intervals</b>
+</p>
+<ul class="org-ul">
+<li>Move the lower note one octave higher OR move the higher note one octave lower.</li>
+</ul>
+
+<p>
+We can turn things around and look at which intervals are reachable from a certain position.
+</p>
+<pre class="example" id="orga6fe304">
+|---|-6-|---|-7-|-o-|---|-2-|-b3|-4-|  |---|-7-|-o-|---|-2-|-b3|-4-|---|-5-|  |---|-2-|-b3|-3-|-4-|---|-5-|-6-|---|
+|---|-3-|-4-|---|-5-|---|-6-|---|-7-|  |---|---|-5-|---|-6-|---|-7-|-o-|---|  |---|---|---|---|-x-|---|---|---|---|
+|---|-o-|---|-2-|-b3|-3-|-4-|---|-5-|  |---|-2-|-b3|-3-|-4-|---|-5-|---|-6-|  |---|---|---|---|---|---|---|---|---|
+|---|-5-|---|-6-|---|-7-|-o-|---|-2-|  |---|---|---|---|-x-|---|-2-|-b3|-3-|  |---|---|---|---|---|---|---|---|---|
+|---|-2-|-b3|-3-|-4-|---|-5-|---|-6-|  |---|---|---|---|---|---|---|---|---|  |---|---|---|---|---|---|---|---|---|
+|---|---|---|---|-x-|---|-2-|-b3|-4-|  |---|---|---|---|---|---|---|---|---|  |---|---|---|---|---|---|---|---|---|
+
+For the g string there's a one fret shift to the right.
+
+|-4-|---|-5-|---|-6-|---|-7-|-o-|---|
+|---|---|-2-|-b3|-3-|-4-|---|-5-|---|
+|---|---|---|---|-x-|---|-2-|-b3|-4-|
+|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|
+|---|---|---|---|---|---|---|---|---|
+</pre>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-orga0f7d7d" class="outline-2">
+<h2 id="orga0f7d7d">Major Scale</h2>
+<div class="outline-text-2" id="text-orga0f7d7d">
+<p>
+<b>Structure</b>
+</p>
+<pre class="example">
+W W H W W W H
+2 3 4 5 6 7 8
+</pre>
+
+
+<div class="picture" id="orge3ad3f6">
+
+<div id="orgfb3356f" class="figure">
+<p><img src="resources/Guitar/Major Scale/Notes.PNG" alt="Notes.PNG" />
+</p>
+</div>
+
+
+<div id="org43ae0e1" class="figure">
+<p><img src="resources/Guitar/Major Scale/C Major Fretboard.PNG" alt="C Major Fretboard.PNG" />
+</p>
+</div>
+
+</div>
+</div>
+
+<div id="outline-container-org2005c08" class="outline-3">
+<h3 id="org2005c08">Patterns</h3>
+<div class="outline-text-3" id="text-org2005c08">
+<p>
+Pattern 1
+</p>
+<div class="picture" id="orgf6f6164">
+
+<div id="org50e1169" class="figure">
+<p><img src="resources/Guitar/Major Scale/Pattern 1.PNG" alt="Pattern 1.PNG" />
+</p>
+</div>
+
+</div>
+
+<p>
+3-Finger-Scale (see F-Lydian)
+</p>
+<div class="picture" id="org1f2cf53">
+
+<div id="org1acc293" class="figure">
+<p><img src="resources/Guitar/Major Scale/Modes/F_Lydian.png" alt="F_Lydian.png" />
+</p>
+</div>
+
+</div>
+
+<p>
+Pattern 2
+</p>
+<div class="picture" id="org2c29081">
+
+<div id="org55fa2a0" class="figure">
+<p><img src="resources/Guitar/Major Scale/Pattern 2.PNG" alt="Pattern 2.PNG" />
+</p>
+</div>
+
+</div>
+
+<p>
+3-Finger-Scale (see G-Mixolydian)
+</p>
+<div class="picture" id="orge694143">
+
+<div id="org1bac198" class="figure">
+<p><img src="resources/Guitar/Major Scale/Modes/G_Mixolydian.png" alt="G_Mixolydian.png" />
+</p>
+</div>
+
+</div>
+
+<p>
+Pattern 3
+</p>
+<div class="picture" id="org22af79d">
+
+<div id="org990fa80" class="figure">
+<p><img src="resources/Guitar/Major Scale/Pattern 3.PNG" alt="Pattern 3.PNG" />
+</p>
+</div>
+
+</div>
+<p>
+3-Finger-Scale (see A-Aeolian)
+</p>
+<div class="picture" id="orgf49e451">
+
+<div id="orga103121" class="figure">
+<p><img src="resources/Guitar/Major Scale/Modes/A_Aeolian.png" alt="A_Aeolian.png" />
+</p>
+</div>
+
+</div>
+
+<p>
+Pattern 4
+</p>
+<div class="picture" id="org26ca4ec">
+
+<div id="org8aa1f0d" class="figure">
+<p><img src="resources/Guitar/Major Scale/Pattern 4.PNG" alt="Pattern 4.PNG" />
+</p>
+</div>
+
+</div>
+<p>
+3-Finger-Scale (see B-Locrian)
+</p>
+<div class="picture" id="orgb003ab5">
+
+<div id="orgbf78216" class="figure">
+<p><img src="resources/Guitar/Major Scale/Modes/B_Locrian.png" alt="B_Locrian.png" />
+</p>
+</div>
+
+</div>
+
+<p>
+Pattern 5
+</p>
+<div class="picture" id="orgec5c56d">
+
+<div id="org177d55a" class="figure">
+<p><img src="resources/Guitar/Major Scale/Pattern 5.PNG" alt="Pattern 5.PNG" />
+</p>
+</div>
+
+</div>
+<p>
+3-Finger-Scale (see C-Ionian)
+</p>
+<div class="picture" id="orgfdb09a5">
+
+<div id="org98e6308" class="figure">
+<p><img src="resources/Guitar/Major Scale/Modes/C_Ionian.png" alt="C_Ionian.png" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3d15583" class="outline-2">
+<h2 id="org3d15583">Minor Scale</h2>
+<div class="outline-text-2" id="text-org3d15583">
+</div>
+<div id="outline-container-org243672a" class="outline-3">
+<h3 id="org243672a">Natural Minor</h3>
+<div class="outline-text-3" id="text-org243672a">
+<p>
+<b>Structure</b> <br />
+W H W W H W W
+</p>
+<div class="picture" id="org3f7ba3a">
+
+<div id="org6ccaf52" class="figure">
+<p><img src="resources/Guitar/Scales/C Natural Minor Notes.PNG" alt="C Natural Minor Notes.PNG" />
+</p>
+</div>
+
+
+<div id="org6c9db78" class="figure">
+<p><img src="resources/Guitar/Scales/C Natural Minor.PNG" alt="C Natural Minor.PNG" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<div id="outline-container-orga6d1e85" class="outline-3">
+<h3 id="orga6d1e85">Harmonic Minor</h3>
+<div class="outline-text-3" id="text-orga6d1e85">
+<p>
+<b>Structure</b> <br />
+W H W W H W+ H
+</p>
+
+<div class="picture" id="org33f7ad7">
+
+<div id="org035516a" class="figure">
+<p><img src="resources/Guitar/Scales/C Harmonic Minor Notes.PNG" alt="C Harmonic Minor Notes.PNG" />
+</p>
+</div>
+
+
+<div id="org6fe97af" class="figure">
+<p><img src="resources/Guitar/Scales/C Harmonic Minor.png" alt="C Harmonic Minor.png" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+<div id="outline-container-orgd79b9cf" class="outline-3">
+<h3 id="orgd79b9cf">Melodic Minor</h3>
+<div class="outline-text-3" id="text-orgd79b9cf">
+<p>
+<b>Structure</b> <br />
+W H W W W W H
+</p>
+
+<div class="picture" id="org47a4fb7">
+
+<div id="org5b22abe" class="figure">
+<p><img src="resources/Guitar/Scales/C Melodic Minor Notes.PNG" alt="C Melodic Minor Notes.PNG" />
+</p>
+</div>
+
+
+<div id="orgc6cf4ab" class="figure">
+<p><img src="resources/Guitar/Scales/C Melodic Minor.PNG" alt="C Melodic Minor.PNG" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+<div id="outline-container-org003a179" class="outline-2">
+<h2 id="org003a179">Pentatonic Scale</h2>
+<div class="outline-text-2" id="text-org003a179">
+</div>
+<div id="outline-container-org59ee801" class="outline-3">
+<h3 id="org59ee801">Major Pentatonic</h3>
+<div class="outline-text-3" id="text-org59ee801">
+<ul class="org-ul">
+<li><a href="https://appliedguitartheory.com/lessons/major-pentatonic-scale/">https://appliedguitartheory.com/lessons/major-pentatonic-scale/</a></li>
+</ul>
+
+<p>
+Remove 4 &amp; 7 from major scale.
+</p>
+</div>
+</div>
+<div id="outline-container-org1979999" class="outline-3">
+<h3 id="org1979999">Minor Pentatonic</h3>
+<div class="outline-text-3" id="text-org1979999">
+<ul class="org-ul">
+<li><a href="https://appliedguitartheory.com/lessons/a-minor-pentatonic-scale/">https://appliedguitartheory.com/lessons/a-minor-pentatonic-scale/</a></li>
+</ul>
+
+<p>
+Remove 2 &amp; 6 from minor scale.
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org91723fe" class="outline-2">
+<h2 id="org91723fe">The 7 modes (C-major)</h2>
+<div class="outline-text-2" id="text-org91723fe">
+<p>
+If we take the notes of C-major and start from each note we get
+7 new scales (modes).
+</p>
+
+<p>
+<b>Structure</b>
+</p>
+<pre class="example">
+W    W    H    W    W    W    H - C Ionian            C     Dm    Em   F     G     Am    B°
+2    3    4    5    6    7    8                       Cmaj7 Dm7   Em7  Fmaj7 G7    Am7   Bm7b5
+</pre>
+
+
+<pre class="example">
+W    H    W    W    W    H    W - D Dorian            Dm Em F  G  Am B° C
+2    b3   4    5    6    b7   8
+</pre>
+
+
+<pre class="example">
+H    W    W    W    H    W    W - E Phrygian          Em F  G  Am B° C  Dm
+b2   b3   4    5    b6   b7   8   note: b2
+</pre>
+
+
+<pre class="example">
+W    W    W    H    W    W    H - F Lydian            F  G  Am B° C  Dm Em
+2    3    #4   5    6    7    8   note: augmented 4
+</pre>
+
+
+<pre class="example">
+W    W    H    W    W    H    W - G Mixolydian        G  Am B° C  Dm Em F
+2    3    4    5    6    b7   8
+</pre>
+
+
+<pre class="example">
+W    H    W    W    H    W    W - A Aeolian           Am B° C  Dm Em F  G
+2    b3   4    5    b6   b7   8
+</pre>
+
+
+<pre class="example">
+H    W    W    H    W    W    W - B Locrian           B° C  Dm Em F  G  Am
+b2   b3   4    b5   b6   b7   8
+</pre>
+
+
+<p>
+And of course we can use the structures and start those scales from C.
+</p>
+
+<p>
+Notes:
+</p>
+<ul class="org-ul">
+<li>Fourth &amp; Fifth are almost always perfect (except Lydian).</li>
+</ul>
+</div>
+
+<div id="outline-container-org5ec2089" class="outline-3">
+<h3 id="org5ec2089">Ionian</h3>
+<div class="outline-text-3" id="text-org5ec2089">
+<p>
+<b>Structure</b>
+</p>
+<pre class="example">
+W W H W W W H
+</pre>
+
+
+<p>
+C-Ionian
+</p>
+<div class="picture" id="orgfd5e49b">
+
+<div id="orgb84cbc7" class="figure">
+<p><img src="resources/Guitar/Major Scale/Modes/C_Ionian.png" alt="C_Ionian.png" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org78ec336" class="outline-3">
+<h3 id="org78ec336">Dorian</h3>
+<div class="outline-text-3" id="text-org78ec336">
+<p>
+<b>Structure</b>
+</p>
+<pre class="example">
+W H W W W H W
+2 1 2 2 2 1 2
+</pre>
+
+
+<p>
+D-Dorian
+</p>
+<div class="picture" id="orgce76a61">
+
+<div id="org0c8694a" class="figure">
+<p><img src="resources/Guitar/Major Scale/Modes/D_Dorian.png" alt="D_Dorian.png" />
+</p>
+</div>
+
+</div>
+
+<p>
+C-Dorian
+</p>
+<pre class="example">
+||---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+||---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+||---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+||---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+||---|---|---|---|---|-d-|-d#|---|--|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+||---|---|---|---|---|---|---|-c-|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+   1   2   3   4   5   6   7   8   9   10  11  12  13  14  15  16  17  18  19  20  21  22  23  24
+</pre>
+</div>
+</div>
+
+<div id="outline-container-org854e093" class="outline-3">
+<h3 id="org854e093">Phrygian</h3>
+<div class="outline-text-3" id="text-org854e093">
+<p>
+<b>Structure</b>
+</p>
+<pre class="example">
+H W W W H W W
+</pre>
+
+
+<p>
+E-Phrygian
+</p>
+<div class="picture" id="org22f261f">
+
+<div id="org648a604" class="figure">
+<p><img src="resources/Guitar/Major Scale/Modes/E_Phrygian.png" alt="E_Phrygian.png" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org4299535" class="outline-3">
+<h3 id="org4299535">Lydian</h3>
+<div class="outline-text-3" id="text-org4299535">
+<p>
+<b>Structure</b>
+</p>
+<pre class="example">
+W W W H W W H
+</pre>
+
+
+<p>
+F-Lydian
+</p>
+<div class="picture" id="org90a3a86">
+
+<div id="org7a6c7c1" class="figure">
+<p><img src="resources/Guitar/Major Scale/Modes/F_Lydian.png" alt="F_Lydian.png" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1b9350e" class="outline-3">
+<h3 id="org1b9350e">Mixolydian</h3>
+<div class="outline-text-3" id="text-org1b9350e">
+<p>
+<b>Structure</b>
+</p>
+<pre class="example">
+W W H W W H W
+</pre>
+
+
+<p>
+G-Mixolydian
+</p>
+<div class="picture" id="org8bf8405">
+
+<div id="org6952282" class="figure">
+<p><img src="resources/Guitar/Major Scale/Modes/G_Mixolydian.png" alt="G_Mixolydian.png" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0893ee0" class="outline-3">
+<h3 id="org0893ee0">Aeolian</h3>
+<div class="outline-text-3" id="text-org0893ee0">
+<p>
+<b>Structure</b>
+</p>
+<pre class="example">
+W H W W H W W
+</pre>
+
+
+<p>
+A-Aeolian
+</p>
+<div class="picture" id="org1bcd51e">
+
+<div id="org39bbf0a" class="figure">
+<p><img src="resources/Guitar/Major Scale/Modes/A_Aeolian.png" alt="A_Aeolian.png" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org10cb703" class="outline-3">
+<h3 id="org10cb703">Locrian</h3>
+<div class="outline-text-3" id="text-org10cb703">
+<p>
+<b>Structure</b>
+</p>
+<pre class="example">
+H W W H W W W
+</pre>
+
+
+<p>
+B-Locrian
+</p>
+<div class="picture" id="orgae5d15b">
+
+<div id="orgea5ad6f" class="figure">
+<p><img src="resources/Guitar/Major Scale/Modes/B_Locrian.png" alt="B_Locrian.png" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga6a3cb5" class="outline-2">
+<h2 id="orga6a3cb5">Arpeggios</h2>
+<div class="outline-text-2" id="text-orga6a3cb5">
+</div>
+<div id="outline-container-orgeb136df" class="outline-3">
+<h3 id="orgeb136df">Major and Minor Shapes</h3>
+<div class="outline-text-3" id="text-orgeb136df">
+<p>
+<b>Basic Shapes</b>
+</p>
+<div class="picture" id="org0c0c85f">
+
+<div id="org86aca2f" class="figure">
+<p><img src="resources/Guitar/Arpeggios/Major and Minor Basic Shapes.png" alt="Major and Minor Basic Shapes.png" />
+</p>
+</div>
+
+</div>
+
+<p>
+<b>Am Shape</b>
+</p>
+<div class="picture" id="orgf6aaf84">
+
+<div id="org70df73b" class="figure">
+<p><img src="resources/Guitar/Arpeggios/Am Shape.png" alt="Am Shape.png" />
+</p>
+</div>
+
+</div>
+
+<p>
+<b>G Shape</b>
+</p>
+<div class="picture" id="org44b2c82">
+
+<div id="org1722ce5" class="figure">
+<p><img src="resources/Guitar/Arpeggios/G major Shape.png" alt="G major Shape.png" />
+</p>
+</div>
+
+</div>
+
+<p>
+<b>Triads</b>
+</p>
+<div class="picture" id="org94f235f">
+
+<div id="orgebbc384" class="figure">
+<p><img src="resources/Guitar/Arpeggios/Triads.png" alt="Triads.png" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-org99ef488" class="outline-3">
+<h3 id="org99ef488">Diminished</h3>
+<div class="outline-text-3" id="text-org99ef488">
+<div class="picture" id="org5b1b8f5">
+
+<div id="orge049bb0" class="figure">
+<p><img src="resources/Guitar/Arpeggios/Diminished Shapes.png" alt="Diminished Shapes.png" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd2ab72e" class="outline-2">
+<h2 id="orgd2ab72e">Chords</h2>
+<div class="outline-text-2" id="text-orgd2ab72e">
+<p>
+C-Major Scale:
+</p>
+<pre class="example">
+C  D  E  F  G  A  B
+s1 s2 s3 s4 s5 s6 s7
+</pre>
+
+
+<p>
+Chord formulas:
+</p>
+<pre class="example" id="org8779fc5">
+The formulas refer to the numbers of the scale (without s).
+So once you have the scale you can use the formula to
+construct the chords.
+
+(R...Root)
+
+major: 1 3 5
+1st Inversion: 3 5 1
+2nd Inversion: 5 1 3
+
+Pattern 1
+|---|---|---|---|---   |---|---|---|---|---   |---|---|---|---|---
+|---|---|---|---|---   |---|---|---|---|---   |-3-|---|---|---|---
+|---|---|---|---|---   |-1-|---|---|---|---   |-1-|---|---|---|---
+|-5-|---|---|---|---   |-5-|---|---|---|---   |-5-|---|---|---|---
+|---|---|-3-|---|---   |---|---|-3-|---|---   |---|---|---|---|---
+|---|---|---|-1-|---   |---|---|---|---|---   |---|---|---|---|---
+                          1st Inversion           2nd Inversion
+
+Pattern 2
+||-5-|---|---|---|---
+||---|---|-3-|---|---
+||---|---|-1-|---|---
+||---|---|---|---|---
+||---|---|---|---|---
+||---|---|---|---|---
+
+Pattern 3
+||---|---|---|---|---
+||-5-|---|---|---|---
+||---|-3-|---|---|---
+||---|---|-1-|---|---
+||---|---|---|---|---
+||---|---|---|---|---
+
+minor: 1 b3 5
+1st Inversion: b3 5 1
+2nd Inversion: 5 1 b3
+
+Pattern 1
+|---|---|---|---|---   |---|---|---|---|---   |---|---|---|---|---
+|---|---|---|---|---   |---|---|---|---|---   |-b3|---|---|---|---
+|---|---|---|---|---   |-1-|---|---|---|---   |---|-1-|---|---|---
+|-5-|---|---|---|---   |-5-|---|---|---|---   |---|-5-|---|---|---
+|---|-b3|---|---|---   |---|-b3|---|---|---   |---|---|---|---|---
+|---|---|---|-1-|---   |---|---|---|---|---   |---|---|---|---|---
+                          1st Inversion           2nd Inversion
+
+Pattern 2
+||-5-|---|---|---|---
+||---|-b3|---|---|---
+||---|---|-1-|---|---
+||---|---|---|---|---
+||---|---|---|---|---
+||---|---|---|---|---
+
+Pattern 3
+||---|---|---|---|---
+||-5-|---|---|---|---
+||-b3|---|---|---|---
+||---|---|-1-|---|---
+||---|---|---|---|---
+||---|---|---|---|---
+
+major 7: 1 3 5 7
+
+||---|---|---|---|---|---
+||---|---|---|---|---|---
+||-7-|---|---|---|---|---
+||---|-5-|---|---|---|---
+||---|---|-b3|---|---|---
+||---|---|---|---|-1-|---
+
+1st Inversion:
+
+major: 3  5 1
+minor: b3 5 1
+
+Pattern 1 (major)
+||---|-1-|---|---|---
+||---|-5-|---|---|---
+||---|---|-3-|---|---
+||---|---|---|---|---
+||---|---|---|---|---
+||---|---|---|---|---
+
+Pattern 1 (minor)
+||---|-1-|---|---|---
+||---|-5-|---|---|---
+||---|-b3|---|---|---
+||---|---|---|---|---
+||---|---|---|---|---
+||---|---|---|---|---
+</pre>
+</div>
+</div>
+
+
+<div id="outline-container-org1b35ca2" class="outline-2">
+<h2 id="org1b35ca2">Circle of Fifths</h2>
+<div class="outline-text-2" id="text-org1b35ca2">
+<div class="picture" id="orgea60f50">
+
+<div id="orga19b81b" class="figure">
+<p><img src="resources/Guitar/Circle of Fifths.PNG" alt="Circle of Fifths.PNG" />
+</p>
+</div>
+
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbd881bf" class="outline-2">
+<h2 id="orgbd881bf">Songs</h2>
+<div class="outline-text-2" id="text-orgbd881bf">
+</div>
+<div id="outline-container-org66306ac" class="outline-3">
+<h3 id="org66306ac">Songs in different modes</h3>
+<div class="outline-text-3" id="text-org66306ac">
+</div>
+<div id="outline-container-orgd36e509" class="outline-4">
+<h4 id="orgd36e509">Ionian</h4>
+<div class="outline-text-4" id="text-orgd36e509">
+<p>
+Joe Satriani - Friends
+Joe Satriani - Love Thing
+Joe Satriani - Always with me always with you (B major)
+Steve Vai - Whispering a Prayer
+</p>
+</div>
+</div>
+<div id="outline-container-orgf9b97d2" class="outline-4">
+<h4 id="orgf9b97d2">Dorian</h4>
+<div class="outline-text-4" id="text-orgf9b97d2">
+<ul class="org-ul">
+<li>Final Fantasy IX OST - Terra</li>
+<li>Steve Vai
+<ul class="org-ul">
+<li>Tender Surrender</li>
+</ul></li>
+<li>Joe Satriani
+<ul class="org-ul">
+<li>Mountain Song</li>
+</ul></li>
+<li>Jimi Hendrix
+<ul class="org-ul">
+<li>Purple Haze (E Dorian)</li>
+</ul></li>
+<li>Miles Davis
+<ul class="org-ul">
+<li>So What (D Dorian, Eb Dorian)</li>
+</ul></li>
+<li>Michael Jackson
+<ul class="org-ul">
+<li>Thriller</li>
+</ul></li>
+<li>Simon &amp; Garfunkel
+<ul class="org-ul">
+<li>Scarborough Fair</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org28653f8" class="outline-4">
+<h4 id="org28653f8">Phrygian</h4>
+<div class="outline-text-4" id="text-org28653f8">
+<ul class="org-ul">
+<li>Joe Satriani
+<ul class="org-ul">
+<li>Devil Slide</li>
+<li>War</li>
+</ul></li>
+<li>Megadeth
+<ul class="org-ul">
+<li>Symphony of Destruction</li>
+</ul></li>
+<li>Metallica
+<ul class="org-ul">
+<li>One</li>
+<li>Harvester of Sorrow</li>
+</ul></li>
+<li>Rainbow
+<ul class="org-ul">
+<li>Stargazer</li>
+<li>The Gates of Babylon (Phrygian Dominant)</li>
+</ul></li>
+<li>Pink Floyd
+<ul class="org-ul">
+<li>Set the Controls for the Heart of the Sun</li>
+</ul></li>
+<li>Iron Maiden
+<ul class="org-ul">
+<li>Remember Tomorrow</li>
+</ul></li>
+<li>Scorpions
+<ul class="org-ul">
+<li>Sails of Charon</li>
+</ul></li>
+<li>Racer X
+<ul class="org-ul">
+<li>Viking Kong</li>
+</ul></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org94834b8" class="outline-4">
+<h4 id="org94834b8">Lydian</h4>
+<div class="outline-text-4" id="text-org94834b8">
+<p>
+Joe Satriani - Flying in a Blue Dream
+Steve Vai - The Riddle (along with Lydian Augmented)
+</p>
+</div>
+</div>
+
+<div id="outline-container-org31c6c14" class="outline-4">
+<h4 id="org31c6c14">Mixolydian</h4>
+<div class="outline-text-4" id="text-org31c6c14">
+<p>
+Joe Satriani - Summer Song
+John Petrucci - Glasgow Kiss
+Steve Vai - Juice
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd513b55" class="outline-4">
+<h4 id="orgd513b55">Aeolian</h4>
+<div class="outline-text-4" id="text-orgd513b55">
+<p>
+Steve Vai - For the love of God
+Joe Satriani - Until We Say Goodbye
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9805dc2" class="outline-4">
+<h4 id="org9805dc2">Locrian</h4>
+<div class="outline-text-4" id="text-org9805dc2">
+<p>
+Metallica - Sad but true (?)
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb88ed31" class="outline-3">
+<h3 id="orgb88ed31">How to write songs</h3>
+<div class="outline-text-3" id="text-orgb88ed31">
+<p>
+Song parts
+</p>
+<ul class="org-ul">
+<li>Intro</li>
+<li>Main Riff</li>
+<li>Verse</li>
+<li>Pre-Chorus</li>
+<li>Chorus</li>
+<li>Bridge</li>
+<li>Solo</li>
+<li>Outro</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgacfead9" class="outline-2">
+<h2 id="orgacfead9">Links</h2>
+<div class="outline-text-2" id="text-orgacfead9">
+<ul class="org-ul">
+<li>Chords: <a href="https://www.all-guitar-chords.com/">https://www.all-guitar-chords.com/</a></li>
+<li>Modal chord progressions: <a href="https://www.fretjam.com/modal-chord-progressions.html">https://www.fretjam.com/modal-chord-progressions.html</a></li>
+<li>Theory: <a href="https://appliedguitartheory.com">https://appliedguitartheory.com</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-01-21 Sun 06:00</p>
+</div>
+</body>
+</html>

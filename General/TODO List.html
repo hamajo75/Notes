@@ -1,0 +1,3196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+<head>
+<!-- 2024-01-22 Mon 06:00 -->
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>TODO List</title>
+<meta name="generator" content="Org Mode" />
+<style>
+  #content { max-width: 60em; margin: auto; }
+  .title  { text-align: center;
+             margin-bottom: .2em; }
+  .subtitle { text-align: center;
+              font-size: medium;
+              font-weight: bold;
+              margin-top:0; }
+  .todo   { font-family: monospace; color: red; }
+  .done   { font-family: monospace; color: green; }
+  .priority { font-family: monospace; color: orange; }
+  .tag    { background-color: #eee; font-family: monospace;
+            padding: 2px; font-size: 80%; font-weight: normal; }
+  .timestamp { color: #bebebe; }
+  .timestamp-kwd { color: #5f9ea0; }
+  .org-right  { margin-left: auto; margin-right: 0px;  text-align: right; }
+  .org-left   { margin-left: 0px;  margin-right: auto; text-align: left; }
+  .org-center { margin-left: auto; margin-right: auto; text-align: center; }
+  .underline { text-decoration: underline; }
+  #postamble p, #preamble p { font-size: 90%; margin: .2em; }
+  p.verse { margin-left: 3%; }
+  pre {
+    border: 1px solid #e6e6e6;
+    border-radius: 3px;
+    background-color: #f2f2f2;
+    padding: 8pt;
+    font-family: monospace;
+    overflow: auto;
+    margin: 1.2em;
+  }
+  pre.src {
+    position: relative;
+    overflow: auto;
+  }
+  pre.src:before {
+    display: none;
+    position: absolute;
+    top: -8px;
+    right: 12px;
+    padding: 3px;
+    color: #555;
+    background-color: #f2f2f299;
+  }
+  pre.src:hover:before { display: inline; margin-top: 14px;}
+  /* Languages per Org manual */
+  pre.src-asymptote:before { content: 'Asymptote'; }
+  pre.src-awk:before { content: 'Awk'; }
+  pre.src-authinfo::before { content: 'Authinfo'; }
+  pre.src-C:before { content: 'C'; }
+  /* pre.src-C++ doesn't work in CSS */
+  pre.src-clojure:before { content: 'Clojure'; }
+  pre.src-css:before { content: 'CSS'; }
+  pre.src-D:before { content: 'D'; }
+  pre.src-ditaa:before { content: 'ditaa'; }
+  pre.src-dot:before { content: 'Graphviz'; }
+  pre.src-calc:before { content: 'Emacs Calc'; }
+  pre.src-emacs-lisp:before { content: 'Emacs Lisp'; }
+  pre.src-fortran:before { content: 'Fortran'; }
+  pre.src-gnuplot:before { content: 'gnuplot'; }
+  pre.src-haskell:before { content: 'Haskell'; }
+  pre.src-hledger:before { content: 'hledger'; }
+  pre.src-java:before { content: 'Java'; }
+  pre.src-js:before { content: 'Javascript'; }
+  pre.src-latex:before { content: 'LaTeX'; }
+  pre.src-ledger:before { content: 'Ledger'; }
+  pre.src-lisp:before { content: 'Lisp'; }
+  pre.src-lilypond:before { content: 'Lilypond'; }
+  pre.src-lua:before { content: 'Lua'; }
+  pre.src-matlab:before { content: 'MATLAB'; }
+  pre.src-mscgen:before { content: 'Mscgen'; }
+  pre.src-ocaml:before { content: 'Objective Caml'; }
+  pre.src-octave:before { content: 'Octave'; }
+  pre.src-org:before { content: 'Org mode'; }
+  pre.src-oz:before { content: 'OZ'; }
+  pre.src-plantuml:before { content: 'Plantuml'; }
+  pre.src-processing:before { content: 'Processing.js'; }
+  pre.src-python:before { content: 'Python'; }
+  pre.src-R:before { content: 'R'; }
+  pre.src-ruby:before { content: 'Ruby'; }
+  pre.src-sass:before { content: 'Sass'; }
+  pre.src-scheme:before { content: 'Scheme'; }
+  pre.src-screen:before { content: 'Gnu Screen'; }
+  pre.src-sed:before { content: 'Sed'; }
+  pre.src-sh:before { content: 'shell'; }
+  pre.src-sql:before { content: 'SQL'; }
+  pre.src-sqlite:before { content: 'SQLite'; }
+  /* additional languages in org.el's org-babel-load-languages alist */
+  pre.src-forth:before { content: 'Forth'; }
+  pre.src-io:before { content: 'IO'; }
+  pre.src-J:before { content: 'J'; }
+  pre.src-makefile:before { content: 'Makefile'; }
+  pre.src-maxima:before { content: 'Maxima'; }
+  pre.src-perl:before { content: 'Perl'; }
+  pre.src-picolisp:before { content: 'Pico Lisp'; }
+  pre.src-scala:before { content: 'Scala'; }
+  pre.src-shell:before { content: 'Shell Script'; }
+  pre.src-ebnf2ps:before { content: 'ebfn2ps'; }
+  /* additional language identifiers per "defun org-babel-execute"
+       in ob-*.el */
+  pre.src-cpp:before  { content: 'C++'; }
+  pre.src-abc:before  { content: 'ABC'; }
+  pre.src-coq:before  { content: 'Coq'; }
+  pre.src-groovy:before  { content: 'Groovy'; }
+  /* additional language identifiers from org-babel-shell-names in
+     ob-shell.el: ob-shell is the only babel language using a lambda to put
+     the execution function name together. */
+  pre.src-bash:before  { content: 'bash'; }
+  pre.src-csh:before  { content: 'csh'; }
+  pre.src-ash:before  { content: 'ash'; }
+  pre.src-dash:before  { content: 'dash'; }
+  pre.src-ksh:before  { content: 'ksh'; }
+  pre.src-mksh:before  { content: 'mksh'; }
+  pre.src-posh:before  { content: 'posh'; }
+  /* Additional Emacs modes also supported by the LaTeX listings package */
+  pre.src-ada:before { content: 'Ada'; }
+  pre.src-asm:before { content: 'Assembler'; }
+  pre.src-caml:before { content: 'Caml'; }
+  pre.src-delphi:before { content: 'Delphi'; }
+  pre.src-html:before { content: 'HTML'; }
+  pre.src-idl:before { content: 'IDL'; }
+  pre.src-mercury:before { content: 'Mercury'; }
+  pre.src-metapost:before { content: 'MetaPost'; }
+  pre.src-modula-2:before { content: 'Modula-2'; }
+  pre.src-pascal:before { content: 'Pascal'; }
+  pre.src-ps:before { content: 'PostScript'; }
+  pre.src-prolog:before { content: 'Prolog'; }
+  pre.src-simula:before { content: 'Simula'; }
+  pre.src-tcl:before { content: 'tcl'; }
+  pre.src-tex:before { content: 'TeX'; }
+  pre.src-plain-tex:before { content: 'Plain TeX'; }
+  pre.src-verilog:before { content: 'Verilog'; }
+  pre.src-vhdl:before { content: 'VHDL'; }
+  pre.src-xml:before { content: 'XML'; }
+  pre.src-nxml:before { content: 'XML'; }
+  /* add a generic configuration mode; LaTeX export needs an additional
+     (add-to-list 'org-latex-listings-langs '(conf " ")) in .emacs */
+  pre.src-conf:before { content: 'Configuration File'; }
+
+  table { border-collapse:collapse; }
+  caption.t-above { caption-side: top; }
+  caption.t-bottom { caption-side: bottom; }
+  td, th { vertical-align:top;  }
+  th.org-right  { text-align: center;  }
+  th.org-left   { text-align: center;   }
+  th.org-center { text-align: center; }
+  td.org-right  { text-align: right;  }
+  td.org-left   { text-align: left;   }
+  td.org-center { text-align: center; }
+  dt { font-weight: bold; }
+  .footpara { display: inline; }
+  .footdef  { margin-bottom: 1em; }
+  .figure { padding: 1em; }
+  .figure p { text-align: center; }
+  .equation-container {
+    display: table;
+    text-align: center;
+    width: 100%;
+  }
+  .equation {
+    vertical-align: middle;
+  }
+  .equation-label {
+    display: table-cell;
+    text-align: right;
+    vertical-align: middle;
+  }
+  .inlinetask {
+    padding: 10px;
+    border: 2px solid gray;
+    margin: 10px;
+    background: #ffffcc;
+  }
+  #org-div-home-and-up
+   { text-align: right; font-size: 70%; white-space: nowrap; }
+  textarea { overflow-x: auto; }
+  .linenr { font-size: smaller }
+  .code-highlighted { background-color: #ffff00; }
+  .org-info-js_info-navigation { border-style: none; }
+  #org-info-js_console-label
+    { font-size: 10px; font-weight: bold; white-space: nowrap; }
+  .org-info-js_search-highlight
+    { background-color: #ffff00; color: #000000; font-weight: bold; }
+  .org-svg { }
+</style>
+<link rel="shortcut icon" href="/public_html/favicon.ico" type="image/x-icon">
+<link rel="stylesheet" type="text/css" href="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/html-export.css"/>
+<link rel="stylesheet" type="text/css" href="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/css/htmlize.css"/>
+<link rel="stylesheet" type="text/css" href="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/css/hideshow.css"/>
+<link rel="stylesheet" type="text/css" href="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/css/code.css">
+
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery-1.11.0.min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery-ui-1.10.2.min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery.localscroll-min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery.zclip.min.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/bigblow.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/hideshow.js"></script>
+<script type="text/javascript" src="https://joesanmarzano.duckdns.org/public_html/css/org-html-themes-master/styles/bigblow/js/jquery.stickytableheaders.min.js"></script>
+</head>
+<body>
+<div style = "text-align: right; margin-top: 5px">
+   <a accesskey="h" href="" style="font: 20px arial,helvetica,clean,sans-serif"></a>
+   <a accesskey="H" href="https://joesanmarzano.duckdns.org/public_html/" style="font: 20px arial,helvetica,clean,sans-serif;margin: 30px;"> HOME </a>
+</div><div id="content" class="content">
+<h1 class="title">TODO List</h1>
+
+<div id="outline-container-orgdb1feea" class="outline-2">
+<h2 id="orgdb1feea">Top 5</h2>
+<div class="outline-text-2" id="text-orgdb1feea">
+<ol class="org-ol">
+<li><a href="#orgeb4236d">Gerhardt - Individuum und Menschheit: Eine Philosophie der Demokratie</a></li>
+<li><a href="#org12d1366">C++ Error Handling</a></li>
+<li><a href="#orgbc79b62">C++ Template Metaprogramming</a></li>
+<li><a href="#org410cd77">Linux debugging, profiling and tracing training</a></li>
+<li>Linux: gpios, buttons, one wire, serial, etc.</li>
+<li><a href="#org88de4c7">VS Code and Yocto Project</a></li>
+</ol>
+
+<p>
+Notes:
+</p>
+<ul class="org-ul">
+<li>Loosely based on the Ivy Lee method.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc96bd6c" class="outline-2">
+<h2 id="orgc96bd6c">Books <code>[9/40]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Books">Books</span></span></h2>
+<div class="outline-text-2" id="text-orgc96bd6c">
+</div>
+<div id="outline-container-org2ea7ce0" class="outline-3">
+<h3 id="org2ea7ce0">Literature <code>[7/15]</code></h3>
+<div class="outline-text-3" id="text-org2ea7ce0">
+</div>
+<div id="outline-container-org7cacc36" class="outline-4">
+<h4 id="org7cacc36"><span class="todo TODO">TODO</span> Tolkien - Lord of the Rings</h4>
+</div>
+<div id="outline-container-org768268a" class="outline-4">
+<h4 id="org768268a"><span class="todo TODO">TODO</span> The Slimarillion</h4>
+<div class="outline-text-4" id="text-org768268a">
+<p>
+Audiobook
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge1794dc" class="outline-4">
+<h4 id="orge1794dc"><span class="todo TODO">TODO</span> Cryptonomicon</h4>
+<div class="outline-text-4" id="text-orge1794dc">
+<ul class="org-ul">
+<li><a href="https://en.wikipedia.org/wiki/Cryptonomicon">https://en.wikipedia.org/wiki/Cryptonomicon</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org6254f9f" class="outline-4">
+<h4 id="org6254f9f"><span class="done DONE">DONE</span> Dero gehorsamster Sohn - Mozart-Briefe (Hörhuch)</h4>
+<div class="outline-text-4" id="text-org6254f9f">
+<p>
+gelesen von Peter Matic
+gehört 2023
+</p>
+</div>
+</div>
+
+<div id="outline-container-org29c70ad" class="outline-4">
+<h4 id="org29c70ad"><span class="done DONE">DONE</span> Menasse - Die Hauptstadt</h4>
+<div class="outline-text-4" id="text-org29c70ad">
+<p>
+gelesen 2023
+</p>
+
+<p>
+Schöne Geschichte, gut erzählt.
+Interessante Charaktere.
+Vielleicht insgesamt ein bisschen zu viel. Man hat das Gefühl, dass viele
+Handlungsstränge nicht zu Ende erzählt werden. Das Buch müsste wahrscheinlich
+doppelt so dick sein.
+</p>
+
+<p>
+Sprachlich etwas schwach. Der Mann ist halt kein Josef Roth.
+</p>
+
+<p>
+Protagonisten:
+</p>
+<ul class="org-ul">
+<li>David de Vriend: Als Kind aus dem Zug gesprungen und Auschwitz Überlebender.</li>
+<li>Prof. Alois Erhart</li>
+<li>Polizeikommissar Émile Brunfaut</li>
+<li>Martin Susman</li>
+<li>Fenia Xenopoulou</li>
+</ul>
+
+<p>
+Eckpunkte:
+</p>
+<ul class="org-ul">
+<li>Jubilee-Project der Europäischen Kommission: Zur Imagepolitur der EU.</li>
+<li>Professor Ehrharts schlägt vor in Auschwitz die EU Hauptstadt zu bauen.</li>
+<li>Überwindung des Nationalstaats.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7e4725f" class="outline-4">
+<h4 id="org7e4725f"><span class="done DONE">DONE</span> Hemingway - Der alte Mann und das Meer</h4>
+<div class="outline-text-4" id="text-org7e4725f">
+<p>
+gelesen 2023
+</p>
+</div>
+</div>
+
+<div id="outline-container-org26f57ee" class="outline-4">
+<h4 id="org26f57ee"><span class="done DONE">DONE</span> Melville - Bartleby the scrivener</h4>
+<div class="outline-text-4" id="text-org26f57ee">
+<p>
+gehört 2023
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgb145a12" class="outline-4">
+<h4 id="orgb145a12"><span class="todo TODO">TODO</span> Jamers Joyce - Ulysses</h4>
+<div class="outline-text-4" id="text-orgb145a12">
+<ul class="org-ul">
+<li><a href="https://www.litcharts.com/lit/ulysses">https://www.litcharts.com/lit/ulysses</a></li>
+</ul>
+</div>
+
+<div id="outline-container-org24f0d0e" class="outline-5">
+<h5 id="org24f0d0e">1. Telemach</h5>
+</div>
+</div>
+<div id="outline-container-org67cb1f1" class="outline-4">
+<h4 id="org67cb1f1">David Foster Wallace <code>[0/1]</code></h4>
+<div class="outline-text-4" id="text-org67cb1f1">
+</div>
+<div id="outline-container-orge609627" class="outline-5">
+<h5 id="orge609627"><span class="todo TODO">TODO</span> Unendlicher Spass</h5>
+<div class="outline-text-5" id="text-orge609627">
+<ul class="org-ul">
+<li><a href="https://www.litcharts.com/lit/infinite-jest">https://www.litcharts.com/lit/infinite-jest</a></li>
+</ul>
+</div>
+
+<div id="outline-container-org020d74c" class="outline-6">
+<h6 id="org020d74c">1) Jahr des Glad Müllsacks (S.7)</h6>
+<div class="outline-text-6" id="text-org020d74c">
+<p>
+Hal (Harold Inkondenza), 18 Jahre alt, Schüler an der Enfield Tennis Academy,
+hat ein Aufnahmegespräch an der Universität von Arizona.
+Man glaubt ihm nicht, dass er seinen Aufnahmeessay selbst geschrieben hat.
+</p>
+
+<p>
+Hal berichtet von einer Geschichte mit der Moms und dem Pilzklumpen, den er gegessen hatte, die im sein
+Bruder Orin erzählt hat(S. 17).
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9d33ca7" class="outline-6">
+<h6 id="org9d33ca7">2) Jahr der Inkontinenz-Unterwäsche (S.28)</h6>
+<div class="outline-text-6" id="text-org9d33ca7">
+<p>
+Ken Erdedy wartet auf die Frau mit dem Marijuana.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd0b1aa3" class="outline-6">
+<h6 id="orgd0b1aa3">3) 1.April - Jahr des Tucks Hämerrhoiden Salbentuchs (S.42)</h6>
+<div class="outline-text-6" id="text-orgd0b1aa3">
+<p>
+Hal, 11 Jahre alt, ist bei einem professionellen Konversationalisten.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org91a13a9" class="outline-6">
+<h6 id="org91a13a9">4) 9. Mai - Jahr der Inkontinenz-Unterwäsche (S. 48)</h6>
+<div class="outline-text-6" id="text-org91a13a9">
+<p>
+Hal spricht mit seinem Bruder Mario im Bett.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orge771be5" class="outline-6">
+<h6 id="orge771be5">5) Jahr der Interkontinenz-Unterwäsche (S. 49)</h6>
+<div class="outline-text-6" id="text-orge771be5">
+<p>
+Der Gesundheitsattaché begleitet den saudischen Minister für Unterhaltungselektronik.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc62b7d6" class="outline-6">
+<h6 id="orgc62b7d6">6) Jahr der Dove-Probepackung (S. 55)</h6>
+<div class="outline-text-6" id="text-orgc62b7d6">
+<p>
+Zwischenspiel auf African-American Vernacular English. Muss man auf Englisch lesen.
+</p>
+<ul class="org-ul">
+<li>Audio Book: Chapter 2 - 52:10</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org8109fed" class="outline-6">
+<h6 id="org8109fed">7) Jahr der Inkontinenz-Unterwäsche (S. 59)</h6>
+<div class="outline-text-6" id="text-org8109fed">
+<p>
+Hal &amp; Mario
+</p>
+</div>
+</div>
+
+<div id="outline-container-org05361f2" class="outline-6">
+<h6 id="org05361f2">8) Oktober - Jahr der Inkontinenz-Unterwäsche (S. 63)</h6>
+<div class="outline-text-6" id="text-org05361f2">
+<p>
+Hals Bruder Orin.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org99f632d" class="outline-6">
+<h6 id="org99f632d">9) Jahr der Inkontinenz-Unterwäsche (S. 72)</h6>
+</div>
+</div>
+</div>
+<div id="outline-container-orgbbfd06c" class="outline-4">
+<h4 id="orgbbfd06c">Josef Roth <code>[3/3]</code></h4>
+<div class="outline-text-4" id="text-orgbbfd06c">
+</div>
+<div id="outline-container-org4744d9a" class="outline-5">
+<h5 id="org4744d9a"><span class="done DONE">DONE</span> Beichte eines Mörders, erzählt in einer Nacht (Hörbuch)</h5>
+<div class="outline-text-5" id="text-org4744d9a">
+<p>
+fabelhaft
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2023-05-24 Wed&gt;</span></span>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd7a3678" class="outline-5">
+<h5 id="orgd7a3678"><span class="done DONE">DONE</span> Die Kapuzinergruft (Hörbuch)</h5>
+<div class="outline-text-5" id="text-orgd7a3678">
+<p>
+gehört 2023
+</p>
+</div>
+</div>
+
+<div id="outline-container-org3608bd6" class="outline-5">
+<h5 id="org3608bd6"><span class="done DONE">DONE</span> Die Legende vom heiligen Trinker (Hörbuch)</h5>
+<div class="outline-text-5" id="text-org3608bd6">
+<p>
+gehört 2022
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org07d55ff" class="outline-4">
+<h4 id="org07d55ff">Dostojewski <code>[0/2]</code></h4>
+<div class="outline-text-4" id="text-org07d55ff">
+</div>
+<div id="outline-container-orge9dc604" class="outline-5">
+<h5 id="orge9dc604"><span class="todo TODO">TODO</span> Der Idiot</h5>
+</div>
+<div id="outline-container-orga39d927" class="outline-5">
+<h5 id="orga39d927"><span class="todo TODO">TODO</span> Schuld und Sühne</h5>
+</div>
+</div>
+<div id="outline-container-org642652f" class="outline-4">
+<h4 id="org642652f">Dürrenmatt <code>[0/1]</code></h4>
+<div class="outline-text-4" id="text-org642652f">
+</div>
+<div id="outline-container-orgbe56ea7" class="outline-5">
+<h5 id="orgbe56ea7"><span class="todo TODO">TODO</span> Der Richter und sein Henker</h5>
+</div>
+</div>
+</div>
+<div id="outline-container-orgc0d673e" class="outline-3">
+<h3 id="orgc0d673e">Philosophy <code>[1/7]</code></h3>
+<div class="outline-text-3" id="text-orgc0d673e">
+</div>
+<div id="outline-container-orgeb4236d" class="outline-4">
+<h4 id="orgeb4236d"><span class="todo TODO">TODO</span> Gerhardt - Individuum und Menschheit: Eine Philosophie der Demokratie</h4>
+<div class="outline-text-4" id="text-orgeb4236d">
+</div>
+<div id="outline-container-org163ea84" class="outline-5">
+<h5 id="org163ea84">I. Anfänge von Menschheit und Demokratie</h5>
+<div class="outline-text-5" id="text-org163ea84">
+</div>
+<div id="outline-container-orga68483b" class="outline-6">
+<h6 id="orga68483b">1. Das Parallelogramm von Mensch und Politik</h6>
+<div class="outline-text-6" id="text-orga68483b">
+<p>
+Platon - Politeia: Der Staat ist ein idealisierter Mensch.
+Oder umgekehrt: Der Staat bildet für den Menschen ein Modell, hinsichtlich seiner
+Eigenschaften und Tugenden. An diesem kann sich der individuelle Mensch
+orientieren. Staat und Mensch sind sich ähnlich. In diesem Sinne spricht man
+auch von Staatskörper und seinen Organen.
+</p>
+
+<p>
+Rede von Menenius Agrippa (nach Titus Livius): Er bringt die revoltierenden
+Truppen Roms zur Rückkehr durch einen Vergleich des Staates mit dem
+menschlichen Körper. Die Gliedmaßen revoltieren gegen den Magen und verweigern
+ihm die Nahrung, sehen aber am Ende ein, dass nur alle gemeinsam überleben
+können.
+</p>
+
+<p>
+Die gesamte Konstruktion des Politischen baut auf den zwei Pfeilern:
+Individualität und Allgemeinheit. Darauf aufbauend entsteht vor ca.
+2500 Jahren ein Begriff der Menschheit angelehnt an einen politische
+Verfassung, die Freiheit und Gleichheit des Individuums garantiert.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8842c32" class="outline-6">
+<h6 id="org8842c32">2. Menschheit als Verständigungsgemeinschaft</h6>
+<div class="outline-text-6" id="text-org8842c32">
+<p>
+Menschen und Götter: Die Menschen sehen sich, den Göttern unterworfen, in
+einer natürlichen Herrschaftsordnung. Sie bilden eine Verständigungsgemeinschaft, die
+sie zu gewissen Handlungen verpflichtet. Sie haben gemeinsame Vorstellungen und
+Überzeugungen, die flexibel sind und sich verändern. Menschen lernen voneinander und
+sind immer aufeinander bezogen.
+</p>
+
+<p>
+Zum gegenseitigen Verstehen gesellen sich auch Irrtum, Täuschung und Lüge.
+</p>
+
+<p>
+Wo es stabile Herrschaftsordnungen gibt, werden einzelne Menschen herausgehoben und als
+Individuen bewundert. Individuelle Leistungen definieren Tugenden.
+Auch heben die Götter den Menschen in eine exponierte Stellung.
+Es kommt zur Herausbildung des Begriffs der Individualität.
+</p>
+
+<p>
+Was immer Menschen gemeinsam tun, es basiert auf Abstraktionen, die alle beteiligten
+verstehen müssen.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org28c6670" class="outline-6">
+<h6 id="org28c6670">3. Der Anteil der ersten Philosophen</h6>
+<div class="outline-text-6" id="text-org28c6670">
+<p>
+Xenophanes, Heraklit, Anaxagoras denken über die Gegriffe Gott, Mensch, Natur, Geist
+nach. Sie thematisieren Individualität und Universalität.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org926cf07" class="outline-6">
+<h6 id="org926cf07">4. Der geschichtliche Vorlauf der Demokratie</h6>
+<div class="outline-text-6" id="text-org926cf07">
+<p>
+Herodot und Thukydides erzählen uns vom Peloponeschischen Krieg. Der günstige Ausgang der
+Auseinandersetzung mit den Persern ermöglicht es Athen unter der Führung des Perikles
+eine Demokratie zu werden.
+In den Historien von Herodot findet sich die Beschreibung einer Debatte am persischen
+Königshof über die beste Staatsform. Diskutiert werden
+</p>
+
+<ol class="org-ol">
+<li>Monarchie (d. Herrschaft eines einzelnen), König Darius</li>
+<li>Aristokratie (d. Herrschaft der besten), ein gewisser Otanes</li>
+<li>Demokratie (d. Herrschaft des Volkes), ein gewisser Megabyzos</li>
+</ol>
+
+<p>
+Auf die Demokratie ist zu setzten, weil nur sie, durch ihre vielen
+</p>
+<ul class="org-ul">
+<li>Ämter und</li>
+<li>Zuständigkeiten des Volkes</li>
+<li>Verfahren</li>
+</ul>
+<p>
+die Kontrolle der Regierenden gewährleistet.
+</p>
+
+<p>
+Auf der Gesamtheit des Volkes ruht der ganze Staat.
+</p>
+
+<p>
+Diese Idee trifft auf einhellige Ablehnung, aufgrund der Inkompetenz des Volkes.
+</p>
+
+<p>
+Die Pointe des Otanes war aber eine institutionelle: Die Kompetenz der demokratischen
+Institutionen beruht nicht auf der Kompetenz des Einzelnen.
+</p>
+
+<p>
+Die Rede des Otanes spricht auch über die Gleichheit vor dem Gesetz. Eine Bedingung für
+diese ist die Freiheit des Bürgers.
+Freiheit und Gesetz gehören zusammen. Freiheit und Gleichheit sind nicht zu trennen.
+</p>
+
+<p>
+Idee: Einem guten Gesetz folgt der Bürger freiwillig.
+</p>
+
+<p>
+Diese Gleichheit steht gegen einen Alleinherrscher. Er wird sich nie als gleichberechtigter
+Bürger verstehen.
+</p>
+
+<p>
+<b>Solons Verfassung</b>: Reformen in Athen (595 v.C.)
+</p>
+<ul class="org-ul">
+<li>gleicher Rechtsanspruch für alle Bürger</li>
+<li>Einfluss auf die Besetzung der Gerichte</li>
+<li>Einfluss auf die Gesetzgebung</li>
+<li>Reglungen bzgl. Schulden
+
+<ul class="org-ul">
+<li>480 v.C.: Eroberung Athens durch die Perser.</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org844fa5a" class="outline-6">
+<h6 id="org844fa5a">5. Die weltpolitische Innovation in Athen</h6>
+<div class="outline-text-6" id="text-org844fa5a">
+<p>
+Im ersten Jahr des peloponnesischen Krieges 431 vor Christus haben wir Athener siegreich gekämpft.
+Thematisiert wird die Rede des Perikles für die Gefallenen (Epitaphios). Geschichtsschreiber Thukydides überliefert uns die Rede.
+unter dem Eindruck des Totalitarismus des 20 Jahrhunderts gab es Autoren denen die Rede des Perikles den Mut und die Kraft gegeben hat, trotz allem an die Zukunft der Demokratie zu glauben (Popper übersetzt sie, im neuseeländischen Exil ins Englische).
+</p>
+
+<ul class="org-ul">
+<li>Freie Entfaltung der Bürger.</li>
+<li>Demokratie als Bildungsgemeinschaft.</li>
+<li>Didaktisches Mittel ist das gute Beispiel.</li>
+<li>Jeder kümmert sich nicht nur um das private sondern auch um die öffentlichen allgemeinen Dinge.</li>
+<li>Jeder hat ein Interesse sein eigenes Leben mit dem alle anderen zu verbinden.</li>
+<li>Demokratie ist nie reine Rechtsordnung, sondern eine Lebensform.</li>
+<li>Rechtsgleichheit, keine Privilegien aus Herkunft und Besitz.</li>
+<li>Anerkennung der Meinungsverschiedenheit als wesentlicher Element einer Gesellschaft (Pluralität).</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org0fcef37" class="outline-5">
+<h5 id="org0fcef37">II. Die philosophische Grundlegung der Politik</h5>
+<div class="outline-text-5" id="text-org0fcef37">
+</div>
+<div id="outline-container-orgedf9602" class="outline-6">
+<h6 id="orgedf9602">Das Beispiel des Sokrates lass</h6>
+<div class="outline-text-6" id="text-orgedf9602">
+<ul class="org-ul">
+<li>Alkibiades: Selbstprüfung</li>
+<li>Laches: Zivilcourage</li>
+<li>Herrschen über Freiwillige.</li>
+</ul>
+
+<p>
+Sokrates weigert sich zu fliehen und stellt die Achtung vor dem Gesetz über sein eigenes Leben.
+</p>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9e14c5c" class="outline-4">
+<h4 id="org9e14c5c"><span class="todo TODO">TODO</span> Popper - Die offene Gesellschaft und ihre Feinde, Band I</h4>
+<div class="outline-text-4" id="text-org9e14c5c">
+<ul class="org-ul">
+<li>Historizismus: Die Geschichte folgt Gesetzen, die eine Vorhersage der sozialen
+Zukunft ermöglichen. So etwas kann nach Popper nicht von einer
+Sozialwissenschaft geleistet werden.</li>
+</ul>
+</div>
+<div id="outline-container-org2a2baae" class="outline-5">
+<h5 id="org2a2baae">1. Der Historizismus und der Schicksalsmythos</h5>
+<div class="outline-text-5" id="text-org2a2baae">
+<p>
+Die bedeutenden Schauspieler auf der Bühne der Geschichte sind, große Nationen,
+große Führer, Klassen und Ideen.
+</p>
+
+<p>
+Varianten des Historizismus:
+</p>
+<ul class="org-ul">
+<li>Die Lehre vom auserwählten Volk (theistisch), einer Gruppe oder Klasse.</li>
+<li>Die soziale Entwicklung folgt einem Naturgesetz.</li>
+<li>spirituell, ökomisch,</li>
+</ul>
+
+<p>
+Die beiden modernen Hauptformen sind:
+</p>
+<ol class="org-ol">
+<li>Faschismus (Rassenlehre)</li>
+<li>Marxismus (auserwählte Klasse)</li>
+</ol>
+
+<p>
+Beide gehen auf die Philosophie Hegels zurück. Der wiederum gründet auf Heraklit, Platon und
+Aristoteles.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org2454b92" class="outline-5">
+<h5 id="org2454b92">2. Heraklit</h5>
+<div class="outline-text-5" id="text-org2454b92">
+<p>
+Alles ist im Fluß, die Welt ist kein Bauwerk, sondern ein Prozess.
+Historizisten betonen die Veränderung im Übermaß.
+Hinter dieser Veränderung entdeckt Heraklit ein allgemeines Gesetz.
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgd2afe78" class="outline-5">
+<h5 id="orgd2afe78">3. Platons Ideenlehre</h5>
+<div class="outline-text-5" id="text-orgd2afe78">
+<p>
+Platons historisches Entwicklungsgesetz: Soziale Veränderung führt zum Verfall.
+</p>
+</div>
+</div>
+</div>
+
+
+
+<div id="outline-container-org0ad6414" class="outline-4">
+<h4 id="org0ad6414">Spencer Brown - Laws of Form <code>[0/4]</code></h4>
+<div class="outline-text-4" id="text-org0ad6414">
+</div>
+<div id="outline-container-org8c959a2" class="outline-5">
+<h5 id="org8c959a2"><span class="todo TODO">TODO</span> Lau - Die Form der Paradoxie</h5>
+</div>
+<div id="outline-container-org2084d51" class="outline-5">
+<h5 id="org2084d51"><span class="todo TODO">TODO</span> Baecker (Hsg.) - Probleme der Form</h5>
+</div>
+<div id="outline-container-orge39a80c" class="outline-5">
+<h5 id="orge39a80c"><span class="todo TODO">TODO</span> Baecker (Hrg.) - Kalkül der Form</h5>
+</div>
+<div id="outline-container-orgb07b5c3" class="outline-5">
+<h5 id="orgb07b5c3"><span class="todo TODO">TODO</span> The Markable Mark</h5>
+<div class="outline-text-5" id="text-orgb07b5c3">
+<p>
+<a href="http://www.markability.net/">http://www.markability.net/</a>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org94c6c3f" class="outline-4">
+<h4 id="org94c6c3f"><span class="done DONE">DONE</span> Sigmund - Sie nannten sich der Wiener Kreis</h4>
+</div>
+</div>
+<div id="outline-container-org1ae91e4" class="outline-3">
+<h3 id="org1ae91e4">Computer Stuff</h3>
+<div class="outline-text-3" id="text-org1ae91e4">
+</div>
+<div id="outline-container-org1e60b5a" class="outline-4">
+<h4 id="org1e60b5a"><span class="todo TODO">TODO</span> Linux Stuff <code>[0/8]</code></h4>
+<div class="outline-text-4" id="text-org1e60b5a">
+</div>
+<div id="outline-container-org9c526d6" class="outline-5">
+<h5 id="org9c526d6"><span class="todo TODO">TODO</span> Linux in a Nutshell</h5>
+<div class="outline-text-5" id="text-org9c526d6">
+<ul class="org-ul">
+<li><a href="https://joesanmarzano.duckdns.org/nextcloud/index.php/f/897247">Linux in a Nutshell</a>
+<ul class="org-ul">
+<li>Package Management</li>
+<li>The gawk Programming Language</li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org70ad76f" class="outline-5">
+<h5 id="org70ad76f"><span class="todo TODO">TODO</span> Unix and Linux System Administration Handbook</h5>
+<div class="outline-text-5" id="text-org70ad76f">
+<ul class="org-ul">
+<li><a href="https://joesanmarzano.duckdns.org/nextcloud/index.php/f/1017786">Unix and Linux System Administration Handbook</a></li>
+</ul>
+</div>
+
+<div id="outline-container-orgff5bf74" class="outline-6">
+<h6 id="orgff5bf74"><span class="todo TODO">TODO</span> Chapter 13 TCP / IP Networking</h6>
+</div>
+</div>
+<div id="outline-container-org0e7f4db" class="outline-5">
+<h5 id="org0e7f4db"><span class="todo TODO">TODO</span> Shell Programming</h5>
+<div class="outline-text-5" id="text-org0e7f4db">
+<ul class="org-ul">
+<li><a href="https://joesanmarzano.duckdns.org/nextcloud/index.php/f/897245">Sams Teach Yourself Shell Programming in 24 Hours</a></li>
+<li><a href="https://joesanmarzano.duckdns.org/nextcloud/index.php/f/1074842">Advanced Bash-Scripting Guide</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1a09502" class="outline-5">
+<h5 id="org1a09502"><span class="todo TODO">TODO</span> Embedded Linux kernel and driver development training</h5>
+<div class="outline-text-5" id="text-org1a09502">
+<ul class="org-ul">
+<li><a href="https://joesanmarzano.duckdns.org/nextcloud/index.php/f/897267">https://joesanmarzano.duckdns.org/nextcloud/index.php/f/897267</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org410cd77" class="outline-5">
+<h5 id="org410cd77"><span class="todo TODO">TODO</span> Linux debugging, profiling and tracing training</h5>
+<div class="outline-text-5" id="text-org410cd77">
+<ul class="org-ul">
+<li><a href="https://joesanmarzano.duckdns.org/nextcloud/index.php/f/1079961">https://joesanmarzano.duckdns.org/nextcloud/index.php/f/1079961</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7106999" class="outline-5">
+<h5 id="org7106999"><span class="todo TODO">TODO</span> Mastering Linux Device Driver Development</h5>
+<div class="outline-text-5" id="text-org7106999">
+<ul class="org-ul">
+<li><a href="https://joesanmarzano.duckdns.org/nextcloud/index.php/f/1019084">Mastering Linux Device Driver Development.pdf</a>
+<ul class="org-ul">
+<li>Chapter 05, 06: ALSA</li>
+<li>Chapter 14: Kernel Debugging</li>
+</ul></li>
+</ul>
+
+<p>
+ALSA SoC (ASoC) Framework - ALSA for embedded needs.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org02c7eac" class="outline-5">
+<h5 id="org02c7eac"><span class="todo TODO">TODO</span> Linux Device Driver Development</h5>
+<div class="outline-text-5" id="text-org02c7eac">
+<ul class="org-ul">
+<li><a href="https://joesanmarzano.duckdns.org/nextcloud/index.php/f/1079971">https://joesanmarzano.duckdns.org/nextcloud/index.php/f/1079971</a>
+<ul class="org-ul">
+<li>Chapter 5: Understanding and Leveraging the Device Tree
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=a9CZ1Uk3OYQ&amp;t=2606s">Bootlin Youtube</a></li>
+</ul></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org70b8cb4" class="outline-5">
+<h5 id="org70b8cb4"><span class="todo TODO">TODO</span> Madieu - Mastering Linux Device Driver Development</h5>
+<div class="outline-text-5" id="text-org70b8cb4">
+<ul class="org-ul">
+<li><a href="https://joesanmarzano.duckdns.org/nextcloud/index.php/f/1019084">https://joesanmarzano.duckdns.org/nextcloud/index.php/f/1019084</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5ebd8af" class="outline-3">
+<h3 id="org5ebd8af">Other <code>[1/8]</code></h3>
+<div class="outline-text-3" id="text-org5ebd8af">
+</div>
+<div id="outline-container-orgff4c832" class="outline-4">
+<h4 id="orgff4c832"><span class="todo TODO">TODO</span> Daniel Kehlman - Thinking Fast and Slow</h4>
+<div class="outline-text-4" id="text-orgff4c832">
+</div>
+<div id="outline-container-org279ea41" class="outline-5">
+<h5 id="org279ea41">Links</h5>
+<div class="outline-text-5" id="text-org279ea41">
+<ul class="org-ul">
+<li><a href="https://marklooi.medium.com/summary-of-kahnemans-thinking-fast-and-slow-3d1c2ea0e6a">Summary</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org2d5d697" class="outline-5">
+<h5 id="org2d5d697">Zwei Arten des Denkens</h5>
+<div class="outline-text-5" id="text-org2d5d697">
+<ol class="org-ol">
+<li>System 1: Intuitives, automatisches, ungesteuertes, leichtes, schnelles Denken.</li>
+<li>System 2: Konzentriertes, langsames, mühsames, anstrengendes Denken.</li>
+</ol>
+
+<p>
+Beispiele System 1:
+</p>
+<ul class="org-ul">
+<li>Feindseligkeit in einer Stimme hören.</li>
+<li>Auf einer leeren Straße Auto fahren.</li>
+<li>Einen Gesichtsausdruck interpretieren.</li>
+<li>Einfache, alltägliche Sprache verstehen.</li>
+</ul>
+
+<p>
+Beispiele System 2:
+</p>
+<ul class="org-ul">
+<li>Eine nicht triviale Rechenaufgabe lösen (also nicht: 2+2)</li>
+<li>Ausschau halten nach einer Frau mit weißem Hut.</li>
+<li>Einen günstigen Handytarif finden.</li>
+<li>Das eigene Verhalten in einer ungewohneten sozialen Situation kontrollieren.</li>
+</ul>
+
+<p>
+Notes:
+</p>
+<ul class="org-ul">
+<li>With enough practice a system 2 task can become a system 1 task.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org22b0070" class="outline-5">
+<h5 id="org22b0070">System 1 beeinflussen, Priming</h5>
+<div class="outline-text-5" id="text-org22b0070">
+<p>
+Ein Reiz oder eine Serie von Reizen kann ein Netz von Gedächtnisinhalten
+aktivieren und so spätere Reize beeinflussen.
+</p>
+
+<p>
+Beispiel:
+</p>
+
+
+<ul class="org-ul">
+<li>Derren Brown: <a href="https://www.youtube.com/watch?v=EUA4Q5aoG74&amp;t=3s">https://www.youtube.com/watch?v=EUA4Q5aoG74&amp;t=3s</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1e058bd" class="outline-5">
+<h5 id="org1e058bd">Framing</h5>
+<div class="outline-text-5" id="text-org1e058bd">
+<ul class="org-ul">
+<li>10% probability to die</li>
+<li>90% probability to live</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgaa4c54f" class="outline-5">
+<h5 id="orgaa4c54f">Sunk Cost</h5>
+<div class="outline-text-5" id="text-orgaa4c54f">
+<ul class="org-ul">
+<li>I already invested so much, i cannot stop now.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org77d52b1" class="outline-5">
+<h5 id="org77d52b1">Der Halo Effekt</h5>
+<div class="outline-text-5" id="text-org77d52b1">
+<p>
+Schluss von bekannten Eigenschaften auf unbekannte.
+</p>
+
+<p>
+Beispiel:
+</p>
+<ul class="org-ul">
+<li>Man findet jmd. sympathisch und schließt darauf, dass er großzügig ist.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org737f0cf" class="outline-5">
+<h5 id="org737f0cf">What you see is all there is</h5>
+</div>
+<div id="outline-container-org9a43a01" class="outline-5">
+<h5 id="org9a43a01">Der Ankereffekt</h5>
+<div class="outline-text-5" id="text-org9a43a01">
+<ul class="org-ul">
+<li>Eine unbekannte Größe abschätzen (Siedetemperatur von Wasser auf dem Mount Everest - Anker: 100°C).</li>
+<li>Man bewegt sich von einem Anker hin zur Schätzung.
+<ul class="org-ul">
+<li>Wurde Ghandi älter als 122 Jahre? Man weiß es ist weniger, aber wie viel. Der Anker (122 Jahre) beeinflusst
+das Ergebnis.</li>
+</ul></li>
+</ul>
+
+<p>
+Beispiele:
+</p>
+<ul class="org-ul">
+<li>Immobilienpreise</li>
+<li>Durchschnittstemperatur in Deutschland.</li>
+<li>Spendenbereitschaft (Wären Sie bereit 5/500 EUR zu spenden?)</li>
+<li>Versteigerungen, Eröffnungsgebot</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2fc869f" class="outline-4">
+<h4 id="org2fc869f"><span class="todo TODO">TODO</span> The selfish Gene</h4>
+</div>
+<div id="outline-container-orgfad4e03" class="outline-4">
+<h4 id="orgfad4e03"><span class="todo TODO">TODO</span> Dettmer - Immune</h4>
+</div>
+<div id="outline-container-orgbca216c" class="outline-4">
+<h4 id="orgbca216c"><span class="todo TODO">TODO</span> Krause - Von Gestern und Helden</h4>
+<div class="outline-text-4" id="text-orgbca216c">
+<ul class="org-ul">
+<li>Fruchtbarkeitsgöttin</li>
+<li>Megalithkulturen</li>
+<li>Mythos Schmied</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org1cfd48b" class="outline-4">
+<h4 id="org1cfd48b"><span class="todo TODO">TODO</span> Köppe, Kindt - Erzähltheorie</h4>
+<div class="outline-text-4" id="text-org1cfd48b">
+<ul class="org-ul">
+<li><a href="https://www-archiv.fdm.uni-hamburg.de/lhn/index.html">the living handbook of narratology</a></li>
+</ul>
+</div>
+
+<div id="outline-container-org2fda908" class="outline-5">
+<h5 id="org2fda908">Erzähltheorie allgemien</h5>
+<div class="outline-text-5" id="text-org2fda908">
+<ul class="org-ul">
+<li><a href="https://de.wikipedia.org/wiki/Erz%C3%A4hltheorie">https://de.wikipedia.org/wiki/Erz%C3%A4hltheorie</a></li>
+</ul>
+
+<p>
+Gegenstand: Alle Arten erzählender Texte bzw. erzählender Textabschnitte.
+</p>
+
+<p>
+Thematische vs. modale Narratologie:
+</p>
+<ul class="org-ul">
+<li>Was wird erzählt (Ereigniskette)?</li>
+<li>Wie wird erzählt (Stilmittel, etc.)?</li>
+</ul>
+</div>
+
+<div id="outline-container-org1f70681" class="outline-6">
+<h6 id="org1f70681">Erzählperspektiven</h6>
+<div class="outline-text-6" id="text-org1f70681">
+<ul class="org-ul">
+<li>Der allwissende Erzähler (auktorialer Erzähler)
+Susanne S. ging die Straße entlang. Sie konnte noch nicht ahnen, was noch
+passieren würde.</li>
+<li>Neutraler Erzähler: Perspektive eines unsichtbaren Beobachters (wie Kamera).
+Susanne S. ging die Staße entlang. Sie hatte ein rotes Kleid an.</li>
+<li>Erzählung aus der Perspektive einer bestimmten Figur (Personale Erähler).
+Sie ging die Staße entlang und dachte sich&#x2026;.</li>
+<li>Ich-Erzähler (Innenperspektive)
+Ich ging die Straße entlang und dachte mir&#x2026;
+<ul class="org-ul">
+<li>erzählendes Ich vs. erlebendes Ich: Ich erzähle euch jetzt was: Vor ein paar Jahren&#x2026;</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org89987ce" class="outline-5">
+<h5 id="org89987ce">1 Erzähltheorie</h5>
+<div class="outline-text-5" id="text-org89987ce">
+<p>
+übersprungen
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4119a0b" class="outline-5">
+<h5 id="org4119a0b">2 Die Erzählung</h5>
+<div class="outline-text-5" id="text-org4119a0b">
+</div>
+<div id="outline-container-org71b3f2a" class="outline-6">
+<h6 id="org71b3f2a">2.1 Von der erzählenden Ereignisverknüpfung zur Erzählung</h6>
+<div class="outline-text-6" id="text-org71b3f2a">
+<ul class="org-ul">
+<li>zentraler Begriff: narrative (erzählende) Ereignisverknüpfung
+<ul class="org-ul">
+<li>min. 2 Ereignisse werden chronologisch geordnet und in min. einer weiteren Weise sinnvoll verknüpft dargestellt.</li>
+</ul></li>
+</ul>
+
+<p>
+also: Chronologisch geordnete und sinnvoll verknüpfte Ereignisdarstellung.
+</p>
+
+<ul class="org-ul">
+<li>Sinnvolle Verknüpfungen
+<ul class="org-ul">
+<li>kausal: In Folge der Hungersnot ging er nach Amerika.</li>
+<li>Wünsche, Hoffnungen, Absichten, Handlungsmotive</li>
+<li>Gründe (um-zu-Relation)</li>
+<li>evaluativ verknüpft: ein Ereignis stellt sich auf Grund eines anderen als bedauerlich, erfreulich etc. heraus.</li>
+</ul></li>
+</ul>
+
+<p>
+Kompetenzen des Lesers
+</p>
+<ul class="org-ul">
+<li>Ergänzung von Lücken</li>
+<li>chronologische, kausale Ordnung von Ereignissen</li>
+<li>Annahmen von: Erzählstimme, Perspektive, Absichten, etc.</li>
+</ul>
+</div>
+
+<ul class="org-ul">
+<li><a id="orgc015733" name="orgc015733"></a>3 Bedingungen für das Vorliegen einer Erzählung<br />
+<div class="outline-text-7" id="text-orgc015733">
+<ol class="org-ol">
+<li>Bezugnahme auf die Ereignisse</li>
+<li>Spannugnsbogen</li>
+<li>Tellability</li>
+</ol>
+
+<p>
+ad 1) Relationen zu Personen
+</p>
+<ul class="org-ul">
+<li>Welche Beziehung haben die Ereginisse zu Personen (Hoffnugnen, Bedürfnisse, Meinungen).</li>
+<li>Aus welchem Grund sind die Ereignisse wichtig?</li>
+</ul>
+<p>
+ad 2) Abgeschlossenheit
+</p>
+<ul class="org-ul">
+<li>Abgeschlossenheit (Anfang, Mitte, Ende - vgl. Aristoteles Poetik)</li>
+<li>kognitiver Aspekt: Frühere Ereignisse erzeugen eine bestimmte Erwartung. Spätere
+Ereignisse befriedigen diese Erwartung (Abschluss d. Spannungsbogens).</li>
+<li>affektiver Aspekt: Folge von Gefühlen, die der Leser durchlebt kommt zu einem Abschluss.</li>
+</ul>
+<p>
+ad 3) tellability oder narrative point
+</p>
+<ul class="org-ul">
+<li>Pointe, d. Witz an der Sache (Warum ist die Erzählung nicht banal?)</li>
+<li>kann sein: Unterhaltungswert, Ästhetik, Informationsgehalt</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+
+<div id="outline-container-org0089c6b" class="outline-6">
+<h6 id="org0089c6b">2.2 Fiktionale Erzählungen</h6>
+<div class="outline-text-6" id="text-org0089c6b">
+<ul class="org-ul">
+<li>Der Leser ist aufgefordert sich etwas vorzustellen (Autorenwelt, Leserwelt).</li>
+</ul>
+
+<p>
+3 (unter Umständen dramatisch verschiedene) Welten:
+</p>
+<ol class="org-ol">
+<li>Welt des Authors</li>
+<li>Welt des Lesers</li>
+<li>die abstrakte Welt der Erzählung</li>
+</ol>
+
+<p>
+Vorstellungen
+</p>
+<ul class="org-ul">
+<li>bewusst, sie existieren so lange man sich etwas vorstellt</li>
+<li>willentlich, sie können (zumindest teilweise) gesteuert werden</li>
+<li>Simulationstheorie: Vorstellungen sind Realitätssimulationen</li>
+</ul>
+
+<p>
+Wahrheit und Fiktionalität
+</p>
+<ul class="org-ul">
+<li>Eine Erzählung wird nicht dadurch fiktional, dass sie falsche Sätze enthält.
+Eine Lügengeschichte kann durchaus außerhalb eines fiktionalen Kontextes
+erzählt werden. Das ist gerade wesentlich beim Lügen.</li>
+<li>Ein Satz wird dadurch fiktional, dass er in einer Fiktionalitätssituation
+geäußert wird.</li>
+</ul>
+
+<p>
+Fiktionalität vs. Fiktivität
+</p>
+<ul class="org-ul">
+<li>Fiktional sind Ausdrücke, Sätze, etc., die in einem fiktiven Kontext geäußert werden.</li>
+<li>Fiktiv ist das, von was die Erzählung handelt. Die Dinge, die man sich vorstellt.</li>
+<li>Man kann sich natürlich über die Fiktionalität einer Erzählung irren.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgbc6679f" class="outline-6">
+<h6 id="orgbc6679f">2.2.1 Die Rolle des fiktiven Erzählers in fiktionalen Erzählungen</h6>
+<div class="outline-text-6" id="text-orgbc6679f">
+<p>
+Autor vs. Erzähler
+</p>
+<ul class="org-ul">
+<li>Autor produziert den Text.</li>
+<li>Erzähler: fiktive Instanz, die zur Vorstellung auffordert, der Text würde von
+jemandem erzählt.</li>
+<li><p>
+Der Erzähler kann Teil der fiktiven Welt sein oder auch nicht.
+</p>
+
+<p>
+Es muss keinen fiktiven Erzähler geben: Die Katze lag auf dem Teppich und das Sonnenlicht
+fiel durch das Fenster auf sie. Die Szene glich einem Stillleben.
+</p></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org33dca60" class="outline-4">
+<h4 id="org33dca60"><span class="todo TODO">TODO</span> Fludernik - Erzähltheorie - Eine Einführung</h4>
+<div class="outline-text-4" id="text-org33dca60">
+</div>
+<div id="outline-container-org3a9b3ae" class="outline-5">
+<h5 id="org3a9b3ae">I. Erzählung und Erzählen</h5>
+<div class="outline-text-5" id="text-org3a9b3ae">
+<p>
+Narrative Gattungen: Roman, Film, Drama, Comics, Ballet, Pantomime, etc.
+Sie alle können eine Geschichte erzählen.
+</p>
+
+<p>
+Wesentliche Eigenheiten:
+</p>
+<ul class="org-ul">
+<li>Ereignissequenzen</li>
+<li>Ursache-Wirkung-Zusammenhänge</li>
+</ul>
+
+<p>
+Gérard Genettes Unterscheidung:
+</p>
+<ul class="org-ul">
+<li>narration (Erzählakt)</li>
+<li>discours (Text oder Äußerung)</li>
+<li>histoire (die Geschichte, die erzählt wird)</li>
+
+<li>Dieselbe Geschichte kann in vielen Varianten und Formen erzählt werden.</li>
+<li>Erzählungen von Historikern vs. fiktive Erzählungen (nicht fiktionale vs.
+fiktionale Erzählungen).</li>
+</ul>
+
+<p>
+Fabel vs. Plot
+</p>
+<ul class="org-ul">
+<li>Fabel: Folge von Ereignissen, die Geschichte allgemein</li>
+<li>Plot: Spezielle Version der Fabel</li>
+</ul>
+
+<p>
+Erzähler und Erzähltes
+</p>
+<ul class="org-ul">
+<li>Gibt es einen oder mehrere Erzähler?</li>
+<li>Im Mittelpunkt einer Erzählung stehen aptropomorphe Figuren, die
+zeitlich und räumlich verankert sind (Wir wissen in der Regel wann und
+wo sie sich befinden).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9e52fb4" class="outline-5">
+<h5 id="org9e52fb4">II. Die Erzähltheorie</h5>
+<div class="outline-text-5" id="text-org9e52fb4">
+<ul class="org-ul">
+<li>Wie werden aus Sätzen Erzählungen?</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2eac109" class="outline-4">
+<h4 id="org2eac109"><span class="todo TODO">TODO</span> Demokratie - 100 Seiten</h4>
+<div class="outline-text-4" id="text-org2eac109">
+<p>
+Naturzustand bei Hobbs: Alle gegen alle.
+Platon fürchtet die Demokratie als Herrschaft des Mobs.
+</p>
+
+<ul class="org-ul">
+<li>Aristokratie: Herrschaft der Besten.</li>
+</ul>
+
+<p>
+<b>Allgemeinheit</b>
+</p>
+<ul class="org-ul">
+<li>Jeder kann seine Meinung äußern.</li>
+<li>Jeder hat Zugang zu allen Ämtern.</li>
+<li>Rechte und Pflichten kommen allen Bürgern in gleicher Weise zu.</li>
+</ul>
+
+<p>
+<b>Gruppenbildung, Identifikation</b>
+</p>
+<ul class="org-ul">
+<li>In-group / Out-group, gesellschaftliche Blasen</li>
+<li>Wir gegen die, Sündenböcke, Ressentiments</li>
+<li>Narrative: Mythologie, Religion, Fake News, Klatsch</li>
+<li></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge99cd91" class="outline-4">
+<h4 id="orge99cd91"><span class="done DONE">DONE</span> Bryston - Eine kurze Geschichte des menschlichen Körpers</h4>
+<div class="outline-text-4" id="text-orge99cd91">
+<p>
+gehört 2022
+</p>
+
+<p>
+Hörbuch
+</p>
+
+<p>
+Kapitel
+</p>
+<ul class="org-ul">
+<li>92 Skelett</li>
+</ul>
+<p>
+-122 Lunge
+-175 Schmerzen
+</p>
+<ul class="org-ul">
+<li>192 Krebs</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org3386c90" class="outline-2">
+<h2 id="org3386c90">Courses &amp; Tutorials <code>[3/17]</code>&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Training">Training</span></span></h2>
+<div class="outline-text-2" id="text-org3386c90">
+</div>
+<div id="outline-container-org58bbc19" class="outline-3">
+<h3 id="org58bbc19">Software Development&#xa0;&#xa0;&#xa0;<span class="tag"><span class="Programming">Programming</span></span></h3>
+<div class="outline-text-3" id="text-org58bbc19">
+</div>
+<div id="outline-container-orgf241524" class="outline-4">
+<h4 id="orgf241524"><span class="todo TODO">TODO</span> Kompilerbau</h4>
+</div>
+<div id="outline-container-org9709578" class="outline-4">
+<h4 id="org9709578"><span class="todo TODO">TODO</span> Objektorientierte Programmierung</h4>
+</div>
+<div id="outline-container-org3ffc0bf" class="outline-4">
+<h4 id="org3ffc0bf"><span class="todo TODO">TODO</span> Codierungstheorie</h4>
+<div class="outline-text-4" id="text-org3ffc0bf">
+<p>
+<a href="https://timms.uni-tuebingen.de/tp/UT_20100413_001_codetheo_0001">https://timms.uni-tuebingen.de/tp/UT_20100413_001_codetheo_0001</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgea97fe6" class="outline-4">
+<h4 id="orgea97fe6"><span class="todo TODO">TODO</span> Docker</h4>
+<div class="outline-text-4" id="text-orgea97fe6">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=e1BOFzxgQQY&amp;list=PL6QrD7_cU23li4myvLoicA663wx1bmzQi">https://www.youtube.com/watch?v=e1BOFzxgQQY&amp;list=PL6QrD7_cU23li4myvLoicA663wx1bmzQi</a></li>
+<li><a href="https://www.youtube.com/watch?v=3c-iBn73dDE&amp;t=5741s">https://www.youtube.com/watch?v=3c-iBn73dDE&amp;t=5741s</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org36c7995" class="outline-4">
+<h4 id="org36c7995"><span class="todo TODO">TODO</span> Concurrency in Python</h4>
+<div class="outline-text-4" id="text-org36c7995">
+<ul class="org-ul">
+<li><a href="https://www.tutorialspoint.com/concurrency_in_python/index.htm">https://www.tutorialspoint.com/concurrency_in_python/index.htm</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgecd2272" class="outline-4">
+<h4 id="orgecd2272"><span class="todo TODO">TODO</span> Prolog</h4>
+<div class="outline-text-4" id="text-orgecd2272">
+<ul class="org-ul">
+<li><a href="http://www.learnprolognow.org/lpnpage.php?pagetype=html&amp;pageid=lpn-htmlch1">http://www.learnprolognow.org/lpnpage.php?pagetype=html&amp;pageid=lpn-htmlch1</a></li>
+<li>Derek Banas: <a href="https://www.youtube.com/watch?v=SykxWpFwMGs&amp;t=768s">https://www.youtube.com/watch?v=SykxWpFwMGs&amp;t=768s</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga57968e" class="outline-4">
+<h4 id="orga57968e"><span class="todo TODO">TODO</span> Dynamic Programming</h4>
+<div class="outline-text-4" id="text-orga57968e">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=oBt53YbR9Kk">https://www.youtube.com/watch?v=oBt53YbR9Kk</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf2e53c9" class="outline-4">
+<h4 id="orgf2e53c9"><span class="done DONE">DONE</span> Embedded Programming with Modern C++</h4>
+<div class="outline-text-4" id="text-orgf2e53c9">
+<ul class="org-ul">
+<li><a href="https://www.educative.io/courses/embedded-programming-with-cpp/N8GBKjnGWXz#whats-the-reason-for-my-perception">https://www.educative.io/courses/embedded-programming-with-cpp/N8GBKjnGWXz#whats-the-reason-for-my-perception</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org38543a8" class="outline-4">
+<h4 id="org38543a8"><span class="done DONE">DONE</span> Distributed Systems</h4>
+<div class="outline-text-4" id="text-org38543a8">
+<ul class="org-ul">
+<li><a href="https://www.freecodecamp.org/news/a-thorough-introduction-to-distributed-systems-3b91562c9b3c/">https://www.freecodecamp.org/news/a-thorough-introduction-to-distributed-systems-3b91562c9b3c/</a></li>
+</ul>
+<p>
+<span class="timestamp-wrapper"><span class="timestamp">&lt;2021-01-15 Fri&gt;</span></span>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org9518442" class="outline-3">
+<h3 id="org9518442">Mathematics</h3>
+<div class="outline-text-3" id="text-org9518442">
+</div>
+<div id="outline-container-orgccb8318" class="outline-4">
+<h4 id="orgccb8318"><span class="todo TODO">TODO</span> Lineare Algebra (Hagen)</h4>
+</div>
+<div id="outline-container-orgea4e3fc" class="outline-4">
+<h4 id="orgea4e3fc"><span class="todo TODO">TODO</span> Lineare Algebra (TIMMS)</h4>
+<div class="outline-text-4" id="text-orgea4e3fc">
+<p>
+<a href="https://timms.uni-tuebingen.de/tp/UT_20131015_001_lineal1_0001">https://timms.uni-tuebingen.de/tp/UT_20131015_001_lineal1_0001</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org1c582c6" class="outline-4">
+<h4 id="org1c582c6"><span class="todo TODO">TODO</span> Analysis 1 (TIMMS)</h4>
+<div class="outline-text-4" id="text-org1c582c6">
+<p>
+<a href="https://timms.uni-tuebingen.de/tp/UT_20141014_001_ana1b_0001">https://timms.uni-tuebingen.de/tp/UT_20141014_001_ana1b_0001</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgc8a5777" class="outline-4">
+<h4 id="orgc8a5777"><span class="todo TODO">TODO</span> Analysis 2 (TIMMS)</h4>
+<div class="outline-text-4" id="text-orgc8a5777">
+<p>
+<a href="http://timms.uni-tuebingen.de/List/List?id=UT_2015_____00%5B12%5D_ana2b_000_&amp;Headline=Analysis%20II">http://timms.uni-tuebingen.de/List/List?id=UT_2015_____00%5B12%5D_ana2b_000_&amp;Headline=Analysis%20II</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org8c824ec" class="outline-4">
+<h4 id="org8c824ec"><span class="todo TODO">TODO</span> Analysis 3 (TIMMS)</h4>
+<div class="outline-text-4" id="text-org8c824ec">
+<p>
+<a href="http://timms.uni-tuebingen.de/tp/UT_20151013_001_ana3c_0001">http://timms.uni-tuebingen.de/tp/UT_20151013_001_ana3c_0001</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-orgf027e80" class="outline-4">
+<h4 id="orgf027e80"><span class="todo TODO">TODO</span> Analysis 4 (TIMMS)</h4>
+<div class="outline-text-4" id="text-orgf027e80">
+<p>
+<a href="http://timms.uni-tuebingen.de/tp/UT_20160415_001_ana4c_0001">http://timms.uni-tuebingen.de/tp/UT_20160415_001_ana4c_0001</a>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2662fbb" class="outline-3">
+<h3 id="org2662fbb"><span class="todo TODO">TODO</span> Electronic Circuits Tutorial</h3>
+<div class="outline-text-3" id="text-org2662fbb">
+<ul class="org-ul">
+<li><a href="https://www.tutorialspoint.com/electronic_circuits/index.htm">https://www.tutorialspoint.com/electronic_circuits/index.htm</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org029308a" class="outline-3">
+<h3 id="org029308a">Gstreamer</h3>
+</div>
+<div id="outline-container-org9ec80ce" class="outline-3">
+<h3 id="org9ec80ce">Dbus</h3>
+</div>
+<div id="outline-container-org35776c8" class="outline-3">
+<h3 id="org35776c8"><span class="done DONE">DONE</span> Celestial Navigation</h3>
+<div class="outline-text-3" id="text-org35776c8">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=-ARXW8InStY&amp;t=1678s">Watch Celestial Navigation</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org221fbae" class="outline-2">
+<h2 id="org221fbae">Programming <code>[2/18]</code></h2>
+<div class="outline-text-2" id="text-org221fbae">
+</div>
+<div id="outline-container-orgdeb1d98" class="outline-3">
+<h3 id="orgdeb1d98"><span class="todo TODO">TODO</span> Jenkins</h3>
+<div class="outline-text-3" id="text-orgdeb1d98">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=7KCS70sCoK0&amp;t=1241s">https://www.youtube.com/watch?v=7KCS70sCoK0&amp;t=1241s</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org33e53ac" class="outline-3">
+<h3 id="org33e53ac">Homepage</h3>
+<div class="outline-text-3" id="text-org33e53ac">
+</div>
+<div id="outline-container-org239952e" class="outline-4">
+<h4 id="org239952e"><span class="todo TODO">TODO</span> Use fixed anchors for html export as to have constant links</h4>
+<div class="outline-text-4" id="text-org239952e">
+<ul class="org-ul">
+<li><a href="https://github.com/alphapapa/unpackaged.el#export-to-html-with-useful-anchors">https://github.com/alphapapa/unpackaged.el#export-to-html-with-useful-anchors</a></li>
+<li><a href="https://writequit.org/articles/emacs-org-mode-generate-ids.html">https://writequit.org/articles/emacs-org-mode-generate-ids.html</a></li>
+</ul>
+
+<p>
+Use <code>CUSTOM_ID</code>
+</p>
+<pre class="example" id="orgd23e37f">
+:PROPERTIES:
+:CUSTOM_ID:       efc8226b-1e40-4871-81be-8f3fed2870aa
+:END:
+</pre>
+<p>
+This somehow only works for html export but not publishing.
+</p>
+
+<p>
+org-export-get-reference
+</p>
+</div>
+</div>
+
+<div id="outline-container-org292059b" class="outline-4">
+<h4 id="org292059b"><span class="todo TODO">TODO</span> Improve Preview of search results</h4>
+<div class="outline-text-4" id="text-org292059b">
+<p>
+I search
+</p>
+<ul class="org-ul">
+<li>HTML <code>Heading 2</code> down to <code>Heading 6</code></li>
+<li><code>.outline-text-2</code> down to <code>.outline-text-6</code></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org70474a2" class="outline-4">
+<h4 id="org70474a2"><span class="todo TODO">TODO</span> Create advanced Tag system</h4>
+<div class="outline-text-4" id="text-org70474a2">
+<p>
+What do i want?
+</p>
+<ol class="org-ol">
+<li>Include global tag list in Dashboard.
+<ul class="org-ul">
+<li>Parse all files on publish.</li>
+</ul></li>
+<li>List all headings with tag when clicked.
+<ul class="org-ul">
+<li>Has to be dynamic: Create a list of links.</li>
+</ul></li>
+<li>List all headings with a combination of tags.
+<ul class="org-ul">
+<li>e.g. "Technology" + "Fun" should list everything tagged with those tags.</li>
+</ul></li>
+</ol>
+
+<p>
+Questions?
+</p>
+<ul class="org-ul">
+<li>What do we tag? Only Headings are supported in org publish.</li>
+</ul>
+
+<p>
+Notes:
+</p>
+<ul class="org-ul">
+<li>Only Headings have tags.
+<ul class="org-ul">
+<li><p>
+Headings with tags look like this:
+</p>
+<pre class="example">
+&lt;h3 id="orga3bddc0"&gt;Rindfleisch&amp;#xa0;&amp;#xa0;&amp;#xa0;&lt;span class="tag"&gt;&lt;span class="Rind"&gt;Rind&lt;/span&gt;&lt;/span&gt;&lt;/h3&gt;
+</pre></li>
+</ul></li>
+<li>We already have an index. So we should include the tags in the index.
+See <code>build_index.js</code> in <code>Lunr_Test</code>.</li>
+<li>Use search to find tags and create the link list.
+<code>idx.search('tag:foo')</code></li>
+<li>We can also create the tag links in <code>bigblow.js</code> but that's only local.</li>
+</ul>
+</div>
+
+<div id="outline-container-org9f46867" class="outline-5">
+<h5 id="org9f46867">Which tags should be used?</h5>
+<div class="outline-text-5" id="text-org9f46867">
+<p>
+<b>What about local tags?</b> <br />
+</p>
+<ul class="org-ul">
+<li>E.g. "top" in Kulinarik.</li>
+<li>In a global context "top" makes no sense, "topRecipes" might be better. But that is
+maybe too special for a global tag.</li>
+<li>I would have to give global tags a special name, e.g. "gMyGlobalTag" or use upper case
+for global tags and lower case for local tags.</li>
+</ul>
+
+<p>
+<b>What should the Controlled Vocabulary be?</b><br />
+</p>
+<ul class="org-ul">
+<li>Should not be more than 50.</li>
+</ul>
+
+<p>
+<b>Should tags be hierarchically ordered?</b>
+</p>
+
+<p>
+<b>What could be the additional value added to the already existing tree structure?</b>
+</p>
+<ul class="org-ul">
+<li>Tags could be useful when a heading that is already classified in the notes tree,
+should be reclassified under a different topic.
+Example: Data Structures are in <code>Programming C++</code> and in <code>Code Snippets</code> and in <code>Computer
+  Science</code>. This can only be done with global tags.</li>
+<li>It doesn't make sense to add the same navigational possibilities.</li>
+<li>It could be something like search in the sense that it allows to extract a list
+of headings with a specific search criteria (tags). What then is the benefit over
+search?</li>
+</ul>
+
+<p>
+One way to think of tags: Hierarchically ordered Tags are like folders with the additional advantage that one
+item can be in multiple tags.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org113f7c7" class="outline-4">
+<h4 id="org113f7c7"><span class="todo TODO">TODO</span> Open files (pdf, etc.) with login</h4>
+</div>
+<div id="outline-container-org533acd5" class="outline-4">
+<h4 id="org533acd5"><span class="todo TODO">TODO</span> Improve Citations</h4>
+<div class="outline-text-4" id="text-org533acd5">
+<ul class="org-ul">
+<li>References should have better formatting.</li>
+<li>References should have links.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org093c7eb" class="outline-4">
+<h4 id="org093c7eb"><span class="todo TODO">TODO</span> Add location info</h4>
+<div class="outline-text-4" id="text-org093c7eb">
+<p>
+When you jump to a heading, you cannot see where in the overall tree structure you are.
+Best with links, like in a file browser.
+</p>
+
+<p>
+Example:
+</p>
+<pre class="example">
+The Philosophy of Computer Programming -&gt; Ontology -&gt; Operations
+</pre>
+
+
+<p>
+<b>Idea</b>
+</p>
+<ul class="org-ul">
+<li>Replace the Heading with full path in revers order.
+<ul class="org-ul">
+<li>E.g. <code>Operations &lt;- Ontology &lt;- The Philosophy of Computer Programming</code></li>
+</ul></li>
+<li>Tooltip with links</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgae3d4ef" class="outline-4">
+<h4 id="orgae3d4ef"><span class="todo TODO">TODO</span> Add shortcut to expand/collapse all subheadings</h4>
+<div class="outline-text-4" id="text-orgae3d4ef">
+<p>
+Right now only all Headings can be expanded/collapsed.
+</p>
+
+<p>
+The corresponding click event in <code>hideshow.js</code> is <code>hsToggleCollapsing</code>.
+Idea: Add a check for the shift key to toggle all subheaders.
+</p>
+
+<p>
+Maybe so:
+</p>
+<pre class="example">
+var actualkey = String.fromCharCode(keycode);
+</pre>
+</div>
+</div>
+
+<div id="outline-container-orgc0b3caf" class="outline-4">
+<h4 id="orgc0b3caf"><span class="done DONE">DONE</span> Search engine for homepage</h4>
+<div class="outline-text-4" id="text-orgc0b3caf">
+<p>
+Creating my own index with <code>Lunr</code> using <code>cheerio</code> html parser.
+See <a href="../Technology/Hardware/Odroid XU4.html#orgb84f042">Odroid XU4.org::Lunr.js</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org100254c" class="outline-4">
+<h4 id="org100254c"><span class="done DONE">DONE</span> Table of Content instead of HOME button</h4>
+<div class="outline-text-4" id="text-org100254c">
+<p>
+It's actually in addition to the HOME button.
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgc421d18" class="outline-3">
+<h3 id="orgc421d18"><span class="todo TODO">TODO</span> Python Composite Walker</h3>
+<div class="outline-text-3" id="text-orgc421d18">
+<ul class="org-ul">
+<li>files in folders</li>
+<li>lines in files</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org17ea960" class="outline-3">
+<h3 id="org17ea960">Design Patterns</h3>
+<div class="outline-text-3" id="text-org17ea960">
+</div>
+<div id="outline-container-org52b9574" class="outline-4">
+<h4 id="org52b9574"><span class="todo TODO">TODO</span> Composite Pattern</h4>
+</div>
+</div>
+<div id="outline-container-orge85f320" class="outline-3">
+<h3 id="orge85f320">Linux System Programming</h3>
+<div class="outline-text-3" id="text-orge85f320">
+</div>
+<div id="outline-container-orgd44924f" class="outline-4">
+<h4 id="orgd44924f"><span class="todo TODO">TODO</span> Kerrisk - The Linux Programming Interface</h4>
+</div>
+</div>
+<div id="outline-container-org3ebb0a5" class="outline-3">
+<h3 id="org3ebb0a5">Concurrency</h3>
+<div class="outline-text-3" id="text-org3ebb0a5">
+</div>
+<div id="outline-container-orgd4e889e" class="outline-4">
+<h4 id="orgd4e889e"><span class="todo TODO">TODO</span> Wiliams - C++ Concurrency in Action</h4>
+</div>
+</div>
+<div id="outline-container-org57e0848" class="outline-3">
+<h3 id="org57e0848">Coding Challenges</h3>
+<div class="outline-text-3" id="text-org57e0848">
+</div>
+<div id="outline-container-orgd0bb4bf" class="outline-4">
+<h4 id="orgd0bb4bf"><span class="todo TODO">TODO</span> Convert integer to roman numerals</h4>
+</div>
+</div>
+<div id="outline-container-orga85d99b" class="outline-3">
+<h3 id="orga85d99b">Build audio player</h3>
+<div class="outline-text-3" id="text-orga85d99b">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=i_Iq4_Kd7Rc">https://www.youtube.com/watch?v=i_Iq4_Kd7Rc</a></li>
+<li><a href="https://github.com/matkatmusic/SimpleEQ">https://github.com/matkatmusic/SimpleEQ</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org12d1366" class="outline-3">
+<h3 id="org12d1366"><span class="todo TODO">TODO</span> C++ Error Handling</h3>
+<div class="outline-text-3" id="text-org12d1366">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/playlist?list=PLMyU6epqBEmSngzQIXoU7juSkK6ZSmGN9">Youtube Playlist</a></li>
+</ul>
+
+<p>
+2 kinds of errors:
+</p>
+<ol class="org-ol">
+<li>recoverable errors
+<ul class="org-ul">
+<li>file not found</li>
+<li>unknown message type</li>
+<li>convert string to int</li>
+</ul></li>
+<li>non recoverable errors
+<ul class="org-ul">
+<li>out of range</li>
+<li>null ptr dereference</li>
+<li>segmentation fault</li>
+</ul></li>
+</ol>
+
+<p>
+In case 2 we can really just stop the program and give as much good information
+as needed to find out what went wrong.
+</p>
+
+<p>
+happy path, error path
+</p>
+
+<p>
+Error handling techniques:
+</p>
+</div>
+
+<div id="outline-container-org16b5c9e" class="outline-4">
+<h4 id="org16b5c9e">Error codes</h4>
+<div class="outline-text-4" id="text-org16b5c9e">
+<ul class="org-ul">
+<li>return bool</li>
+<li>return int error code</li>
+<li>return std::optional - that's like an advanced bool</li>
+<li>return std::variant - very noisy</li>
+<li><p>
+return std::expected
+</p>
+
+<p>
+Notes:
+</p></li>
+<li>Happy code and error code are mixed up together. They're not really well
+separated.</li>
+<li>Functional composition is difficult.</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org078f8fe" class="outline-4">
+<h4 id="org078f8fe">Exceptions</h4>
+<div class="outline-text-4" id="text-org078f8fe">
+<ul class="org-ul">
+<li>very expensive on the error path</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbc79b62" class="outline-3">
+<h3 id="orgbc79b62"><span class="todo TODO">TODO</span> C++ Template Metaprogramming</h3>
+<div class="outline-text-3" id="text-orgbc79b62">
+<ul class="org-ul">
+<li><a href="https://www.linux-magazin.de/ausgaben/2011/01/c/">https://www.linux-magazin.de/ausgaben/2011/01/c/</a></li>
+</ul>
+
+<p>
+Calculate types and values at compile time.
+</p>
+</div>
+
+<div id="outline-container-orgfbfb78b" class="outline-4">
+<h4 id="orgfbfb78b">History</h4>
+<div class="outline-text-4" id="text-orgfbfb78b">
+<ul class="org-ul">
+<li>Erwin Unruh (1994) - with templates you can calculate values at compile time.</li>
+<li>Became popular with Modern C++ Design (Alexandrescu).</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgffd2ca1" class="outline-4">
+<h4 id="orgffd2ca1">Examples</h4>
+<div class="outline-text-4" id="text-orgffd2ca1">
+</div>
+<div id="outline-container-orgbc6155b" class="outline-5">
+<h5 id="orgbc6155b">Calculate a value at compile time</h5>
+<div class="outline-text-5" id="text-orgbc6155b">
+<div class="org-src-container">
+<pre class="src src-cpp"><span class="org-comment-delimiter">// </span><span class="org-comment">Define a template function that calculates the factorial of a given number</span>
+<span class="org-keyword">template</span> &lt;<span class="org-type">int</span> <span class="org-variable-name">N</span>&gt;
+<span class="org-type">int</span> <span class="org-function-name">factorial</span>()
+{
+    <span class="org-comment-delimiter">// </span><span class="org-comment">Use recursion to calculate the factorial of N</span>
+    <span class="org-keyword">return</span> N * factorial&lt;N - 1&gt;();
+}
+
+<span class="org-comment-delimiter">// </span><span class="org-comment">Define a specialization of the factorial function for the base case (N = 1)</span>
+<span class="org-keyword">template</span> &lt;&gt;
+<span class="org-type">int</span> <span class="org-function-name">factorial&lt;1&gt;</span>()
+{
+    <span class="org-keyword">return</span> 1;
+}
+
+<span class="org-type">int</span> <span class="org-function-name">main</span>()
+{
+    <span class="org-comment-delimiter">// </span><span class="org-comment">Calculate the factorial of 5 at compile time</span>
+    <span class="org-type">int</span> <span class="org-variable-name">result</span> = factorial&lt;5&gt;();
+
+    <span class="org-comment-delimiter">// </span><span class="org-comment">Print the result</span>
+    <span class="org-constant">std</span>::cout &lt;&lt; <span class="org-string">"5! = "</span> &lt;&lt; result &lt;&lt; <span class="org-constant">std</span>::endl;
+
+    <span class="org-keyword">return</span> 0;
+}
+</pre>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgb709002" class="outline-5">
+<h5 id="orgb709002">Change types at compile time</h5>
+<div class="outline-text-5" id="text-orgb709002">
+<div class="org-src-container">
+<pre class="src src-cpp"><span class="org-preprocessor">#include</span> <span class="org-string">&lt;iostream&gt;</span>
+<span class="org-preprocessor">#include</span> <span class="org-string">&lt;map&gt;</span>
+<span class="org-keyword">template</span> &lt;<span class="org-keyword">typename</span> <span class="org-type">T</span>&gt;
+<span class="org-keyword">struct</span> <span class="org-type">RemoveConst</span>{
+    <span class="org-keyword">typedef</span> <span class="org-type">T</span> <span class="org-type">type</span>;
+};
+<span class="org-keyword">template</span> &lt;<span class="org-keyword">typename</span> <span class="org-type">T</span>&gt;
+<span class="org-keyword">struct</span> <span class="org-type">RemoveConst</span>&lt;<span class="org-keyword">const</span> <span class="org-type">T</span>&gt;{
+    <span class="org-keyword">typedef</span> <span class="org-type">T</span> <span class="org-type">type</span>;
+};
+<span class="org-keyword">template</span> &lt;<span class="org-keyword">typename</span> <span class="org-type">T</span>&gt;
+<span class="org-type">void</span> <span class="org-function-name">checkConst</span>(){
+    <span class="org-keyword">if</span> (<span class="org-constant">std</span>::<span class="org-constant">is_const</span>&lt;<span class="org-type">T</span>&gt;::value == <span class="org-constant">true</span>  ) {
+        <span class="org-constant">std</span>::cout &lt;&lt; <span class="org-string">"const "</span> &lt;&lt; <span class="org-constant">std</span>::endl;
+    }
+    <span class="org-keyword">else</span> {
+        <span class="org-constant">std</span>::cout &lt;&lt; <span class="org-string">"not const"</span> &lt;&lt; <span class="org-constant">std</span>::endl;
+    }
+}
+<span class="org-type">int</span> <span class="org-function-name">main</span>(){
+  <span class="org-constant">std</span>::cout &lt;&lt; <span class="org-string">"int : "</span>; checkConst&lt;<span class="org-type">int</span>&gt;();
+  <span class="org-constant">std</span>::cout &lt;&lt; <span class="org-string">"const int: "</span>; checkConst&lt;<span class="org-keyword">const</span> <span class="org-type">int</span>&gt;();
+  <span class="org-constant">std</span>::cout &lt;&lt; <span class="org-string">"RemoveConst&lt;int&gt;::type &gt; "</span>; checkConst&lt; <span class="org-constant">RemoveConst</span>&lt;<span class="org-type">int</span>&gt;::<span class="org-type">type</span> &gt;();
+  <span class="org-constant">std</span>::cout &lt;&lt; <span class="org-string">"RemoveConst&lt;const int&gt;::type &gt; : "</span>; checkConst&lt; <span class="org-constant">RemoveConst</span>&lt;<span class="org-keyword">const</span> <span class="org-type">int</span>&gt;::<span class="org-type">type</span> &gt;();
+  <span class="org-keyword">typedef</span> <span class="org-constant">RemoveConst</span>&lt;<span class="org-keyword">const</span> <span class="org-type">int</span>&gt;::<span class="org-type">type</span> <span class="org-type">NotConstFromConstInt</span>;
+  <span class="org-constant">std</span>::cout &lt;&lt; <span class="org-string">"NotConstFromConstInt : "</span>; checkConst&lt; <span class="org-type">NotConstFromConstInt</span> &gt;();
+  <span class="org-type">NotConstFromConstInt</span> <span class="org-variable-name">i</span>= 10;
+}
+</pre>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org471c435" class="outline-3">
+<h3 id="org471c435"><span class="todo TODO">TODO</span> Linux Serial</h3>
+<div class="outline-text-3" id="text-org471c435">
+<ul class="org-ul">
+<li><a href="https://man7.org/linux/man-pages/man7/aio.7.html">POSIX asynchronous I/O</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga41a73d" class="outline-3">
+<h3 id="orga41a73d">Learn Rust</h3>
+<div class="outline-text-3" id="text-orga41a73d">
+<p>
+Here are some additional resources that you may find helpful:
+</p>
+
+<ul class="org-ul">
+<li>The Rust Programming Language: <a href="https://doc.rust-lang.org/book/">https://doc.rust-lang.org/book/</a></li>
+<li>Rust by Example: <a href="https://doc.rust-lang.org/rust-by-example/">https://doc.rust-lang.org/rust-by-example/</a></li>
+<li>Rustlings: <a href="https://github.com/rust-lang/rustlings">https://github.com/rust-lang/rustlings</a></li>
+<li>The Rust Cookbook: <a href="https://rust-lang-nursery.github.io/rust-cookbook/">https://rust-lang-nursery.github.io/rust-cookbook/</a></li>
+<li>The Rustonomicon: <a href="https://doc.rust-lang.org/nomicon/">https://doc.rust-lang.org/nomicon/</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org006f548" class="outline-2">
+<h2 id="org006f548">Videos to watch</h2>
+<div class="outline-text-2" id="text-org006f548">
+</div>
+<div id="outline-container-org88de4c7" class="outline-3">
+<h3 id="org88de4c7"><span class="todo TODO">TODO</span> VS Code and Yocto Project</h3>
+<div class="outline-text-3" id="text-org88de4c7">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=PY4godidHx4">https://www.youtube.com/watch?v=PY4godidHx4</a></li>
+<li><a href="https://karo-electronics.github.io/docs/software-documentation/vscode/index.html">https://karo-electronics.github.io/docs/software-documentation/vscode/index.html</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgf840b61" class="outline-3">
+<h3 id="orgf840b61"><span class="todo TODO">TODO</span> Speeding up Your Docker Image Build</h3>
+<div class="outline-text-3" id="text-orgf840b61">
+<p>
+-<a href="https://www.youtube.com/watch?v=-LSiF8RNM1g">https://www.youtube.com/watch?v=-LSiF8RNM1g</a>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orga8f25d4" class="outline-2">
+<h2 id="orga8f25d4">Stick my nose in <code>[2/4]</code></h2>
+<div class="outline-text-2" id="text-orga8f25d4">
+</div>
+<div id="outline-container-orgea10cb7" class="outline-3">
+<h3 id="orgea10cb7">netem: Network Emulation</h3>
+<div class="outline-text-3" id="text-orgea10cb7">
+<ul class="org-ul">
+<li><a href="https://wiki.linuxfoundation.org/networking/netem">https://wiki.linuxfoundation.org/networking/netem</a></li>
+</ul>
+
+<p>
+Check why NFS is slow.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org86a9dd9" class="outline-3">
+<h3 id="org86a9dd9"><span class="todo TODO">TODO</span> low.js</h3>
+<div class="outline-text-3" id="text-org86a9dd9">
+<p>
+<a href="https://www.neonious.com/lowjs/">https://www.neonious.com/lowjs/</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org9f5cb44" class="outline-3">
+<h3 id="org9f5cb44"><span class="todo TODO">TODO</span> Operating Systems: Three Easy Pieces</h3>
+<div class="outline-text-3" id="text-org9f5cb44">
+<ul class="org-ul">
+<li><a href="https://pages.cs.wisc.edu/~remzi/OSTEP/">https://pages.cs.wisc.edu/~remzi/OSTEP/</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7352736" class="outline-3">
+<h3 id="org7352736"><span class="done DONE">DONE</span> ZeroMQ</h3>
+<div class="outline-text-3" id="text-org7352736">
+<p>
+Target
+</p>
+<ul class="org-ul">
+<li>Solve the challenge of connected code.</li>
+</ul>
+
+<p>
+What can you do?
+</p>
+<ul class="org-ul">
+<li>It gives you sockets to send messages around.
+<ul class="org-ul">
+<li>In one process</li>
+<li>Inter process</li>
+<li>TCP</li>
+<li>Multicast</li>
+</ul></li>
+</ul>
+
+<p>
+Connect sockets:
+</p>
+<ul class="org-ul">
+<li>Request - Response</li>
+<li>Fan-out</li>
+<li>Task distribution (push tasks to workers and pull results).</li>
+<li>Publish subscribe</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7a74178" class="outline-3">
+<h3 id="org7a74178"><span class="done DONE">DONE</span> Digital Filter Design</h3>
+<div class="outline-text-3" id="text-org7a74178">
+<ul class="org-ul">
+<li><a href="https://www.micromodeler.com/index.jsp">https://www.micromodeler.com/index.jsp</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1d62a4e" class="outline-2">
+<h2 id="org1d62a4e">Cooking <code>[1/4]</code></h2>
+<div class="outline-text-2" id="text-org1d62a4e">
+</div>
+<div id="outline-container-org25c86f7" class="outline-3">
+<h3 id="org25c86f7"><span class="done DONE">DONE</span> Coq au Vin</h3>
+</div>
+<div id="outline-container-org04a6f23" class="outline-3">
+<h3 id="org04a6f23"><span class="todo TODO">TODO</span> Roast beef</h3>
+</div>
+<div id="outline-container-orgb2c427e" class="outline-3">
+<h3 id="orgb2c427e"><span class="todo TODO">TODO</span> Calamari mit Kritharaki</h3>
+</div>
+<div id="outline-container-org520e3d1" class="outline-3">
+<h3 id="org520e3d1"><span class="todo TODO">TODO</span> Chicken Biryani</h3>
+<div class="outline-text-3" id="text-org520e3d1">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=6XlMguO9r-M">https://www.youtube.com/watch?v=6XlMguO9r-M</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-General-TODO_List-Guitar" class="outline-2">
+<h2 id="General-TODO_List-Guitar">Guitar <code>[0/22]</code></h2>
+<div class="outline-text-2" id="text-General-TODO_List-Guitar">
+<p>
+Links:
+</p>
+<ul class="org-ul">
+<li><a href="../Kultur/Music.html">Kultur/Music</a></li>
+<li><a href="https://www.patreon.com/bernth/posts">Bernth - Patreon</a></li>
+</ul>
+</div>
+
+<div id="outline-container-orgb631a77" class="outline-3">
+<h3 id="orgb631a77">Hours played</h3>
+<div class="outline-text-3" id="text-orgb631a77">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 1:</span> Clock summary at <span class="timestamp-wrapper"><span class="timestamp">[2024-01-21 Sun 22:21]</span></span></caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+<th scope="col" class="org-left">&#xa0;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>309:32</b></td>
+<td class="org-left">&#xa0;</td>
+</tr>
+</tbody>
+<tbody>
+<tr>
+<td class="org-left">&ensp;&ensp;Hours played</td>
+<td class="org-left">&#xa0;</td>
+<td class="org-left">309:32</td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="outline-container-org7dadf8d" class="outline-4">
+<h4 id="org7dadf8d">9.5.2022 - 31.12.2023</h4>
+<div class="outline-text-4" id="text-org7dadf8d">
+<ul class="org-ul">
+<li>280 h (since 9.5.2022 - 31.12.2023)</li>
+</ul>
+</div>
+</div>
+
+
+<div id="outline-container-org66ac4ca" class="outline-4">
+<h4 id="org66ac4ca">2024</h4>
+<div class="outline-text-4" id="text-org66ac4ca">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 2:</span> Clock summary at <span class="timestamp-wrapper"><span class="timestamp">[2024-01-21 Sun 22:21]</span></span></caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>29:32</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="outline-container-org48e55bb" class="outline-5">
+<h5 id="org48e55bb">CW 1</h5>
+<div class="outline-text-5" id="text-org48e55bb">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 3:</span> Clock summary at <span class="timestamp-wrapper"><span class="timestamp">[2024-01-21 Sun 22:21]</span></span></caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>17:09</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org0333281" class="outline-5">
+<h5 id="org0333281">CW 2</h5>
+<div class="outline-text-5" id="text-org0333281">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 4:</span> Clock summary at <span class="timestamp-wrapper"><span class="timestamp">[2024-01-21 Sun 22:21]</span></span></caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>2:45</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+
+<div id="outline-container-org70af0a4" class="outline-5">
+<h5 id="org70af0a4">CW 3</h5>
+<div class="outline-text-5" id="text-org70af0a4">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 5:</span> Clock summary at <span class="timestamp-wrapper"><span class="timestamp">[2024-01-21 Sun 22:21]</span></span></caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>9:38</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org09c0d91" class="outline-3">
+<h3 id="org09c0d91">Daily Routine</h3>
+<div class="outline-text-3" id="text-org09c0d91">
+<p>
+Songs:
+</p>
+<ul class="org-ul">
+<li>Judas Priest - Painkiller: 90, 103 (103 bpm)</li>
+<li>Ozzy - Bark at the Moon: 100, 110, 120, 130 (146 bpm)</li>
+<li>Symphony X: Sea of Lies: 100 bpm</li>
+<li>Megadeth - Holy Wars: 110, 120, 130, 140, 150 (160 bpm)</li>
+<li>Metallica - Fight Fire With Fire: 150, 160. 170, 180 (200 bpm)</li>
+<li>Metallica - Master of Puppets: 160, 170, 180 (214 bpm)</li>
+<li>Metallica - Creeping Death: 170, 180 (200 bpm)</li>
+<li>Metallica - Dyers Eve: 140 (195 bpm)</li>
+<li>Metallica - The Four Horsemen: 170 (204 bpm)</li>
+<li>Anthrax - Deathrider: 110, 130, 140 (160 bpm)</li>
+<li>Slayer - War Ensemble (Verse Riff): 140, 150, 160, 170 (220 bpm)</li>
+<li>Slayer - Raining Blood 140, 150, 160 (178 bpm)</li>
+<li>Mordred - State of Mind:</li>
+<li>Iron Maiden - Phantom of the Opera:</li>
+<li>Death - Lack of Comprehension: Riff: 140, 150, 160 bpm - Lick: 90, 100, 110, 120, 130, 140 (180 bpm)</li>
+<li>Led Zeppelin - Stairway to Heaven Solo: 60 (100 bpm)</li>
+<li>Vinnie Moore - Morning Star 80 (120 bpm)</li>
+</ul>
+
+<p>
+Exercises:
+</p>
+<ul class="org-ul">
+<li>ALS: <a href="https://joesanmarzano.duckdns.org/nextcloud/index.php/f/1238984">60 Minutes Practice Routine</a></li>
+<li>ALS: <a href="https://www.youtube.com/watch?v=hRqXyl8iiXM">Bernth - 3 Key Techniques Workout</a></li>
+<li>L: free Play: 60,</li>
+<li>R: <a href="#org976849d">Bernth - #258 - Odd Meter Workout</a></li>
+<li>R: <a href="#org3bc26e3">Bernth - #261 - Picking Hand Riff Workout</a></li>
+<li>A: <a href="#orgeaff424">Bernth Speed Building Workout</a></li>
+<li>A: <a href="#orgc433ac4">Free AP</a></li>
+<li>A: <a href="#orgd9fb10a">Bernth - #223 - Morning Picking</a></li>
+<li>A: <a href="#org390e010">Bernth Inside/Outside Picking Workout</a></li>
+<li>S: <a href="#org2eeb465">Clint Tustin - 5 Exerciese</a></li>
+<li>L: <a href="#org23ceea6">Clint Tustin - LEGATO SHRED LESSON &amp; EXERCISES</a></li>
+<li>L: <a href="#orge56b961">Bernth - #252 - Legato Workout</a></li>
+</ul>
+</div>
+
+<div id="outline-container-org459efca" class="outline-4">
+<h4 id="org459efca">Rhythm</h4>
+<div class="outline-text-4" id="text-org459efca">
+</div>
+<div id="outline-container-org3bc26e3" class="outline-5">
+<h5 id="org3bc26e3">Bernth - #261 - Picking Hand Riff Workout</h5>
+<div class="outline-text-5" id="text-org3bc26e3">
+<ul class="org-ul">
+<li><a href="https://youtu.be/b3Go2M_kv5E?t=108">Bernth - #261 - Picking Hand Riff Workout</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org976849d" class="outline-5">
+<h5 id="org976849d">Bernth - #258 - Odd Meter Workout</h5>
+<div class="outline-text-5" id="text-org976849d">
+<p>
+<a href="https://youtu.be/ccNWlpNVHBQ?t=155">Bernth - #258 - Odd Meter Workout</a>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5f61053" class="outline-4">
+<h4 id="org5f61053">Alternate Picking</h4>
+<div class="outline-text-4" id="text-org5f61053">
+</div>
+<div id="outline-container-orgc433ac4" class="outline-5">
+<h5 id="orgc433ac4">Free AP</h5>
+<div class="outline-text-5" id="text-orgc433ac4">
+<ul class="org-ul">
+<li>120 bpm</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd9fb10a" class="outline-5">
+<h5 id="orgd9fb10a">Bernth - #223 - Morning Picking</h5>
+<div class="outline-text-5" id="text-orgd9fb10a">
+<p>
+<a href="https://www.youtube.com/watch?v=96CVs9hB10Y&amp;t=173s">Bernth - #223 - Morning Picking</a>
+</p>
+<ul class="org-ul">
+<li>60 bpm</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org12ead67" class="outline-5">
+<h5 id="org12ead67">5 Minute Workout (Sync, Speed, Endurance)</h5>
+<div class="outline-text-5" id="text-org12ead67">
+<ul class="org-ul">
+<li><a href="https://youtu.be/dX7prn1yric?t=60">Best 5 MIN Alternate Picking WORKOUT! (Hand Synchronization, Speed, Endurance)</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdef36f5" class="outline-5">
+<h5 id="orgdef36f5">5 Minute Workout (Intermediate)</h5>
+<div class="outline-text-5" id="text-orgdef36f5">
+<ul class="org-ul">
+<li><a href="https://youtu.be/dX7prn1yric?t=61">Best 5-Minute Alternate Picking WORKOUT! (For Intermediate Players)</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3acf6f0" class="outline-5">
+<h5 id="org3acf6f0">Eugenes Trick Bag</h5>
+<div class="outline-text-5" id="text-org3acf6f0">
+<ul class="org-ul">
+<li>90 bpm</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc9890b9" class="outline-5">
+<h5 id="orgc9890b9">Bernth Picking Workout Challenge</h5>
+<div class="outline-text-5" id="text-orgc9890b9">
+<ul class="org-ul">
+<li><a href="https://youtu.be/4EkLnuK0QdI?t=165">Bernth Picking Workout Challenge</a></li>
+<li>80 ppm</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org390e010" class="outline-5">
+<h5 id="org390e010">Bernth Inside/Outside Picking Workout</h5>
+<div class="outline-text-5" id="text-org390e010">
+<ul class="org-ul">
+<li><a href="https://youtu.be/lfUkRDd0yt8?t=125">Bernth Exclusive Inside/Outside Picking Workout</a></li>
+<li>60 ppm</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgeaff424" class="outline-5">
+<h5 id="orgeaff424">Bernth Speed Building Workout</h5>
+<div class="outline-text-5" id="text-orgeaff424">
+<ul class="org-ul">
+<li><a href="https://youtu.be/Upbwbpu1rCY?t=150">Speed Building Workout</a></li>
+<li>50 ppm</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3a0b0ec" class="outline-5">
+<h5 id="org3a0b0ec">Ben Eller - Hand Synchronization</h5>
+<div class="outline-text-5" id="text-org3a0b0ec">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=CDl2DcLGVZc&amp;t=454s">https://www.youtube.com/watch?v=CDl2DcLGVZc&amp;t=454s</a></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="outline-container-org62e98a1" class="outline-4">
+<h4 id="org62e98a1">Sweep Picking</h4>
+<div class="outline-text-4" id="text-org62e98a1">
+</div>
+<div id="outline-container-org2eeb465" class="outline-5">
+<h5 id="org2eeb465">Clint Tustin - 5 Exerciese</h5>
+<div class="outline-text-5" id="text-org2eeb465">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=unCX7dAKPd0&amp;list=PLMyU6epqBEmTwN276I4eXrVRokMMWjQ6Z&amp;index=5">Sweep Picking</a></li>
+<li>90 bpm</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5b21076" class="outline-5">
+<h5 id="org5b21076">Bernth - Sweep Picking Workout Basic</h5>
+<div class="outline-text-5" id="text-org5b21076">
+<p>
+<a href="https://www.youtube.com/watch?v=MjpgRsT9IsY">Bernth - Sweep Picking Workout Basic</a>
+</p>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgcbe47a5" class="outline-4">
+<h4 id="orgcbe47a5">Legato</h4>
+<div class="outline-text-4" id="text-orgcbe47a5">
+</div>
+<div id="outline-container-org6937d09" class="outline-5">
+<h5 id="org6937d09">Legato Free Style</h5>
+<div class="outline-text-5" id="text-org6937d09">
+<ul class="org-ul">
+<li>80bpm - wherever</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge56b961" class="outline-5">
+<h5 id="orge56b961">Bernth - #252 - Legato Workout</h5>
+<div class="outline-text-5" id="text-orge56b961">
+<ul class="org-ul">
+<li><a href="https://youtu.be/WPsJFDgD-cg?t=119">Bernth - #252 - Legato Workout</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org23ceea6" class="outline-5">
+<h5 id="org23ceea6">Clint Tustin - LEGATO SHRED LESSON &amp; EXERCISES</h5>
+<div class="outline-text-5" id="text-org23ceea6">
+<ul class="org-ul">
+<li><a href="https://youtu.be/VzJs4Bu0kmY?t=250">https://youtu.be/VzJs4Bu0kmY?t=250</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org887731d" class="outline-5">
+<h5 id="org887731d">Petrucci Legato 1</h5>
+<div class="outline-text-5" id="text-org887731d">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=4OhzvjlgYwA">https://www.youtube.com/watch?v=4OhzvjlgYwA</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org4d9085d" class="outline-5">
+<h5 id="org4d9085d">Petrucci Legato 2</h5>
+<div class="outline-text-5" id="text-org4d9085d">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=iCyUQG9dXXM">https://www.youtube.com/watch?v=iCyUQG9dXXM</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb30170b" class="outline-5">
+<h5 id="orgb30170b">Paul Gilbert Legato Licks</h5>
+<div class="outline-text-5" id="text-orgb30170b">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=MqOGZCHI-nA">https://www.youtube.com/watch?v=MqOGZCHI-nA</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org5b5d84c" class="outline-3">
+<h3 id="org5b5d84c"><span class="todo TODO">TODO</span> Slayer - War Ensemble</h3>
+<div class="outline-text-3" id="text-org5b5d84c">
+<ul class="org-ul">
+<li>Full Intro Riff: 130 bpm (220 bpm)</li>
+<li>Intro Riff: 160 bpm (220 bpm)</li>
+<li>Verse Riff: 150 bpm (220 bpm)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge5ab37e" class="outline-3">
+<h3 id="orge5ab37e"><span class="todo TODO">TODO</span> Vinnie More - Morning Star</h3>
+<div class="outline-text-3" id="text-orge5ab37e">
+<ul class="org-ul">
+<li>Intro Melody: 80 bpm (120 bpm)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7c2beaf" class="outline-3">
+<h3 id="org7c2beaf"><span class="todo TODO">TODO</span> Megadeth - Holy Wars</h3>
+<div class="outline-text-3" id="text-org7c2beaf">
+<ul class="org-ul">
+<li>Main Riff: 130 bpm (167 bpm)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org3090b89" class="outline-3">
+<h3 id="org3090b89"><span class="todo TODO">TODO</span> Iron Maiden - Phantom of the Opera</h3>
+<div class="outline-text-3" id="text-org3090b89">
+<ul class="org-ul">
+<li>Bridge: 140 bpm (175 bpm)</li>
+<li>Main Riff: 175bpm (175 bpm)</li>
+</ul>
+
+<p>
+Solo:
+</p>
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=mljxeNrQxMQ">https://www.youtube.com/watch?v=mljxeNrQxMQ</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org9b43114" class="outline-3">
+<h3 id="org9b43114"><span class="todo TODO">TODO</span> Metallica - Dyers Eve</h3>
+</div>
+<div id="outline-container-org6c791b8" class="outline-3">
+<h3 id="org6c791b8"><span class="todo TODO">TODO</span> Metallica - Creeping Death</h3>
+<div class="outline-text-3" id="text-org6c791b8">
+<ul class="org-ul">
+<li>Main Riff 180 bpm (200 bpm)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5137e15" class="outline-3">
+<h3 id="org5137e15"><span class="todo TODO">TODO</span> Metallica - One</h3>
+<div class="outline-text-3" id="text-org5137e15">
+<ul class="org-ul">
+<li>Cool riff: 90bpm (100 bpm)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd12f1bc" class="outline-3">
+<h3 id="orgd12f1bc"><span class="todo TODO">TODO</span> Metallica - Fight Fire With Fire</h3>
+<div class="outline-text-3" id="text-orgd12f1bc">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=rATdZb-hHXA">https://www.youtube.com/watch?v=rATdZb-hHXA</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-org028d082" class="outline-3">
+<h3 id="org028d082"><span class="todo TODO">TODO</span> Metallica - Enter Sandman Solo</h3>
+<div class="outline-text-3" id="text-org028d082">
+<ul class="org-ul">
+<li><a href="https://youtu.be/NIAkEJp8i_Y?t=159">https://youtu.be/NIAkEJp8i_Y?t=159</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgc85f056" class="outline-3">
+<h3 id="orgc85f056"><span class="todo TODO">TODO</span> Metallica - Master of Puppets</h3>
+<div class="outline-text-3" id="text-orgc85f056">
+<ul class="org-ul">
+<li>170 bpm (212 bpm)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgdd3e57d" class="outline-3">
+<h3 id="orgdd3e57d"><span class="todo TODO">TODO</span> Death - Lack of Comprehension</h3>
+<div class="outline-text-3" id="text-orgdd3e57d">
+<ul class="org-ul">
+<li>Main Riff: 160 bpm(180 bpm)</li>
+<li>Lead Motive: 90(180 bpm)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orge9e22bc" class="outline-3">
+<h3 id="orge9e22bc"><span class="todo TODO">TODO</span> Steve Vai - Eugenes Trick Bag</h3>
+<div class="outline-text-3" id="text-orge9e22bc">
+<ul class="org-ul">
+<li>Classic Part: 100 bpm (150 bpm)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgfeb5094" class="outline-3">
+<h3 id="orgfeb5094"><span class="todo TODO">TODO</span> Dire Straits - Sultans of Swing</h3>
+<div class="outline-text-3" id="text-orgfeb5094">
+<ul class="org-ul">
+<li>Solo 2 Legato Part: 126 bpm (150 bpm)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb9d389d" class="outline-3">
+<h3 id="orgb9d389d"><span class="todo TODO">TODO</span> Mordred - State of Mind</h3>
+<div class="outline-text-3" id="text-orgb9d389d">
+<ul class="org-ul">
+<li>Intro Lick 1st part: 140 bpm (195 bpm)</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgddb1803" class="outline-3">
+<h3 id="orgddb1803"><span class="todo TODO">TODO</span> Ozzy - Bark at the Moon</h3>
+<div class="outline-text-3" id="text-orgddb1803">
+<ul class="org-ul">
+<li>Intro riff:120 bpm</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb491460" class="outline-3">
+<h3 id="orgb491460"><span class="todo TODO">TODO</span> Stairway to Heaven Solo</h3>
+<div class="outline-text-3" id="text-orgb491460">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=0a4ysptbqM0">https://www.youtube.com/watch?v=0a4ysptbqM0</a></li>
+<li>hard: <a href="https://youtu.be/hyefrmWZL6s?t=355">https://youtu.be/hyefrmWZL6s?t=355</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orga656b0b" class="outline-3">
+<h3 id="orga656b0b"><span class="todo TODO">TODO</span> November Rain</h3>
+<div class="outline-text-3" id="text-orga656b0b">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=fRIQEDrzSHI">https://www.youtube.com/watch?v=fRIQEDrzSHI</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgd1f735e" class="outline-3">
+<h3 id="orgd1f735e"><span class="todo TODO">TODO</span> White Room (24 Nights)</h3>
+<div class="outline-text-3" id="text-orgd1f735e">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=hfN-fmfWrGs&amp;t=159s">https://www.youtube.com/watch?v=hfN-fmfWrGs&amp;t=159s</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org40ed89e" class="outline-3">
+<h3 id="org40ed89e">Links</h3>
+<div class="outline-text-3" id="text-org40ed89e">
+<ul class="org-ul">
+<li>Sweep Picking: <a href="https://www.youtube.com/watch?v=unCX7dAKPd0">https://www.youtube.com/watch?v=unCX7dAKPd0</a></li>
+<li>Bernth Workout Sweep Picking: <a href="https://www.youtube.com/watch?v=MjpgRsT9IsY">https://www.youtube.com/watch?v=MjpgRsT9IsY</a></li>
+<li>Bernth Workout Alternate Picking: <a href="https://www.youtube.com/watch?v=dX7prn1yric">https://www.youtube.com/watch?v=dX7prn1yric</a></li>
+<li>Top 5 Fusion Players: <a href="https://youtu.be/U5HjYR2acrY">https://youtu.be/U5HjYR2acrY</a></li>
+<li>Anthrax Riffs: <a href="https://www.youtube.com/watch?v=eEamVP-T_bg">Karri Hanninen</a></li>
+<li>Death Riffs: <a href="https://www.youtube.com/watch?v=n9_UdwuYdvI&amp;list=PLMyU6epqBEmTwN276I4eXrVRokMMWjQ6Z&amp;index=7">Vermilion</a>, <a href="https://www.youtube.com/watch?v=tWCsd3VgBe0">Andrea Boma Boccarusso</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org5ab4156" class="outline-3">
+<h3 id="org5ab4156">Exercises</h3>
+<div class="outline-text-3" id="text-org5ab4156">
+</div>
+<div id="outline-container-org4f3744e" class="outline-4">
+<h4 id="org4f3744e">Alternate Picking</h4>
+<div class="outline-text-4" id="text-org4f3744e">
+</div>
+<div id="outline-container-org6751fc9" class="outline-5">
+<h5 id="org6751fc9"><span class="todo TODO">TODO</span> 3 Noten + Slide (rauf + runter) auf einer Saite</h5>
+<div class="outline-text-5" id="text-org6751fc9">
+<ul class="org-ul">
+<li>105 bpm</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org89a37bd" class="outline-5">
+<h5 id="org89a37bd"><span class="todo TODO">TODO</span> 4 Noten auf 2 Saiten</h5>
+<div class="outline-text-5" id="text-org89a37bd">
+
+<div id="org3c0e6e0" class="figure">
+<p><img src="resources/Guitar/GuitarExercise.png" alt="GuitarExercise.png" style="margin-left:35px;" />
+</p>
+</div>
+<ul class="org-ul">
+<li>130 bpm</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2907e9a" class="outline-4">
+<h4 id="org2907e9a">Legato</h4>
+<div class="outline-text-4" id="text-org2907e9a">
+</div>
+<div id="outline-container-orgd370d3a" class="outline-5">
+<h5 id="orgd370d3a"><span class="todo TODO">TODO</span> Legato Übung 3 Saiten</h5>
+<div class="outline-text-5" id="text-orgd370d3a">
+<ul class="org-ul">
+<li>110 bpm
+
+<ul class="org-ul">
+<li><a href="https://joesanmarzano.duckdns.org/nextcloud/index.php/f/859499">https://joesanmarzano.duckdns.org/nextcloud/index.php/f/859499</a></li>
+<li><a href="https://joesanmarzano.duckdns.org/nextcloud/index.php/f/859500">https://joesanmarzano.duckdns.org/nextcloud/index.php/f/859500</a></li>
+</ul></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org990c488" class="outline-5">
+<h5 id="org990c488"><span class="todo TODO">TODO</span> Legato chromatisch</h5>
+<div class="outline-text-5" id="text-org990c488">
+<p>
+<a href="https://www.youtube.com/watch?v=OhoUF_tTqcE&amp;t=2s">https://www.youtube.com/watch?v=OhoUF_tTqcE&amp;t=2s</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org592b284" class="outline-5">
+<h5 id="org592b284">Bernth - #227 Legato Workout</h5>
+<div class="outline-text-5" id="text-org592b284">
+<ul class="org-ul">
+<li><a href="https://drive.google.com/drive/folders/1q3lA213PRRpH6Ok8t9r9rrGNm9lS3XGL">https://drive.google.com/drive/folders/1q3lA213PRRpH6Ok8t9r9rrGNm9lS3XGL</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgbe5b234" class="outline-3">
+<h3 id="orgbe5b234">Improvisation</h3>
+<div class="outline-text-3" id="text-orgbe5b234">
+</div>
+<div id="outline-container-org02f1649" class="outline-4">
+<h4 id="org02f1649">Phrygian</h4>
+<div class="outline-text-4" id="text-org02f1649">
+<ul class="org-ul">
+<li>E Phrygian: <a href="https://www.youtube.com/watch?v=c3wUGLaoSWQ">https://www.youtube.com/watch?v=c3wUGLaoSWQ</a></li>
+<li>E Phrygian Dominant: <a href="https://www.youtube.com/watch?v=x7caFY1GK9Q">https://www.youtube.com/watch?v=x7caFY1GK9Q</a></li>
+<li>B Phrygian Dominant: <a href="https://www.youtube.com/watch?v=f9D2K9JrjP0">https://www.youtube.com/watch?v=f9D2K9JrjP0</a></li>
+</ul>
+</div>
+</div>
+<div id="outline-container-orgb94cf58" class="outline-4">
+<h4 id="orgb94cf58">Lydian</h4>
+<div class="outline-text-4" id="text-orgb94cf58">
+<ul class="org-ul">
+<li>F-Lydian (C-Major): <a href="https://www.youtube.com/watch?v=kixzv2mLRGU">https://www.youtube.com/watch?v=kixzv2mLRGU</a></li>
+<li>E-Lydian : <a href="https://www.youtube.com/watch?v=NPrF-hG-_x0">https://www.youtube.com/watch?v=NPrF-hG-_x0</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-orgd95dce8" class="outline-3">
+<h3 id="orgd95dce8">Licks</h3>
+<div class="outline-text-3" id="text-orgd95dce8">
+</div>
+<div id="outline-container-orgf2b4050" class="outline-4">
+<h4 id="orgf2b4050">Kill 'Em All</h4>
+<div class="outline-text-4" id="text-orgf2b4050">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=JXZIfT-bCqI&amp;t=5s">https://www.youtube.com/watch?v=JXZIfT-bCqI&amp;t=5s</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org93e0cc9" class="outline-3">
+<h3 id="org93e0cc9">Theory</h3>
+<div class="outline-text-3" id="text-org93e0cc9">
+</div>
+<div id="outline-container-orgd526a6b" class="outline-4">
+<h4 id="orgd526a6b">Bernth</h4>
+<div class="outline-text-4" id="text-orgd526a6b">
+</div>
+<div id="outline-container-orgc9dd3bb" class="outline-5">
+<h5 id="orgc9dd3bb">Music Theory Masterclass (Beginner To Advanced)</h5>
+<div class="outline-text-5" id="text-orgc9dd3bb">
+<ul class="org-ul">
+<li><a href="https://www.patreon.com/posts/254-music-theory-75625304">https://www.patreon.com/posts/254-music-theory-75625304</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org7152046" class="outline-5">
+<h5 id="org7152046">Circle of Fifths</h5>
+<div class="outline-text-5" id="text-org7152046">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=bXB675YT9Y8">https://www.youtube.com/watch?v=bXB675YT9Y8</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org28f67d5" class="outline-5">
+<h5 id="org28f67d5">#220 - Intermediate Music Theory COURSE</h5>
+<div class="outline-text-5" id="text-org28f67d5">
+<p>
+-<a href="https://www.patreon.com/posts/220-intermediate-64996637">https://www.patreon.com/posts/220-intermediate-64996637</a>
+</p>
+</div>
+</div>
+
+<div id="outline-container-org274c321" class="outline-5">
+<h5 id="org274c321">#224 - 5 Levels Of Rhythm Complexity (easy to INSANE)</h5>
+<div class="outline-text-5" id="text-org274c321">
+<ul class="org-ul">
+<li><a href="https://www.patreon.com/posts/224-5-levels-of-66081836">https://www.patreon.com/posts/224-5-levels-of-66081836</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org2e5b0bb" class="outline-4">
+<h4 id="org2e5b0bb">Signals Music Studio</h4>
+<div class="outline-text-4" id="text-org2e5b0bb">
+</div>
+<div id="outline-container-org519d8b4" class="outline-5">
+<h5 id="org519d8b4">PHRYGIAN - Understanding and Using the Third Mode of Major [MODAL MUSIC THEORY]</h5>
+<div class="outline-text-5" id="text-org519d8b4">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=ZnoKgWnMEq8&amp;t=15s">https://www.youtube.com/watch?v=ZnoKgWnMEq8&amp;t=15s</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org121c9bb" class="outline-5">
+<h5 id="org121c9bb">Playing In Every Mode with ONE Tiny Scale Shape</h5>
+<div class="outline-text-5" id="text-org121c9bb">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=96cydVB4w-A&amp;t=670s">https://www.youtube.com/watch?v=96cydVB4w-A&amp;t=670s</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org091fd82" class="outline-4">
+<h4 id="org091fd82">QJamTracks</h4>
+<div class="outline-text-4" id="text-org091fd82">
+</div>
+<div id="outline-container-orgf444ae3" class="outline-5">
+<h5 id="orgf444ae3">Modes Explained Effective and Crystal Clear</h5>
+<div class="outline-text-5" id="text-orgf444ae3">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=QT4p_BzfToU">https://www.youtube.com/watch?v=QT4p_BzfToU</a></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org1874160" class="outline-2">
+<h2 id="org1874160">Languages</h2>
+<div class="outline-text-2" id="text-org1874160">
+</div>
+<div id="outline-container-orgaf8ae1f" class="outline-3">
+<h3 id="orgaf8ae1f">Greek</h3>
+<div class="outline-text-3" id="text-orgaf8ae1f">
+<p>
+Hours studied: 67 h (14.6.2022 - 31.12.2023)
+</p>
+</div>
+
+<div id="outline-container-orga88f653" class="outline-4">
+<h4 id="orga88f653">2024</h4>
+<div class="outline-text-4" id="text-orga88f653">
+<table border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
+<caption class="t-above"><span class="table-number">Table 6:</span> Clock summary at <span class="timestamp-wrapper"><span class="timestamp">[2024-01-21 Sun 22:21]</span></span></caption>
+
+<colgroup>
+<col  class="org-left" />
+
+<col  class="org-left" />
+</colgroup>
+<thead>
+<tr>
+<th scope="col" class="org-left">Headline</th>
+<th scope="col" class="org-left">Time</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="org-left"><b>Total time</b></td>
+<td class="org-left"><b>4:19</b></td>
+</tr>
+</tbody>
+</table>
+</div>
+
+<div id="outline-container-org723df55" class="outline-5">
+<h5 id="org723df55">CW 1</h5>
+<div class="outline-text-5" id="text-org723df55">
+</div>
+</div>
+<div id="outline-container-org6268ea9" class="outline-5">
+<h5 id="org6268ea9">CW 3</h5>
+<div class="outline-text-5" id="text-org6268ea9">
+</div>
+</div>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org462cea7" class="outline-2">
+<h2 id="org462cea7">Music to hear <code>[0/1]</code></h2>
+<div class="outline-text-2" id="text-org462cea7">
+</div>
+<div id="outline-container-orgbd4f788" class="outline-3">
+<h3 id="orgbd4f788"><span class="todo TODO">TODO</span> Camel: Coming of age</h3>
+</div>
+</div>
+<div id="outline-container-org0eff84e" class="outline-2">
+<h2 id="org0eff84e">Things to do <code>[2/8]</code></h2>
+<div class="outline-text-2" id="text-org0eff84e">
+</div>
+<div id="outline-container-orgddbe3dd" class="outline-3">
+<h3 id="orgddbe3dd">Ausflüge</h3>
+<div class="outline-text-3" id="text-orgddbe3dd">
+<ul class="org-ul">
+<li>Hohe Wand</li>
+<li>Mannersdorfer Wüste</li>
+<li>Perchtholdsdorfer Haide</li>
+<li>Seegrotte Hinterbrühl</li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org85b9676" class="outline-2">
+<h2 id="org85b9676">Movies &amp; Series <code>[4/12]</code></h2>
+<div class="outline-text-2" id="text-org85b9676">
+</div>
+<div id="outline-container-orgfaca378" class="outline-3">
+<h3 id="orgfaca378">Movies</h3>
+<div class="outline-text-3" id="text-orgfaca378">
+<p>
+Sifi
+</p>
+<ul class="org-ul">
+<li>The Andromeda Strain (1971)</li>
+<li>The man from earth</li>
+<li>Maroond</li>
+<li>Robot &amp; Frank</li>
+<li>The trouble with being born</li>
+<li>Under her skin (2013)</li>
+<li>Threads</li>
+</ul>
+</div>
+
+<div id="outline-container-org239bfca" class="outline-4">
+<h4 id="org239bfca"><span class="todo TODO">TODO</span> Der Besuch der alten Dame</h4>
+<div class="outline-text-4" id="text-org239bfca">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=w2RV5Dj3BSk">Der Besuch der alten Dame</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgb7db8c9" class="outline-4">
+<h4 id="orgb7db8c9"><span class="todo TODO">TODO</span> Die Physiker</h4>
+<div class="outline-text-4" id="text-orgb7db8c9">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=HZhFC11uB3Q">Die Physiker</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org0e0fc16" class="outline-4">
+<h4 id="org0e0fc16"><span class="todo TODO">TODO</span> Incendies</h4>
+</div>
+<div id="outline-container-org378ddb7" class="outline-4">
+<h4 id="org378ddb7"><span class="todo TODO">TODO</span> The Trial</h4>
+</div>
+<div id="outline-container-org11f91a5" class="outline-4">
+<h4 id="org11f91a5"><span class="todo TODO">TODO</span> Short Cuts</h4>
+</div>
+<div id="outline-container-org6a4f222" class="outline-4">
+<h4 id="org6a4f222"><span class="todo TODO">TODO</span> Tetris (2023)</h4>
+</div>
+<div id="outline-container-org2792731" class="outline-4">
+<h4 id="org2792731"><span class="todo TODO">TODO</span> The trouble with being born</h4>
+</div>
+<div id="outline-container-orgd960ed2" class="outline-4">
+<h4 id="orgd960ed2"><span class="done DONE">DONE</span> Solaris (2002 Soderbergh)</h4>
+<div class="outline-text-4" id="text-orgd960ed2">
+</div>
+</div>
+
+<div id="outline-container-orgdb725f6" class="outline-4">
+<h4 id="orgdb725f6"><span class="done DONE">DONE</span> Idocracy (2006)</h4>
+<div class="outline-text-4" id="text-orgdb725f6">
+<ul class="org-ul">
+<li>nice idea, nethertheless super bad</li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-orgebc1097" class="outline-4">
+<h4 id="orgebc1097"><span class="done DONE">DONE</span> Europa Report (2013)</h4>
+<div class="outline-text-4" id="text-orgebc1097">
+<p>
+Very stupid ending. Not really worth watching.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org944c0eb" class="outline-4">
+<h4 id="org944c0eb"><span class="done DONE">DONE</span> Office Space (1999)</h4>
+<div class="outline-text-4" id="text-org944c0eb">
+<p>
+Kind of funny. Has it's moments.
+</p>
+</div>
+</div>
+
+<div id="outline-container-org4579c52" class="outline-4">
+<h4 id="org4579c52"><span class="done DONE">DONE</span> Dune</h4>
+<div class="outline-text-4" id="text-org4579c52">
+</div>
+</div>
+
+<div id="outline-container-orgff56bad" class="outline-4">
+<h4 id="orgff56bad">Theo Angelopoulos <code>[1/3]</code></h4>
+<div class="outline-text-4" id="text-orgff56bad">
+</div>
+<div id="outline-container-org4726415" class="outline-5">
+<h5 id="org4726415"><span class="todo TODO">TODO</span> Το βλέμμα του Οδυσσέα (Ulysses Gaze) (1995)</h5>
+</div>
+<div id="outline-container-orgfdefcae" class="outline-5">
+<h5 id="orgfdefcae"><span class="todo TODO">TODO</span> Τοπίο στην ομίχλη (Landscape in the mist) (1988)</h5>
+</div>
+<div id="outline-container-orga697839" class="outline-5">
+<h5 id="orga697839"><span class="done DONE">DONE</span> Μια αιωνιότητα και μια μέρα (Eternity and a Day) (1998)</h5>
+</div>
+</div>
+<div id="outline-container-org513ab7e" class="outline-4">
+<h4 id="org513ab7e">Andrei Arsenjewitsch Tarkowski <code>[0/2]</code></h4>
+<div class="outline-text-4" id="text-org513ab7e">
+</div>
+<div id="outline-container-org2bbdeed" class="outline-5">
+<h5 id="org2bbdeed"><span class="todo TODO">TODO</span> Solaris (1972)</h5>
+</div>
+<div id="outline-container-orgdfa2448" class="outline-5">
+<h5 id="orgdfa2448"><span class="todo TODO">TODO</span> Stalker (1979)</h5>
+</div>
+</div>
+</div>
+<div id="outline-container-orgdca1130" class="outline-3">
+<h3 id="orgdca1130">Series</h3>
+<div class="outline-text-3" id="text-orgdca1130">
+</div>
+<div id="outline-container-orgbe52680" class="outline-4">
+<h4 id="orgbe52680"><span class="todo TODO">TODO</span> The 3 body problem</h4>
+</div>
+</div>
+<div id="outline-container-orgcd09531" class="outline-3">
+<h3 id="orgcd09531">Theater</h3>
+<div class="outline-text-3" id="text-orgcd09531">
+<ul class="org-ul">
+<li><a href="https://www.youtube.com/watch?v=WJCAHnl608c">Warten auf Godot</a></li>
+</ul>
+</div>
+</div>
+</div>
+
+<div id="outline-container-org93f05f9" class="outline-2">
+<h2 id="org93f05f9">Essen gehen</h2>
+<div class="outline-text-2" id="text-org93f05f9">
+</div>
+<div id="outline-container-org28ea8fd" class="outline-3">
+<h3 id="org28ea8fd">Pizza</h3>
+<div class="outline-text-3" id="text-org28ea8fd">
+</div>
+<div id="outline-container-org85c1d00" class="outline-4">
+<h4 id="org85c1d00">Via Toledo Enopizzeria</h4>
+</div>
+<div id="outline-container-org32f3510" class="outline-4">
+<h4 id="org32f3510">Colombo</h4>
+</div>
+<div id="outline-container-org13d986e" class="outline-4">
+<h4 id="org13d986e">Riva</h4>
+</div>
+</div>
+<div id="outline-container-orgb619324" class="outline-3">
+<h3 id="orgb619324"><span class="done DONE">DONE</span> Gasthaus Ziegelwerk</h3>
+<div class="outline-text-3" id="text-orgb619324">
+<ul class="org-ul">
+<li><a href="https://www.ziegelwerk-gasthaus.at/">https://www.ziegelwerk-gasthaus.at/</a></li>
+</ul>
+</div>
+</div>
+
+<div id="outline-container-org666a456" class="outline-3">
+<h3 id="org666a456">Persisch Pars</h3>
+</div>
+<div id="outline-container-org90be96a" class="outline-3">
+<h3 id="org90be96a">Das Lokal im Hof</h3>
+<div class="outline-text-3" id="text-org90be96a">
+<p>
+<a href="https://daslokal.at/speisekarten/">https://daslokal.at/speisekarten/</a>
+</p>
+</div>
+</div>
+</div>
+<div id="outline-container-org86cba71" class="outline-2">
+<h2 id="org86cba71">Segeln</h2>
+<div class="outline-text-2" id="text-org86cba71">
+</div>
+<div id="outline-container-orgae68e68" class="outline-3">
+<h3 id="orgae68e68">Griechenland</h3>
+</div>
+</div>
+</div>
+<div id="postamble" class="status">
+<p class="date">Created: 2024-01-22 Mon 06:00</p>
+</div>
+</body>
+</html>
